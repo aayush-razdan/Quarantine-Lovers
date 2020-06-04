@@ -12,47 +12,26 @@ import {
     Dimensions,
     TouchableOpacity,
 } from 'react-native';
-import ImagePicker from 'react-native-image-picker';
 
 const screenHeight = Math.round(Dimensions.get('window').height);
 const screenWidth = Math.round(Dimensions.get('window').width);
 
 export default class Lost extends React.Component {
-    state = {
-        photo: null,
-    }
 
-    handleChoosePhoto = () => {
-        state = {
-            photo: null,
-        }
-
-        handleChoosePhoto = () => {
-            const options = {
-                noData: true,
-            }
-            ImagePicker.launchImageLibrary(options, response => {
-                if (response.uri) {
-                    this.setState({ photo: response })
-                }
-            })
-        }
-    }
     render() {
-        const { photo } = this.state
         return (
             <View
                 style={styles.background}
             >
-                <View style={styles.itemClassification}>
-                    <TextInput style={styles.inputContainer}
+                <View style={styles.inputContainer}>
+                    <TextInput
                         style={styles.input}
                         placeholder={"What is it (1/2 words)"}
                         placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
                         underlineColorAndroid="transparent"
                     />
                 </View>
-                <View>
+                <View style={styles.inputContainer}>
                     <TextInput
                         style={styles.input}
                         placeholder={"Describe it a bit"}
@@ -60,13 +39,9 @@ export default class Lost extends React.Component {
                         underlineColorAndroid="transparent"
                     />
                 </View>
-                {photo && (
-                    <Image
-                        source={{ uri: photo.uri }}
-                        style={{ width: 300, height: 300 }}
-                    />
-                )}
-                <Button title="Choose Photo" onPress={this.handleChoosePhoto} />
+                <TouchableOpacity style={styles.btnSave}>
+                    <Text style={styles.text}>Add</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -110,7 +85,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         padding: 26,
     },
-    btnPic: {
+    btnSave: {
         width: 230,
         height: 40,
         borderRadius: 25,
@@ -119,11 +94,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         //marginTop: 10,
         position: 'absolute',
-
+        bottom: (screenHeight / 50),
     },
     inputContainer: {
-        marginTop: 50,
-
+        marginTop: 5,
+        alignItems: "center",
+        marginBottom: 10,
     },
     text: {
         color: 'rgba(255,255,255,0.7)',

@@ -82,7 +82,7 @@ export default function AttendancePercent({ navigation }) {
           Total classes: {uptoClass}
         </Text>
         <Text style={styles.text}>
-          Attendance is {per}%
+          Attendance is {per.toFixed(2)}%
         </Text>
         <Text style={styles.text}>
           Number of classes you need to attend: {toAttend}
