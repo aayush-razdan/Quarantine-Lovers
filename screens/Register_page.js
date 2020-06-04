@@ -7,21 +7,39 @@ import {
   Text,
   TouchableWithoutFeedback,
   TextInput,
-  Dimensions,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
+import { } from "react-native-gesture-handler";
+import { Dropdown } from 'react-native-material-dropdown';
+import { Icon } from "react-native-elements";
 
 const { width: WIDTH } = Dimensions.get("window");
 
 export default class Register_page extends React.Component {
-  static navigationOptions = {
-    title: "Register_page",
-  };
   render() {
+    let data = [{
+      value: 'Computer Science',
+    },
+    {
+      value: 'Electronics and telecommunications',
+    },
+    {
+      value: 'Electronics',
+    },
+    {
+      value: 'Electrical',
+    },
+    {
+      value: 'Mechanical',
+    },
+    {
+      value: 'Production',
+    },
+    ];
     return (
-      <ImageBackground
+      <View
         style={styles.background}
-        source={require("../assets/background.jpg")}
       >
         <View style={styles.inputContainer}>
           <TextInput
@@ -42,18 +60,21 @@ export default class Register_page extends React.Component {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder={"Semester (I-VIII)"}
+            placeholder={"Semester (1-8)"}
             placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
             underlineColorAndroid="transparent"
           />
         </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
+        <View style={styles.inputDropdown}>
+          <Dropdown
+            style={{ color: 'rgba(255,255,255,0.7)' }}
+            baseColor="rgba(255, 255, 255, 1)"
+            inputContainerStyle={{ borderBottomWidth: 0 }}
             placeholder={"Branch"}
             placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-            underlineColorAndroid="transparent"
-          />
+            data={data}
+          >
+          </Dropdown>
         </View>
         <View style={styles.inputContainer}>
           <TextInput
@@ -66,7 +87,7 @@ export default class Register_page extends React.Component {
         <TouchableOpacity style={styles.btnRegister}>
           <Text style={styles.text}>Finish</Text>
         </TouchableOpacity>
-      </ImageBackground>
+      </View>
     );
   }
 }
@@ -76,6 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "white",
   },
   input: {
     width: 250,
@@ -88,6 +110,19 @@ const styles = StyleSheet.create({
     marginHorizontal: 25,
     justifyContent: "flex-end",
   },
+  inputDropdown: {
+    borderBottomColor: "transparent",
+    width: 250,
+    height: 45,
+    borderRadius: 25,
+    fontSize: 16,
+    paddingLeft: 45,
+    backgroundColor: "rgba(0,0,0,0.35)",
+    color: "rgba(255,255,255,0.7)",
+    marginHorizontal: 25,
+    justifyContent: "flex-end",
+    marginBottom: 5
+  },
   inputContainer: {
     marginTop: 5,
     alignItems: "center",
@@ -98,7 +133,7 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 25,
     fontSize: 16,
-    backgroundColor: "#432577",
+    backgroundColor: "dodgerblue",
     justifyContent: "center",
     //marginTop: 10,
     position: "absolute",

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -8,82 +8,65 @@ import {
   TouchableWithoutFeedback,
   TextInput,
   Dimensions,
-  TouchableOpacity,
   AppRegistry,
 } from "react-native";
+
+import { TouchableOpacity, } from "react-native-gesture-handler";
+import { Icon } from "react-native-elements";
 import { Button } from "react-native-elements";
-//import Icon from "react-native-vector-icons";
-//import register_page from "./register_page";
-
-//import Register_page from "./Register_page";
-
 const { width: WIDTH } = Dimensions.get("window");
 
-export default class WelcomePage extends React.Component {
-  static navigationOptions = {
-    title: "WelcomePage",
-  };
-
-  // FunctionToOpenRegister_page = () => {
-  //   this.props.navigation.navigate("Register");
-  // };
-  render() {
-    return (
-      <ImageBackground
-        style={styles.background}
-        source={require("../assets/background.jpg")}
-      >
-        <View style={styles.motto}>
-          <Text style={[styles.setColorAzure]}>
-            Manage everything with one app
+export default function WelcomePage({ navigation }) {
+  return (
+    <View
+      style={styles.background}
+    >
+      <View style={styles.motto}>
+        <Text style={[styles.setColorAzure]}>
+          Manage everything with one app
           </Text>
-        </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder={"Username"}
-            placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-            underlineColorAndroid="transparent"
-          />
-        </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder={"Password"}
-            secureTextEntry={true}
-            placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-            underlineColorAndroid="transparent"
-          />
-          <TouchableOpacity style={styles.btnEye}>
-            <Text style={{ color: "rgba(0,0,0,0.35)" }}>^</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.btnLogin}>
-            <Text style={styles.text}>Login</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.btnRegister}>
-            <Text
-              onPress={() => this.props.navigation.navigate("Register")}
-              style={styles.text}
-            >
-              Register
-            </Text>
-          </TouchableOpacity>
-          {/* <Button
-              title="Register"
-              style={styles.btnLogin}
-              onPress={() => this.props.navigation.navigate("Register")}
-            /> */}
-        </View>
-      </ImageBackground>
-    );
-  }
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder={"Username"}
+          placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
+          underlineColorAndroid="transparent"
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder={"Password"}
+          secureTextEntry={true}
+          placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
+          underlineColorAndroid="transparent"
+        />
+        <TouchableOpacity style={styles.btnEye}>
+          <Text style={{ color: "rgba(0,0,0,0.35)" }}>^</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnLogin}>
+          <Text style={styles.text}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btnRegister}
+          onPress={() => navigation.navigate("Register_page")}
+          title="Register">
+          <Text style={styles.text}>
+            Register
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    backgroundColor: "white",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   input: {
     width: 250,
@@ -124,20 +107,21 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 25,
     fontSize: 16,
-    backgroundColor: "#432577",
+    backgroundColor: "dodgerblue",
     justifyContent: "center",
     marginTop: 50,
+    marginBottom: 50,
   },
   btnRegister: {
     width: 250,
     height: 45,
     borderRadius: 25,
     fontSize: 16,
-    backgroundColor: "#432577",
+    backgroundColor: "dodgerblue",
     justifyContent: "center",
-    //marginTop: 10,
+    marginTop: 10,
     position: "absolute",
-    bottom: -287,
+    bottom: 5,
   },
   text: {
     color: "rgba(255,255,255,0.7)",

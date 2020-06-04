@@ -5,10 +5,14 @@ import {
   View,
   ScrollView,
   TextInput,
+  Dimensions,
   TouchableOpacity,
 } from "react-native";
 
 import Note from "../Note";
+
+const screenHeight = Math.round(Dimensions.get('window').height);
+const screenWidth = Math.round(Dimensions.get('window').width);
 
 export default class TodoList extends React.Component {
   constructor(props) {
@@ -80,55 +84,56 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    backgroundColor: "red",
+    backgroundColor: "dodgerblue",
     alignItems: "center",
     justifyContent: "center",
-    borderBottomWidth: 10,
+    borderBottomWidth: screenHeight / 81.1,
     borderBottomColor: "#ddd",
     opacity: 0.5,
   },
   headerText: {
-    color: "white",
-    fontSize: 16,
-    padding: 26,
+    color: "dodgerblue",
+    fontSize: screenHeight / 51,
+    padding: screenHeight / 31.2,
   },
   scrollContainer: {
     flex: 1,
-    marginBottom: 100,
+    marginBottom: 8.11,
   },
   footer: {
     position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: 10,
+    zIndex: 81.1,
   },
   textInput: {
     alignSelf: "stretch",
-    color: "#fff",
-    padding: 20,
-    backgroundColor: "rgba(0,0,0,0.35)",
-    borderTopWidth: 3,
-    borderTopColor: "#ededed",
+    color: "black",
+    opacity: 0.9,
+    padding: screenHeight / 40.55,
+    backgroundColor: "#ddd",
+    borderTopWidth: screenHeight / 270.33,
+    borderTopColor: "dodgerblue",
     justifyContent: "center",
     alignItems: "center",
   },
   addButton: {
     position: "absolute",
-    zIndex: 11,
-    right: 20,
-    bottom: 90,
-    backgroundColor: "purple",
-    width: 90,
-    height: 90,
-    borderRadius: 50,
+    zIndex: screenHeight / 73.72,
+    right: screenHeight / 40.55,
+    bottom: screenHeight / 9,
+    backgroundColor: "dodgerblue",
+    width: screenHeight / 9,
+    height: screenHeight / 9,
+    borderRadius: screenHeight / 16.22,
     alignItems: "center",
     justifyContent: "center",
     elevation: 8,
     opacity: 0.5,
   },
   addButtonText: {
-    color: "#fff",
-    fontSize: 24,
+    color: "dodgerblue",
+    fontSize: screenHeight / 35,
   },
 });

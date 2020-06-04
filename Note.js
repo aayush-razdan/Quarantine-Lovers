@@ -31,18 +31,19 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingRight: 100,
         borderBottomWidth: 2,
-        borderBottomColor: "rgba(0,0,0,0.35)",
+        borderBottomColor: "dodgerblue",
     },
     noteText: {
         paddingLeft: 20,
         borderLeftWidth: 10,
-        borderLeftColor: "rgba(255,255,255,0.7)",
+        borderLeftColor: "dodgerblue",
     },
     noteDelete: {
         position: "absolute",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "purple",
+        backgroundColor: "dodgerblue",
+        borderRadius: 25,
         opacity: 0.5,
         padding: 20,
         top: 10,
@@ -50,6 +51,8 @@ const styles = StyleSheet.create({
         right: 10,
     },
     noteDeleteText: {
-        color: "white",
+        color: "darkblue",
+        fontSize: 24,
+        borderRadius: 15,
     }
 });
