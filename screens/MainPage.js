@@ -31,34 +31,34 @@ const Tab = createBottomTabNavigator();
 
 export default function MainPage() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-       tabBarOptions={{
+
+    <Tab.Navigator
+      tabBarOptions={{
         activeTintColor: 'dodgerblue',
         style: {
           backgroundColor: 'white'
         }
       }}
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ color, size }) => {
-            let iconName;
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
 
-            if (route.name === 'Home') {
-              iconName = 'ios-home';
-            } else if (route.name === 'Profile') {
-              iconName = 'ios-person';
-            } else if (route.name === 'Time-table') {
-              iconName = 'ios-list-box';
-            }
+          if (route.name === 'Home') {
+            iconName = 'ios-home';
+          } else if (route.name === 'Profile') {
+            iconName = 'ios-person';
+          } else if (route.name === 'Time-table') {
+            iconName = 'ios-list-box';
+          }
 
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}>
-        <Tab.Screen name="Time-table" component={TimeTable}  />
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+          // You can return any component that you like here!
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+      })}>
+      <Tab.Screen name="Time-table" component={TimeTable} />
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+
   );
 }

@@ -16,17 +16,18 @@ const todoListScreen = () => {
 };
 const Drawer = createDrawerNavigator();
 
+
+
 export default function DrawerStack() {
   return (
     <NavigationContainer >
-      <Drawer.Navigator initialRouteName="Main Page>
-        <Drawer.Screen name="Main Page" component={MainPage} />
+      <Drawer.Navigator initialRouteName="MainPage">
+        <Drawer.Screen name="MainPage" component={MainPage} />
         <Drawer.Screen name="Welcome" component={RegisterStack} />
-        <Drawer.Screen name="Register" component={Register_page} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="Lost" component={Lost} />
       </Drawer.Navigator>
-    </NavigationContainer>
+    </NavigationContainer >
   );
 }
