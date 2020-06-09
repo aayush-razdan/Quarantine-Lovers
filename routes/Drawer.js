@@ -8,7 +8,8 @@ import AttendanceStack from "./AttendanceStack";
 import WelcomePage from "../screens/WelcomePage";
 import Register_page from "../screens/Register_page";
 import RegisterStack from "./RegisterStack";
-import Lost from "../screens/lost"
+import Lost from "../screens/lost";
+import MainPage from "../screens/MainPage";
 
 const todoListScreen = () => {
   return <TodoList />;
@@ -18,7 +19,8 @@ const Drawer = createDrawerNavigator();
 export default function DrawerStack() {
   return (
     <NavigationContainer >
-      <Drawer.Navigator initialRouteName="Welcome">
+      <Drawer.Navigator initialRouteName="Main Page>
+        <Drawer.Screen name="Main Page" component={MainPage} />
         <Drawer.Screen name="Welcome" component={RegisterStack} />
         <Drawer.Screen name="Register" component={Register_page} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
