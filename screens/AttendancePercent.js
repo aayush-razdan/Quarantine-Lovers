@@ -131,11 +131,11 @@ const styles = StyleSheet.create({
     marginBottom: screenHeight / 54
   },
   text: {
-    fontSize: screenHeight / 51,
+    fontSize: screenHeight / 44,
     marginBottom: screenHeight / 270,
     marginTop: screenHeight / 162
   },
   OutputContainer: {
-    marginTop: 16,
+    marginTop: screenHeight / 20,
   },
 });
