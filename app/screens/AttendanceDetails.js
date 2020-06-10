@@ -19,7 +19,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="PHYSICS"
       >
-        <Text>
+        <Text style={styles.text}>
           PHYSICS
         </Text>
       </TouchableOpacity>
@@ -27,7 +27,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="CHEMISTRY"
       >
-        <Text>
+        <Text style={styles.text}>
           CHEMISTRY
         </Text>
       </TouchableOpacity>
@@ -35,7 +35,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="MATHEMATICS"
       >
-        <Text>
+        <Text style={styles.text}>
           MATHEMATICS
         </Text>
       </TouchableOpacity>
@@ -43,7 +43,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="COMPUTERS"
       >
-        <Text>
+        <Text style={styles.text}>
           COMPUTERS
         </Text>
       </TouchableOpacity>
@@ -51,7 +51,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="B.E.E."
       >
-        <Text>
+        <Text style={styles.text}>
           B.E.E.
         </Text>
       </TouchableOpacity>
@@ -59,7 +59,7 @@ export default function AttendanceDetails({ navigation }) {
         onPress={() => navigation.navigate("AttendancePercent")}
         title="E.M.E."
       >
-        <Text>
+        <Text style={styles.text}>
           E.M.E.
         </Text>
       </TouchableOpacity>
@@ -138,5 +138,10 @@ const styles = StyleSheet.create({
     marginTop: screenHeight / 54,
     marginBottom: screenHeight / 32,
     alignItems: "center",
+  },
+  text: {
+    color: "rgba(255,255,255,0.7)",
+    fontSize: screenHeight / 51,
+    textAlign: "center",
   },
 });

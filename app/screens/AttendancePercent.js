@@ -6,6 +6,9 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
+import {
+  LineChart,
+} from "react-native-chart-kit";
 import { Button } from "react-native-elements";
 import { Icon } from "react-native-elements";
 
@@ -34,6 +37,50 @@ export default function AttendancePercent({ navigation }) {
   }
   return (
     <View style={styles.background}>
+      <View>
+        <Text style={{ paddingLeft: screenWidth / 5 }}>Analysis of your attended classes</Text>
+        <LineChart
+          data={{
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+            datasets: [
+              {
+                data: [
+                  0,
+                  25,
+                  50,
+                  75,
+                  100
+                ]
+              }
+            ]
+          }}
+          width={screenWidth - screenWidth / 10} // from react-native
+          height={220}
+          yAxisSuffix="%"
+          yAxisInterval={1} // optional, defaults to 1
+          chartConfig={{
+            backgroundColor: "dodgerblue",
+            backgroundGradientFrom: "#4169e1",
+            backgroundGradientTo: "#ffa726",
+            decimalPlaces: 2, // optional, defaults to 2dp
+            color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+            style: {
+              borderRadius: screenHeight / 51
+            },
+            propsForDots: {
+              r: "5",
+              strokeWidth: "2",
+              stroke: "dodgerblue"
+            }
+          }}
+          bezier
+          style={{
+            marginVertical: screenHeight / 81,
+            borderRadius: screenWidth / 51,
+          }}
+        />
+      </View>
       <Text style={styles.text}>Did you Have an extra class ?</Text>
       <TouchableOpacity style={styles.btnExtraClass}
         onPress={() => {
@@ -42,7 +89,7 @@ export default function AttendancePercent({ navigation }) {
         title="YES"
         icon={<Icon name="add" size={15} color="black" />}
       >
-        <Text>
+        <Text style={{ color: 'rgba(255,255,255,0.7)' }}>
           +YES
         </Text>
       </TouchableOpacity>
@@ -58,7 +105,7 @@ export default function AttendancePercent({ navigation }) {
         }}
         title="Yes"
       >
-        <Text>
+        <Text style={{ color: 'rgba(255,255,255,0.7)' }}>
           YES
         </Text>
       </TouchableOpacity>
@@ -70,7 +117,7 @@ export default function AttendancePercent({ navigation }) {
         }}
         title="No"
       >
-        <Text>
+        <Text style={{ color: 'rgba(255,255,255,0.7)' }}>
           NO
         </Text>
       </TouchableOpacity>
@@ -106,7 +153,7 @@ const styles = StyleSheet.create({
     backgroundColor: "dodgerblue",
     justifyContent: "center",
     marginTop: screenHeight / 54,
-    marginBottom: screenHeight / 16,
+    marginBottom: screenHeight / 40,
     alignItems: "center",
   },
   btnYes: {
@@ -116,7 +163,7 @@ const styles = StyleSheet.create({
     fontSize: screenHeight / 51,
     backgroundColor: "dodgerblue",
     justifyContent: "center",
-    marginTop: screenHeight / 54,
+    marginTop: screenHeight / 80,
     alignItems: "center",
   },
   btnNo: {
@@ -128,14 +175,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: screenHeight / 81,
     alignItems: "center",
-    marginBottom: screenHeight / 54
+    marginBottom: screenHeight / 400
   },
   text: {
-    fontSize: screenHeight / 51,
-    marginBottom: screenHeight / 270,
-    marginTop: screenHeight / 162
+    fontSize: screenHeight / 44,
+    marginBottom: screenHeight / 400,
+    marginTop: screenHeight / 600
   },
   OutputContainer: {
-    marginTop: 16,
+    marginTop: screenHeight / 20,
   },
 });

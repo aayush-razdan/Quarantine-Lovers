@@ -12,8 +12,9 @@ import {
 } from "react-native";
 
 import { TouchableOpacity, } from "react-native-gesture-handler";
-import { Icon } from "react-native-elements";
+//import { Icon } from "react-native-vector-icons/Ionicons";
 import { Button } from "react-native-elements";
+
 const { width: WIDTH } = Dimensions.get("window");
 
 export default function WelcomePage({ navigation }) {
@@ -21,11 +22,6 @@ export default function WelcomePage({ navigation }) {
     <View
       style={styles.background}
     >
-      <View style={styles.motto}>
-        <Text style={[styles.setColorAzure]}>
-          Manage everything with one app
-          </Text>
-      </View>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -81,16 +77,13 @@ const styles = StyleSheet.create({
   },
   inputIcon: {
     position: "absolute",
-    top: 10,
+    top: 8,
     left: 37,
   },
   inputContainer: {
     marginTop: 5,
     alignItems: "center",
     marginBottom: 10,
-  },
-  setColorAzure: {
-    color: "azure",
   },
   motto: {
     position: "absolute",
