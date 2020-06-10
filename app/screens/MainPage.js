@@ -50,7 +50,7 @@ const TimetableStackScreen=()=>(
 )
 export default function MainPage() {
   return (
-    <NavigationContainer>
+    
       <Tab.Navigator
        tabBarOptions={{
         activeTintColor: 'dodgerblue',
@@ -78,6 +78,6 @@ export default function MainPage() {
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Profile" component={ProfileStackScreen} />
       </Tab.Navigator>
-    </NavigationContainer>
+   
   );
 }
