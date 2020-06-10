@@ -45,14 +45,15 @@ export default function Authentication({ values }) {
     //batch 6
     { username: "crbtch61920", password: "vjtibtechb61920" },
   ];
-  const [modalOpen, setModalOpen] = useState(false);
+  //const [modalOpen, setModalOpen] = useState(false);
+  var modalOpen = false;
 
   for (var i = 0; i < 6; i++) {
     if (
       values.username == data[i].username &&
       values.password == data[i].password
     ) {
-      setModalOpen(true);
+      modalOpen = true;
       break;
     }
   }

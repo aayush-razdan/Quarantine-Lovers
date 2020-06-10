@@ -18,7 +18,7 @@ import Authentication from "../other/authentication";
 
 const { width: WIDTH } = Dimensions.get("window");
 
-export default function WelcomePage(props) {
+export default function WelcomePage({ navigation }) {
   return (
     <View style={styles.background}>
       <Formik
