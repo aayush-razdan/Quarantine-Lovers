@@ -21,7 +21,7 @@ export default function DrawerStack() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="MainPage">
         <Drawer.Screen name="MainPage" component={MainPage} />
-        <Drawer.Screen name="Welcome" component={AuthStack} />
+        <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="Lost" component={Lost} />

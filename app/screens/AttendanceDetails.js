@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnChemistry: {
+    elevation: screenHeight / 90,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,
@@ -85,6 +86,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnPhysics: {
+    elevation: screenHeight / 90,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,
@@ -96,6 +98,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnMaths: {
+    elevation: screenHeight / 80,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,
@@ -107,6 +110,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnComputers: {
+    elevation: screenHeight / 80,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,
@@ -118,6 +122,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnBEE: {
+    elevation: screenHeight / 80,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,
@@ -129,6 +134,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnEME: {
+    elevation: screenHeight / 90,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
     borderRadius: screenHeight / 32,

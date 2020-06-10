@@ -24,7 +24,8 @@ export default function WelcomePage({ navigation }) {
       <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={(values) => {
-          Authentication(values);
+          console.log(values);
+          //Authentication(values);
         }}
       >
         {(props) => (
