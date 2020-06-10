@@ -9,10 +9,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import Note from "../Note";
+import Note from "../other/Note";
 
-const screenHeight = Math.round(Dimensions.get('window').height);
-const screenWidth = Math.round(Dimensions.get('window').width);
+const screenHeight = Math.round(Dimensions.get("window").height);
+const screenWidth = Math.round(Dimensions.get("window").width);
 
 export default class TodoList extends React.Component {
   constructor(props) {
