@@ -10,49 +10,65 @@ import {
   Dimensions,
   AppRegistry,
 } from "react-native";
-
-import { TouchableOpacity, } from "react-native-gesture-handler";
+import { Formik } from "formik";
+import { TouchableOpacity } from "react-native-gesture-handler";
 //import { Icon } from "react-native-vector-icons/Ionicons";
 import { Button } from "react-native-elements";
+import Authentication from "../other/authentication";
 
 const { width: WIDTH } = Dimensions.get("window");
 
-export default function WelcomePage({ navigation }) {
+export default function WelcomePage(props) {
   return (
-    <View
-      style={styles.background}
-    >
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder={"Username"}
-          placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-          underlineColorAndroid="transparent"
-        />
-      </View>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder={"Password"}
-          secureTextEntry={true}
-          placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-          underlineColorAndroid="transparent"
-        />
-        <TouchableOpacity style={styles.btnEye}>
-          <Text style={{ color: "rgba(0,0,0,0.35)" }}>^</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btnLogin}>
-          <Text style={styles.text}>Login</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.btnRegister}
-          onPress={() => navigation.navigate("Register_page")}
-          title="Register">
-          <Text style={styles.text}>
-            Register
-          </Text>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.background}>
+      <Formik
+        initialValues={{ username: "", password: "" }}
+        onSubmit={(values) => {
+          Authentication(values);
+        }}
+      >
+        {(props) => (
+          <View>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder={"Username"}
+                onChangeText={props.handleChange("username")}
+                value={props.values.title}
+                placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
+                underlineColorAndroid="transparent"
+              />
+            </View>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder={"Password"}
+                secureTextEntry={true}
+                onChangeText={props.handleChange("password")}
+                value={props.values.password}
+                placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
+                underlineColorAndroid="transparent"
+              />
+              {/* <TouchableOpacity style={styles.btnEye}>
+                <Text style={{ color: "rgba(0,0,0,0.35)" }}>^</Text>
+              </TouchableOpacity> */}
+              <TouchableOpacity
+                style={styles.btnLogin}
+                onPress={props.handleSubmit}
+              >
+                <Text style={styles.text}>Login</Text>
+              </TouchableOpacity>
+              {/* <TouchableOpacity
+                style={styles.btnRegister}
+                onPress={() => props.navigation.navigate("Register")}
+                title="Register"
+              >
+                <Text style={styles.text}>Register</Text>
+              </TouchableOpacity> */}
+            </View>
+          </View>
+        )}
+      </Formik>
     </View>
   );
 }
@@ -62,7 +78,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
     width: 250,
