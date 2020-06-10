@@ -14,7 +14,6 @@
     "@react-navigation/native": "^5.5.0",
     "@react-navigation/stack": "^5.4.1",
     "expo": "^37.0.12",
-    "formik": "^2.1.4",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
@@ -27,14 +26,9 @@
     "react-native-reanimated": "~1.7.0",
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
-<<<<<<< HEAD
-    "react-native-web": "~0.11.7",
-    "yup": "^0.29.1"
-=======
     "react-native-svg": "11.0.1",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7"
->>>>>>> 847792b88dd89d24c6caa40fed07353ac367d777
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
