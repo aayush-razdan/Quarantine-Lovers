@@ -4,29 +4,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import HomeScreen from "./HomeScreen";
+import TimeTable from "./Timetable";
+import ProfileScreen from "./Profile";
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen under Construction</Text>
-    </View>
-  );
-}
-function TimeTable() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Under Construction</Text>
-    </View>
-  );
-}
 
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>profile under construction</Text>
-    </View>
-  );
-}
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
