@@ -1,21 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   Dimensions,
+  Modal,
+  FlatList,
+  TouchableOpacity,
 } from "react-native";
 import { Button } from "react-native-elements";
-import { TouchableOpacity } from "react-native-gesture-handler";
+//import { TouchableOpacity } from "react-native-gesture-handler";
+//import Subjects from "../other/subjects";
 
-const screenHeight = Math.round(Dimensions.get('window').height);
-const screenWidth = Math.round(Dimensions.get('window').width);
+const screenHeight = Math.round(Dimensions.get("window").height);
+const screenWidth = Math.round(Dimensions.get("window").width);
+
+const data = [
+  {
+    id: "1",
+    title: "First Year",
+  },
+  {
+    id: "2",
+    title: "Second Year",
+  },
+  {
+    id: "3",
+    title: "Third Year",
+  },
+  {
+    id: "4",
+    title: "Final Year",
+  },
+];
 
 export default function AttendanceDetails({ navigation }) {
-
+  //const [yearModalOpen, setYearModalOpen] = useState(true);
+  //const [branchModalOpen, setBranchModalOpen] = useState(false);
   return (
     <View style={styles.background}>
-      <TouchableOpacity style={styles.btnPhysics}
+      <FlatList
+        data={data}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => {
+              navigation.navigate("Semester", item);
+              //setYearModalOpen(false);
+            }}
+          >
+            <Text style={styles.text}>{item.title}</Text>
+          </TouchableOpacity>
+        )}
+        keyExtractor={(item) => item.id}
+      />
+
+      {/* <TouchableOpacity style={styles.btnPhysics}
         onPress={() => navigation.navigate("AttendancePercent")}
         title="PHYSICS"
       >
@@ -62,7 +102,7 @@ export default function AttendanceDetails({ navigation }) {
         <Text style={styles.text}>
           E.M.E.
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }
@@ -85,7 +125,7 @@ const styles = StyleSheet.create({
     marginBottom: screenHeight / 32,
     alignItems: "center",
   },
-  btnPhysics: {
+  btn: {
     elevation: screenHeight / 90,
     width: screenHeight / 4.63,
     height: screenHeight / 18,
