@@ -15,7 +15,7 @@ function AttendanceStack() {
       <Stack.Screen name="AttendanceDetails" component={AttendanceDetails} />
       <Stack.Screen name="Semester" component={Semesters} />
       <Stack.Screen name="Branches" component={Branches} />
-      {/* <Stack.Screen name="Branches" component={Subjects} /> */}
+      <Stack.Screen name="Subjects" component={Subjects} />
       <Stack.Screen name="AttendancePercent" component={AttendancePercent} />
     </Stack.Navigator>
   );
