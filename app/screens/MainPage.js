@@ -15,19 +15,46 @@ const HomeStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const TimetableStack = createStackNavigator();
 
-const HomeStackScreen = () => (
+const HomeStackScreen = ({navigation}) => (
   <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={HomeScreen} />
+    <HomeStack.Screen name="Home" component={HomeScreen} options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            size={28}
+            color="dodgerblue"
+            onPress={() => navigation.openDrawer()}
+          />
+        )
+      }} />
   </HomeStack.Navigator>
 )
-const ProfileStackScreen = () => (
+const ProfileStackScreen = ({navigation}) => (
   <ProfileStack.Navigator>
-    <ProfileStack.Screen name="Profile" component={ProfileScreen} />
+    <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            size={28}
+            color="dodgerblue"
+            onPress={() => navigation.openDrawer()}
+          />
+        )
+      }}/>
   </ProfileStack.Navigator>
 )
-const TimetableStackScreen = () => (
+const TimetableStackScreen = ({navigation}) => (
   <TimetableStack.Navigator>
-    <TimetableStack.Screen name="Time-Table" component={TimeTable} />
+    <TimetableStack.Screen name="Time-Table" component={TimeTable} options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            size={28}
+            color="dodgerblue"
+            onPress={() => navigation.openDrawer()}
+          />
+        )
+      }} />
   </TimetableStack.Navigator>
 )
 export default function MainPage() {
