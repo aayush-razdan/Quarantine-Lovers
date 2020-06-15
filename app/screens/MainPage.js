@@ -60,7 +60,7 @@ const TimetableStackScreen = ({navigation}) => (
 export default function MainPage() {
   return (
 
-    <Tab.Navigator
+    <Tab.Navigator initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: 'dodgerblue',
         style: {
