@@ -206,8 +206,8 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: "#181E28",
-    borderRadius: 20,
-    width: "99%",
+    borderRadius: 0,
+    width: "100%",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
