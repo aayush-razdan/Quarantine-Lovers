@@ -21,7 +21,7 @@ const HomeStackScreen = ({navigation}) => (
         headerLeft: () => (
           <Ionicons
             name="ios-menu"
-            size={28}
+            size={34}
             color="dodgerblue"
             onPress={() => navigation.openDrawer()}
           />
@@ -35,7 +35,7 @@ const ProfileStackScreen = ({navigation}) => (
         headerLeft: () => (
           <Ionicons
             name="ios-menu"
-            size={28}
+            size={34}
             color="dodgerblue"
             onPress={() => navigation.openDrawer()}
           />
@@ -49,7 +49,7 @@ const TimetableStackScreen = ({navigation}) => (
         headerLeft: () => (
           <Ionicons
             name="ios-menu"
-            size={28}
+            size={34}
             color="dodgerblue"
             onPress={() => navigation.openDrawer()}
           />
