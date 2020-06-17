@@ -13,31 +13,40 @@ import {
   Switch,
 } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { color } from "react-native-reanimated";
 
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
       <DrawerContentScrollView {...props}>
         <View style={styles.drawerContent}>
+        <View style={{alignSelf:"center",marginTop: 15}}>
+                            <Avatar.Image 
+                                source={{
+                                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbhEQbhS6T_6jCg4524GJ8Bf0nSA2ejNbGKOUtx_lwZgvmTuJ&usqp=CAU'
+                                }}
+                                size={120}
+                            />
+          </View>
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icon name="home-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Home"
-              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
+              labelStyle={{color:"white"}}
+              color={color}
               onPress={() => {
                 props.navigation.navigate("MainPage");
               }}
             >
-              <Text style={robotoWeights.medium} >Home</Text>
             </DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Login"
-              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
+              labelStyle={{color:"white"}}
               onPress={() => {
                 props.navigation.navigate("Login");
               }}
@@ -47,7 +56,7 @@ export default function DrawerContent(props) {
                 <Icon name="clipboard" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Todo"
-              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
+              labelStyle={{color:"white"}}
               onPress={() => {
                 props.navigation.navigate("Todo List");
               }}
@@ -57,7 +66,7 @@ export default function DrawerContent(props) {
                 <Icon name="google-classroom" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Attendance"
-              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
+              labelStyle={{color:"white"}}
               onPress={() => {
                 props.navigation.navigate("Attendance");
               }}
@@ -67,7 +76,7 @@ export default function DrawerContent(props) {
                 <Icon name="paw" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Lost"
-              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
+              labelStyle={{color:"white"}}
               onPress={() => {
                 props.navigation.navigate("Lost");
               }}
@@ -133,3 +142,4 @@ const styles = StyleSheet.create({
     bottom: 50,
   }
 });
+
