@@ -59,7 +59,7 @@ export default ProfileScreen;
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#1D2430",
+    backgroundColor: "#181E28",
     height: height / 4
   },
   avatar: {
@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
   text: {
     ...robotoWeights.medium,
     color: "white",
-    fontSize: height / 33
+    fontSize: height / 31
   },
 })
