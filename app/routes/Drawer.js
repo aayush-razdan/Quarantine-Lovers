@@ -11,6 +11,7 @@ import RegisterStack from "./RegisterStack";
 import Lost from "../screens/lost";
 import MainPage from "../screens/MainPage";
 import DrawerContent from './DrawerContent';
+import { robotoWeights, material } from 'react-native-typography';
 const todoListScreen = () => {
   return <TodoList />;
 };
@@ -19,7 +20,7 @@ const Drawer = createDrawerNavigator();
 export default function DrawerStack() {
   return (
     <NavigationContainer>
-       <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
+      <Drawer.Navigator drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" }} drawerContent={(props) => <DrawerContent {...props} />}>
         <Drawer.Screen name="MainPage" component={MainPage} />
         <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />

@@ -15,46 +15,49 @@ const HomeStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const TimetableStack = createStackNavigator();
 
-const HomeStackScreen = ({navigation}) => (
+const HomeStackScreen = ({ navigation }) => (
   <HomeStack.Navigator>
     <HomeStack.Screen name="Home" component={HomeScreen} options={{
-        headerLeft: () => (
-          <Ionicons
-            name="ios-menu"
-            size={34}
-            color="dodgerblue"
-            onPress={() => navigation.openDrawer()}
-          />
-        )
-      }} />
+      headerLeft: () => (
+        <Ionicons
+          name="ios-menu"
+          size={30}
+          style={{ paddingLeft: 10 }}
+          color="#1D2430"
+          onPress={() => navigation.openDrawer()}
+        />
+      )
+    }} />
   </HomeStack.Navigator>
 )
-const ProfileStackScreen = ({navigation}) => (
+const ProfileStackScreen = ({ navigation }) => (
   <ProfileStack.Navigator>
     <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
-        headerLeft: () => (
-          <Ionicons
-            name="ios-menu"
-            size={34}
-            color="dodgerblue"
-            onPress={() => navigation.openDrawer()}
-          />
-        )
-      }}/>
+      headerLeft: () => (
+        <Ionicons
+          name="ios-menu"
+          size={30}
+          style={{ paddingLeft: 10 }}
+          color="#1D2430"
+          onPress={() => navigation.openDrawer()}
+        />
+      )
+    }} />
   </ProfileStack.Navigator>
 )
-const TimetableStackScreen = ({navigation}) => (
+const TimetableStackScreen = ({ navigation }) => (
   <TimetableStack.Navigator>
     <TimetableStack.Screen name="Time-Table" component={TimeTable} options={{
-        headerLeft: () => (
-          <Ionicons
-            name="ios-menu"
-            size={34}
-            color="dodgerblue"
-            onPress={() => navigation.openDrawer()}
-          />
-        )
-      }} />
+      headerLeft: () => (
+        <Ionicons
+          name="ios-menu"
+          size={30}
+          style={{ paddingLeft: 10 }}
+          color="#1D2430"
+          onPress={() => navigation.openDrawer()}
+        />
+      )
+    }} />
   </TimetableStack.Navigator>
 )
 export default function MainPage() {
@@ -62,9 +65,9 @@ export default function MainPage() {
 
     <Tab.Navigator initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: 'dodgerblue',
+        activeTintColor: 'white',
         style: {
-          backgroundColor: 'white'
+          backgroundColor: '#1D2430'
         }
       }}
       screenOptions={({ route }) => ({

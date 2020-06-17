@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
+import { robotoWeights, material } from 'react-native-typography'
 import {
   Avatar,
   Title,
@@ -21,45 +22,52 @@ export default function DrawerContent(props) {
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="home-outline" color={color} size={size} />
+                <Icon name="home-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Home"
+              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
               onPress={() => {
                 props.navigation.navigate("MainPage");
               }}
-            />
+            >
+              <Text style={robotoWeights.medium} >Home</Text>
+            </DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="account-outline" color={color} size={size} />
+                <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Login"
+              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
               onPress={() => {
                 props.navigation.navigate("Login");
               }}
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="clipboard" color={color} size={size} />
+                <Icon name="clipboard" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Todo"
+              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
               onPress={() => {
                 props.navigation.navigate("Todo List");
               }}
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="google-classroom" color={color} size={size} />
+                <Icon name="google-classroom" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Attendance"
+              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
               onPress={() => {
                 props.navigation.navigate("Attendance");
               }}
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="paw" color={color} size={size} />
+                <Icon name="paw" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Lost"
+              style={{ borderRadius: 20, backgroundColor: "rgba(255,255,255,0.7)" }}
               onPress={() => {
                 props.navigation.navigate("Lost");
               }}
@@ -67,6 +75,9 @@ export default function DrawerContent(props) {
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
+      <Text style={styles.creaters}>
+        {"                            "}Made by {"\n"} {"                  "}Quarantine Lovers
+        </Text>
     </View>
   );
 }
@@ -115,4 +126,10 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
   },
+  creaters: {
+    ...robotoWeights.medium,
+    position: "absolute",
+    color: "rgba(255,255,255,0.7)",
+    bottom: 50,
+  }
 });

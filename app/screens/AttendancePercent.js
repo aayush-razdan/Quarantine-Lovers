@@ -34,8 +34,12 @@ export default function AttendancePercent({ navigation }) {
     perToAttend = 0;
   } else if ((totClass * 0.75 - attClass) / (totClass - uptoClass) > 1) {
     perToAttend = 1;
-  } else {
+  }
+  else {
     perToAttend = (totClass * 0.75 - attClass) / (totClass - uptoClass);
+  }
+  if (perToAttend > 1) {
+    perToAttend = 1;
   }
   var per;
   if (uptoClass === 0) {
@@ -51,93 +55,92 @@ export default function AttendancePercent({ navigation }) {
 
   return (
     <View style={styles.background}>
-      <View style={styles.container}>
-        <View>
-          <Text style={{ paddingLeft: screenWidth / 5, color: "#A4A6A6" }}>
-            Analysis of your attended classes
+
+      <View>
+        <Text style={{ paddingLeft: screenWidth / 5, color: "#A4A6A6" }}>
+          Analysis of your attended classes
           </Text>
-          <ProgressChart
-            data={data}
-            width={screenWidth - screenWidth / 20}
-            height={220}
-            strokeWidth={16}
-            radius={32}
-            chartConfig={{
-              backgroundColor: "white",
-              backgroundGradientFrom: "#1D2430",
-              backgroundGradientTo: "#1D2430",
-              decimalPlaces: 2,
-              color: (opacity = 1) => `rgba(105, 242, 224 , ${opacity})`,
-              labelColor: (opacity = 1) => `rgba(227, 240, 238 , ${opacity})`,
-              style: {
-                borderRadius: screenHeight / 51,
-              },
-            }}
-            style={{
-              marginVertical: screenHeight / 81,
-              borderRadius: screenWidth / 16,
-            }}
-            hideLegend={false}
-          />
-        </View>
-        <Text style={styles.text}>Did you Have an extra class ?</Text>
+        <ProgressChart
+          data={data}
+          width={screenWidth - screenWidth / 20}
+          height={220}
+          strokeWidth={16}
+          radius={32}
+          chartConfig={{
+            backgroundColor: "white",
+            backgroundGradientFrom: "#1D2430",
+            backgroundGradientTo: "#1D2430",
+            decimalPlaces: 2,
+            color: (opacity = 1) => `rgba(105, 242, 224 , ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(227, 240, 238 , ${opacity})`,
+            style: {
+              borderRadius: screenHeight / 51,
+            },
+          }}
+          style={{
+            marginVertical: screenHeight / 81,
+            borderRadius: screenWidth / 16,
+          }}
+          hideLegend={false}
+        />
+      </View>
+      <Text style={styles.text}>Did you Have an extra class ?</Text>
+      <TouchableOpacity
+        style={styles.btnExtraClass}
+        onPress={() => {
+          setTotClass(totClass + 1);
+        }}
+      >
+        <Text style={{ color: "#D0E1DE", fontWeight: "bold" }}>YES</Text>
+      </TouchableOpacity>
+      <Text style={styles.text}>Did you attend Class today?</Text>
+      <View style={{ flexDirection: "row" }}>
         <TouchableOpacity
-          style={styles.btnExtraClass}
+          style={styles.btnYes}
           onPress={() => {
-            setTotClass(totClass + 1);
+            if (uptoClass < totClass) {
+              setUptoClass(uptoClass + 1);
+              setAttClass(attClass + 1);
+            }
           }}
         >
-          <Text style={{ color: "#D0E1DE", fontWeight: "bold" }}>YES</Text>
+          <Text
+            style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
+          >
+            YES
+            </Text>
+          <Icons name="done" size={20} />
         </TouchableOpacity>
-        <Text style={styles.text}>Did you attend Class today?</Text>
-        <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity
-            style={styles.btnYes}
-            onPress={() => {
-              if (uptoClass < totClass) {
-                setUptoClass(uptoClass + 1);
-                setAttClass(attClass + 1);
-              }
-            }}
+        <TouchableOpacity
+          style={styles.btnNo}
+          onPress={() => {
+            if (uptoClass < totClass) {
+              setUptoClass(uptoClass + 1);
+            }
+          }}
+        >
+          <Text
+            style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
           >
-            <Text
-              style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
-            >
-              YES
+            NO
             </Text>
-            <Icons name="done" size={20} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.btnNo}
-            onPress={() => {
-              if (uptoClass < totClass) {
-                setUptoClass(uptoClass + 1);
-              }
-            }}
-          >
-            <Text
-              style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
-            >
-              NO
-            </Text>
-            <Icon name="cross" size={19} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.OutputContainer}>
-          <Text style={styles.text}>
-            {"\n"}
-            {"   "}Attended classes: {attClass}
+          <Icon name="cross" size={19} />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.OutputContainer}>
+        <Text style={styles.text}>
+          {"\n"}
+          {"   "}Attended classes: {attClass}
+        </Text>
+        <Text style={styles.text}>
+          {"  "} Total classes: {uptoClass}
+        </Text>
+        <Text style={styles.text}>
+          {"  "} Attendance is {per.toFixed(2)}%
           </Text>
-          <Text style={styles.text}>
-            {"  "} Total classes: {uptoClass}
-          </Text>
-          <Text style={styles.text}>
-            {"  "} Attendance is {per.toFixed(2)}%
-          </Text>
-          <Text style={styles.text}>
-            {"  "} Number of classes you need to attend: {toAttend} {"\n"}
-          </Text>
-        </View>
+        <Text style={styles.text}>
+          {"  "} Total classes you need to attend: {toAttend} {"\n"}
+        </Text>
       </View>
     </View>
   );
@@ -146,7 +149,8 @@ export default function AttendancePercent({ navigation }) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#181E28",
+    //backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
   },
