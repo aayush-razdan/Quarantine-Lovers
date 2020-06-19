@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
 import { robotoWeights, material } from 'react-native-typography'
+import ProfileScreen from "../screens/Profile";
 import {
   Avatar,
   Title,
@@ -20,13 +21,13 @@ export default function DrawerContent(props) {
     <View style={{ flex: 1 }}>
       <DrawerContentScrollView {...props}>
         <View style={styles.drawerContent}>
-        <View style={{alignSelf:"center",marginTop: 15}}>
-                            <Avatar.Image 
-                                source={{
-                                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbhEQbhS6T_6jCg4524GJ8Bf0nSA2ejNbGKOUtx_lwZgvmTuJ&usqp=CAU'
-                                }}
-                                size={120}
-                            />
+          <View style={{ alignSelf: "center", marginTop: 15 }}>
+            <Avatar.Image
+              source={{
+                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbhEQbhS6T_6jCg4524GJ8Bf0nSA2ejNbGKOUtx_lwZgvmTuJ&usqp=CAU'
+              }}
+              size={120}
+            />
           </View>
           <Drawer.Section style={styles.drawerSection}>
             <DrawerItem
@@ -34,7 +35,7 @@ export default function DrawerContent(props) {
                 <Icon name="home-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Home"
-              labelStyle={{color:"white"}}
+              labelStyle={{ color: "white" }}
               color={color}
               onPress={() => {
                 props.navigation.navigate("MainPage");
@@ -46,7 +47,7 @@ export default function DrawerContent(props) {
                 <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Login"
-              labelStyle={{color:"white"}}
+              labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Login");
               }}
@@ -56,7 +57,7 @@ export default function DrawerContent(props) {
                 <Icon name="clipboard" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Todo"
-              labelStyle={{color:"white"}}
+              labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Todo List");
               }}
@@ -66,7 +67,7 @@ export default function DrawerContent(props) {
                 <Icon name="google-classroom" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Attendance"
-              labelStyle={{color:"white"}}
+              labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Attendance");
               }}
@@ -76,16 +77,26 @@ export default function DrawerContent(props) {
                 <Icon name="paw" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Lost"
-              labelStyle={{color:"white"}}
+              labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Lost");
+              }}
+            />
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
+              )}
+              label="Gpa Calculator"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("GpaCalculator");
               }}
             />
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
       <Text style={styles.creaters}>
-        {"                            "}Made by {"\n"} {"                  "}Quarantine Lovers
+        {"                       "}Developed by {"\n"} {"                  "}Quarantine Lovers
         </Text>
     </View>
   );

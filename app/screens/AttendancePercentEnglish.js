@@ -15,7 +15,7 @@ import { abs } from "react-native-reanimated";
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
 
-export default function AttendancePercent({ navigation }) {
+export default function AttendancePercentEnglish({ navigation }) {
     const [totClass, setTotClass] = useState(40);
     const [uptoClass, setUptoClass] = useState(0);
     const [attClass, setAttClass] = useState(0);

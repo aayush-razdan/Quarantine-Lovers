@@ -16,59 +16,59 @@ const screenWidth = Math.round(Dimensions.get("window").width);
 const data = [
   {
     id: "1",
-    branch: "Computer",
+    branch: "Batch 1",
     year: "",
     sem: "",
   },
   {
     id: "2",
-    branch: "IT",
-    year: "",
+    branch: "Batch 2",
+    // year: "",
     sem: "",
   },
   {
     id: "3",
-    branch: "EXTC",
-    year: "",
+    branch: "Batch 3",
+    // year: "",
     sem: "",
   },
   {
     id: "4",
-    branch: "Electronics",
-    year: "",
+    branch: "Batch 4",
+    // year: "",
     sem: "",
   },
 
   {
     id: "5",
-    branch: "Electrical",
-    year: "",
+    branch: "Batch 5",
+    // year: "",
     sem: "",
   },
   {
     id: "6",
-    branch: "Mechanical",
-    year: "",
+    branch: "Batch 6",
+    // year: "",
     sem: "",
   },
-  {
-    id: "7",
-    branch: "Civil",
-    year: "",
-    sem: "",
-  },
-  {
-    id: "8",
-    branch: "Production",
-    year: "",
-    sem: "",
-  },
-  {
-    id: "9",
-    branch: "Textile",
-    year: "",
-    sem: "",
-  },
+  // {
+  //   id: "7",
+  //   branch: "Civil",
+  //   year: "",
+  //   sem: "",
+  // },
+  // {
+  //   id: "8",
+  //   branch: "Production",
+  //   year: "",
+  //   sem: "",
+  // },
+  // {
+  //   id: "9",
+  //   branch: "Textile",
+  //   year: "",
+  //   sem: "",
+  // },
 ];
 
 export default function Branches({ route, navigation }) {

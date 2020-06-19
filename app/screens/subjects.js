@@ -22,7 +22,7 @@ const data = [
         num: 1,
         bas: [
           {
-            branch: "computer",
+            branch: "Batch 1",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -33,7 +33,7 @@ const data = [
             ],
           },
           {
-            branch: "IT",
+            branch: "Batch 2",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -44,7 +44,7 @@ const data = [
             ],
           },
           {
-            branch: "EXTC",
+            branch: "Batch 3",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -60,7 +60,7 @@ const data = [
         num: 2,
         bas: [
           {
-            branch: "computer",
+            branch: "Batch 4",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -71,7 +71,7 @@ const data = [
             ],
           },
           {
-            branch: "IT",
+            branch: "Batch 5",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -82,7 +82,7 @@ const data = [
             ],
           },
           {
-            branch: "EXTC",
+            branch: "Batch 6",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -96,88 +96,88 @@ const data = [
       },
     ],
   },
-  {
-    year: "2",
-    sem: [
-      {
-        num: 1,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
+  // {
+  //   year: "2",
+  //   sem: [
+  //     {
+  //       num: 1,
+  //       bas: [
+  //         {
+  //           branch: "computer",
+  //           subjects: [
+  //             { name: "Mathematics", id: "1" },
+  //             { name: "Physics", id: "2" },
+  //             { name: "Chemistry", id: "3" },
+  //             { name: "Mechanics", id: "4" },
+  //             { name: "Drawing", id: "5" },
+  //             //{ name: "f" },
+  //           ],
+  //         },
 
-          {
-            branch: "IT",
-            subjects: [
-              { name: "3", id: "1" },
-              { name: "3", id: "2" },
-              { name: "4", id: "3" },
-              { name: "4", id: "4" },
-              { name: "4", id: "1" },
-              { name: "5", id: "5" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "3", id: "1" },
-              { name: "3", id: "2" },
-              { name: "4", id: "3" },
-              { name: "4", id: "4" },
-              { name: "4", id: "5" },
-              { name: "5", id: "6" },
-            ],
-          },
-        ],
-      },
-      {
-        num: 2,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "IT",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  //         {
+  //           branch: "IT",
+  //           subjects: [
+  //             { name: "3", id: "1" },
+  //             { name: "3", id: "2" },
+  //             { name: "4", id: "3" },
+  //             { name: "4", id: "4" },
+  //             { name: "4", id: "1" },
+  //             { name: "5", id: "5" },
+  //           ],
+  //         },
+  //         {
+  //           branch: "EXTC",
+  //           subjects: [
+  //             { name: "3", id: "1" },
+  //             { name: "3", id: "2" },
+  //             { name: "4", id: "3" },
+  //             { name: "4", id: "4" },
+  //             { name: "4", id: "5" },
+  //             { name: "5", id: "6" },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       num: 2,
+  //       bas: [
+  //         {
+  //           branch: "computer",
+  //           subjects: [
+  //             { name: "Mathematics", id: "1" },
+  //             { name: "Physics", id: "2" },
+  //             { name: "Chemistry", id: "3" },
+  //             { name: "Mechanics", id: "4" },
+  //             { name: "Drawing", id: "5" },
+  //             //{ name: "f" },
+  //           ],
+  //         },
+  //         {
+  //           branch: "IT",
+  //           subjects: [
+  //             { name: "Mathematics", id: "1" },
+  //             { name: "Physics", id: "2" },
+  //             { name: "Chemistry", id: "3" },
+  //             { name: "Mechanics", id: "4" },
+  //             { name: "Drawing", id: "5" },
+  //             //{ name: "f" },
+  //           ],
+  //         },
+  //         {
+  //           branch: "EXTC",
+  //           subjects: [
+  //             { name: "Mathematics", id: "1" },
+  //             { name: "Physics", id: "2" },
+  //             { name: "Chemistry", id: "3" },
+  //             { name: "Mechanics", id: "4" },
+  //             { name: "Drawing", id: "5" },
+  //             //{ name: "f" },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 export default function Subjects({ route, navigation }) {
