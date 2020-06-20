@@ -84,7 +84,7 @@ export default function DrawerContent(props) {
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
+                <Icon name="chart-line" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Gpa Calculator"
               labelStyle={{ color: "white" }}
