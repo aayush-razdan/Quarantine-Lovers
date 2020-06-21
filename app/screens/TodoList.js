@@ -1,139 +1,251 @@
-import React, { Component } from "react";
+
+import React, { useState } from 'react';
 import {
-  StyleSheet,
   Text,
   View,
-  ScrollView,
+  StyleSheet,
   TextInput,
-  Dimensions,
+ 
+  FlatList,
+  Image,
   TouchableOpacity,
-} from "react-native";
+  Dimensions,
+  Modal,
+} from 'react-native';
+import DatePicker from 'react-native-datepicker';
 
-import Note from "../other/Note";
+import { createStackNavigator } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const screenHeight = Math.round(Dimensions.get("window").height);
-const screenWidth = Math.round(Dimensions.get("window").width);
 
-export default class TodoList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      noteArray: [],
-      noteText: "",
-    };
+var deviceWidth = Dimensions.get('window').width;
+var deviceHeight = Dimensions.get('window').height;
+var d = new Date();
+var randomColor=require('randomcolor');
+var color=randomColor();
+
+const GoalItem = (props) => (
+  <View style={styles.listItem}>
+    <Text style={{fontWeight:'bold', marginTop:deviceHeight/95,fontSize:deviceHeight/35, marginLeft:"2%"}}>{props.title}</Text>
+   <View style={{flexDirection:"row",position:"absolute",alignSelf:"flex-end"}}>
+     <Icon name="circle" color="#203557"/>
+     <Text>{props.category}</Text>
+   </View>
+    <Text style={{marginLeft:"3%",marginTop:"1%"}}>{props.details}</Text>
+
+   </View>
+);
+
+ function Todo() {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [enteredText, setEnteredText] = useState('');
+  const [enteredDetails, setEnteredDetails] = useState('');
+  const [date, setDate] = useState(d);
+  const[category, setCategory]=useState('')
+
+  const [courseGoals, changeCourseGoals] = useState([]);
+  const addText = (text) => {
+    setEnteredText(text);
+  };
+  
+  const addDetails = (text) => {
+    setEnteredDetails(text);
+  };
+  const addCategory=(text)=>{
+    setCategory(text);
   }
+  const addGoal = () => {
+    changeCourseGoals((currentGoals) => [
+      ...courseGoals,
+      {
+        id: Math.random().toString(),
+        title: enteredText,
+        details: enteredDetails,
+        date: date,
+        category: category
+      },
+    ]);
+  };
 
-  render() {
-    let notes = this.state.noteArray.map((val, key) => {
-      return (
-        <Note
-          key={key}
-          keyval={key}
-          val={val}
-          deleteMethod={() => this.deleteNote(key)}
-        />
-      );
-    });
+  return (
+    <View style={{ backgroundColor: '#fff', height: deviceHeight }}>
+      <Image source={{uri: 'https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-office-worker-cartoon-work-minimalist-background-image_239069.jpg'}} style={styles.header}/>
+      <Modal  animationType="slide" visible={modalVisible}>
+        
+          <View style={styles.view}>
+            <TextInput
+              style={styles.textInput}
+              placeholder={'Title'}
+              onChangeText={addText}
+              value={enteredText}
+            />
+            <Text style={{ fontSize: 20, marginTop: 20 }}>
+              Schedule related
+            </Text>
+            <View style={{ flexDirection: 'row' }}>
+            <Icon name="note-text" size={30} color="#EE481B"/>
+              <TextInput
+                style={{ marginLeft: 14, fontSize: 16 }}
+                placeholder={'Details'}
+                onChangeText={addDetails}
+                value={enteredDetails}
+              />
+            </View>
+            <DatePicker
+              style={{ width: '90%' }}
+              date={date}
+              mode="date"
+              placeholder="select date"
+              format="YYYY-MM-DD"
+              confirmBtnText="Confirm"
+              cancelBtnText="Cancel"
+              customStyles={{
+                dateIcon: {
+                  position: 'absolute',
+                  left: 0,
+                  top: 4,
+                  marginLeft: 0,
+                },
+                dateInput: {
+                  marginLeft: 36,
+                },
+                // ... You can check the source to find the other keys.
+              }}
+              onDateChange={(date) => setDate(date)}
+            />
 
-    return (
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}></Text>
-        </View>
-        <ScrollView style={styles.scrollContainer}>{notes}</ScrollView>
-        <View style={styles.footer}>
-          <TextInput
-            style={styles.textInput}
-            onChangeText={(noteText) => this.setState({ noteText })}
-            value={this.state.noteText}
-            placeholder="Todo"
-            placeholderTextColor="rgba(0,0,0,0.35)"
-            placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
-          ></TextInput>
-        </View>
+            <Text style={{ fontSize: 20, marginTop: 20 }}>Category</Text>
+            <TextInput
+              style={{ marginTop: 8, fontSize: 16 }}
+              placeholder={'type here'}
+              onChangeText={addCategory}
+              value={category}
+            />
+            <TouchableOpacity
+              style={styles.button1}
+              onPress={() => {
+                addGoal();
+                setModalVisible(!modalVisible);
+        
+                }}>
+              <View style={styles.addPosition}>
+                <Text style={styles.add}>ADD</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+   
+      </Modal>
+     <View>
+      <FlatList
+      inverted
+        keyExtractor={(item, index) => item.id}
+        data={courseGoals}
+        renderItem={(itemData) => (
+          <GoalItem
+            title={itemData.item.title}
+            details={itemData.item.details}
+            
+            category={itemData.item.category}
+          />
+        )} />
+    
+</View>
+      <View
+        style={{
+          marginTop: deviceHeight / 20,
+          marginLeft: deviceWidth / 1.3,
+          position: 'absolute',
+        }}>
         <TouchableOpacity
-          onPress={this.addNote.bind(this)}
-          style={styles.addButton}
-        >
-          <Text style={styles.addButtonText}>+</Text>
+          onPress={() => setModalVisible(!modalVisible)}
+          style={styles.button}>
+          <Text style={{ color: 'white', fontSize: (deviceHeight * 6) / 100 }}>
+            +
+          </Text>
         </TouchableOpacity>
       </View>
-    );
-  }
+    </View>
+  );
+}
 
-  addNote() {
-    if (this.state.noteText) {
-      var d = new Date();
-      this.state.noteArray.push({
-        date: d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear(),
-        note: this.state.noteText,
-      });
-      this.setState({ noteArray: this.state.noteArray });
-      this.setState({ noteText: "" });
-    }
-  }
+const Stack=createStackNavigator();
 
-  deleteNote(key) {
-    this.state.noteArray.splice(key, 1);
-    this.setState({ noteArray: this.state.noteArray });
-  }
+export default function TodoList(){
+  return(
+
+  <Stack.Navigator>
+  
+  <Stack.Screen name="TodoList" component={Todo} options={{title:"TODO"}}/>
+ 
+  </Stack.Navigator>
+  
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  listItem: {
+    padding: 0,
+    marginLeft: deviceWidth/20,
+    width: '90%',
+    height:90,
+    borderLeftColor: "#3A2C6F",
+    marginTop: deviceHeight/30,
+    borderLeftWidth:4,
+    borderWidth: 0,
+    backgroundColor: 'white',
+    borderRadius: 4.7,
+    elevation: 1,
   },
-  header: {
-    backgroundColor: "dodgerblue",
-    alignItems: "center",
-    justifyContent: "center",
-    borderBottomWidth: screenHeight / 81.1,
-    borderBottomColor: "#ddd",
-    opacity: 0.5,
-  },
-  headerText: {
-    color: "dodgerblue",
-    fontSize: screenHeight / 51,
-    padding: screenHeight / 31.2,
-  },
-  scrollContainer: {
-    flex: 1,
-    marginBottom: 8.11,
-  },
-  footer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    zIndex: 81.1,
+  button: {
+    shadowColor: 'rgba(0,0,0, .4)', // IOS
+    shadowOffset: { height: 2, width: 1 }, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 7, //IOS
+    backgroundColor: '#203557',
+    elevation: 2, // Android
+    borderWidth: 0,
+    borderColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 70,
+    height: 70,
+    marginRight: deviceWidth / 18,
+    marginTop: deviceHeight / 1.4,
+    borderRadius: 50,
   },
   textInput: {
-    alignSelf: "stretch",
-    color: "black",
-    opacity: 0.9,
-    padding: screenHeight / 40.55,
-    backgroundColor: "#ddd",
-    borderTopWidth: screenHeight / 270.33,
-    borderTopColor: "dodgerblue",
-    justifyContent: "center",
-    alignItems: "center",
+    width: '80%',
+    fontSize: 25,
   },
-  addButton: {
-    position: "absolute",
-    zIndex: screenHeight / 73.72,
-    right: screenHeight / 40.55,
-    bottom: screenHeight / 9,
-    backgroundColor: "dodgerblue",
-    width: screenHeight / 9,
-    height: screenHeight / 9,
-    borderRadius: screenHeight / 16.22,
-    alignItems: "center",
-    justifyContent: "center",
-    elevation: 8,
-    opacity: 0.5,
+  view: {
+    padding: 10,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height:deviceHeight/1.4,
+    marginTop:"10%"
   },
-  addButtonText: {
-    color: "dodgerblue",
-    fontSize: screenHeight / 35,
+  button1: {
+    shadowColor: 'rgba(0,0,0, .4)', // IOS
+    shadowOffset: { height: 1, width: 1 }, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 1, //IOS
+    borderRadius: 7,
+    backgroundColor: '#292e49',
+    elevation: 2, // Android
+    height: 50,
+    marginTop: '50%',
+  },
+  add: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  addPosition: {
+    alignItems: 'center',
+    marginTop:12
+  },
+  header: {
+    
+    height: deviceHeight / 4
   },
 });
