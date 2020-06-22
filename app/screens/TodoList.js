@@ -5,7 +5,7 @@ import {
   View,
   StyleSheet,
   TextInput,
- 
+ Picker,
   FlatList,
   Image,
   TouchableOpacity,
@@ -41,7 +41,7 @@ const GoalItem = (props) => (
   const [enteredText, setEnteredText] = useState('');
   const [enteredDetails, setEnteredDetails] = useState('');
   const [date, setDate] = useState(d);
-  const[category, setCategory]=useState('')
+  const[category, setCategory]=useState("College")
 
   const [courseGoals, changeCourseGoals] = useState([]);
   const addText = (text) => {
@@ -51,9 +51,7 @@ const GoalItem = (props) => (
   const addDetails = (text) => {
     setEnteredDetails(text);
   };
-  const addCategory=(text)=>{
-    setCategory(text);
-  }
+ 
   const addGoal = () => {
     changeCourseGoals((currentGoals) => [
       ...courseGoals,
@@ -71,8 +69,9 @@ const GoalItem = (props) => (
     <View style={{ backgroundColor: '#fff', height: deviceHeight }}>
       <Image source={{uri: 'https://png.pngtree.com/thumb_back/fw800/back_our/20190623/ourmid/pngtree-office-worker-cartoon-work-minimalist-background-image_239069.jpg'}} style={styles.header}/>
       <Modal  animationType="slide" visible={modalVisible}>
-        
+      <Icon name="close-circle" size={deviceHeight/25} color="rgba(162,161,139,0.4)" style={{alignSelf:"flex-end", marginTop:3}} onPress={()=>setModalVisible(!modalVisible)}/>
           <View style={styles.view}>
+          
             <TextInput
               style={styles.textInput}
               placeholder={'Title'}
@@ -85,7 +84,7 @@ const GoalItem = (props) => (
             <View style={{ flexDirection: 'row' }}>
             <Icon name="note-text" size={30} color="#EE481B"/>
               <TextInput
-                style={{ marginLeft: 14, fontSize: 16 }}
+                style={{ marginLeft: 10, fontSize: 16, width:"80%"}}
                 placeholder={'Details'}
                 onChangeText={addDetails}
                 value={enteredDetails}
@@ -115,12 +114,14 @@ const GoalItem = (props) => (
             />
 
             <Text style={{ fontSize: 20, marginTop: 20 }}>Category</Text>
-            <TextInput
-              style={{ marginTop: 8, fontSize: 16 }}
-              placeholder={'type here'}
-              onChangeText={addCategory}
-              value={category}
-            />
+            <Picker
+        selectedValue={category}
+        style={{ height: 50, width: 150 }}
+        onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}
+      >
+        <Picker.Item label="Homework" value="Homework" />
+        <Picker.Item label="College" value="College" />
+      </Picker>
             <TouchableOpacity
               style={styles.button1}
               onPress={() => {
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
     padding: 0,
     marginLeft: deviceWidth/20,
     width: '90%',
-    height:90,
+    height:110,
     borderLeftColor: "#3A2C6F",
     marginTop: deviceHeight/30,
     borderLeftWidth:4,
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     marginRight: deviceWidth / 18,
-    marginTop: deviceHeight / 1.4,
+    marginTop: deviceHeight / 1.35,
     borderRadius: 50,
   },
   textInput: {
@@ -222,7 +223,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height:deviceHeight/1.4,
-    marginTop:"10%"
+    marginTop:"0%"
   },
   button1: {
     shadowColor: 'rgba(0,0,0, .4)', // IOS
