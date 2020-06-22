@@ -36,7 +36,7 @@ export default function Semesters({ route, navigation }) {
             style={styles.btn}
             onPress={() => {
               {
-                item.year = route.params.id;
+                //item.year = route.params.id;
               }
               navigation.navigate("Branches", item);
               //setYearModalOpen(false);
