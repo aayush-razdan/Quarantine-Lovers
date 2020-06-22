@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     marginRight: deviceWidth / 18,
-    marginTop: deviceHeight / 1.4,
+    marginTop: deviceHeight / 1.35,
     borderRadius: 50,
   },
   textInput: {
