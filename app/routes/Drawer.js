@@ -10,8 +10,8 @@ import Register_page from "../screens/Register_page";
 import RegisterStack from "./RegisterStack";
 import Lost from "../screens/lost";
 import MainPage from "../screens/MainPage";
-import DrawerContent from './DrawerContent';
-import { robotoWeights, material } from 'react-native-typography';
+import DrawerContent from "./DrawerContent";
+import { robotoWeights, material } from "react-native-typography";
 import GpaCalculator from "../screens/Gpa";
 const todoListScreen = () => {
   return <TodoList />;
@@ -21,13 +21,16 @@ const Drawer = createDrawerNavigator();
 export default function DrawerStack() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" }} drawerContent={(props) => <DrawerContent {...props} />}>
+      <Drawer.Navigator
+        drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" }}
+        drawerContent={(props) => <DrawerContent {...props} />}
+      >
         <Drawer.Screen name="MainPage" component={MainPage} />
         <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="Lost" component={Lost} />
-        <Drawer.Screen name="GpaCalculator" component={GpaCalculator} />
+        {/* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );
