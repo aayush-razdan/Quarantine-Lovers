@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, StyleSheet, Image, Text, Dimensions, Button, TouchableWithoutFeedback, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, TextInput, Text, Dimensions, Button, TouchableWithoutFeedback, TouchableOpacity } from 'react-native'
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
 import { robotoWeights, material } from 'react-native-typography';
@@ -35,9 +35,17 @@ function ProfileScreen() {
     }
   };
   return (
-    <View style={{ flex: 1, backgroundColor: "#2f5a78" }}>
+    <View style={{ flex: 1, backgroundColor: "white" }}>
       <View style={styles.header}></View>
-      <View style={styles.name}><Text style={styles.text}>Quarantine Lovers</Text></View>
+      <View style={styles.name}>
+        <TextInput
+          style={styles.text}
+          placeholder={"Your Username"}
+          placeholderTextColorTextColor={"rgba(255,255,255,0.7)"}
+          underlineColorAndroid="transparent"
+        />
+      </View>
+      {/* <View style={styles.name}><Text style={styles.text}>Quarantine Lovers</Text></View> */}
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <TouchableOpacity activeOpacity={0.9} style={styles.btnpick} onPress={pickImage} >
         </TouchableOpacity>
