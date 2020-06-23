@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from "react-native";
+import { connect } from "react-redux";
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -22,7 +23,7 @@ const data = [
         num: 1,
         bas: [
           {
-            branch: "Batch 1",
+            branch: "computer",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -33,7 +34,7 @@ const data = [
             ],
           },
           {
-            branch: "Batch 2",
+            branch: "IT",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -44,7 +45,7 @@ const data = [
             ],
           },
           {
-            branch: "Batch 3",
+            branch: "EXTC",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -60,7 +61,7 @@ const data = [
         num: 2,
         bas: [
           {
-            branch: "Batch 4",
+            branch: "computer",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -71,7 +72,7 @@ const data = [
             ],
           },
           {
-            branch: "Batch 5",
+            branch: "IT",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -82,7 +83,7 @@ const data = [
             ],
           },
           {
-            branch: "Batch 6",
+            branch: "EXTC",
             subjects: [
               { name: "Mathematics", id: "1" },
               { name: "Physics", id: "2" },
@@ -96,98 +97,104 @@ const data = [
       },
     ],
   },
-  // {
-  //   year: "2",
-  //   sem: [
-  //     {
-  //       num: 1,
-  //       bas: [
-  //         {
-  //           branch: "computer",
-  //           subjects: [
-  //             { name: "Mathematics", id: "1" },
-  //             { name: "Physics", id: "2" },
-  //             { name: "Chemistry", id: "3" },
-  //             { name: "Mechanics", id: "4" },
-  //             { name: "Drawing", id: "5" },
-  //             //{ name: "f" },
-  //           ],
-  //         },
+  {
+    year: "2",
+    sem: [
+      {
+        num: 1,
+        bas: [
+          {
+            branch: "computer",
+            subjects: [
+              { name: "Mathematics", id: "1" },
+              { name: "Physics", id: "2" },
+              { name: "Chemistry", id: "3" },
+              { name: "Mechanics", id: "4" },
+              { name: "Drawing", id: "5" },
+              //{ name: "f" },
+            ],
+          },
 
-  //         {
-  //           branch: "IT",
-  //           subjects: [
-  //             { name: "3", id: "1" },
-  //             { name: "3", id: "2" },
-  //             { name: "4", id: "3" },
-  //             { name: "4", id: "4" },
-  //             { name: "4", id: "1" },
-  //             { name: "5", id: "5" },
-  //           ],
-  //         },
-  //         {
-  //           branch: "EXTC",
-  //           subjects: [
-  //             { name: "3", id: "1" },
-  //             { name: "3", id: "2" },
-  //             { name: "4", id: "3" },
-  //             { name: "4", id: "4" },
-  //             { name: "4", id: "5" },
-  //             { name: "5", id: "6" },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       num: 2,
-  //       bas: [
-  //         {
-  //           branch: "computer",
-  //           subjects: [
-  //             { name: "Mathematics", id: "1" },
-  //             { name: "Physics", id: "2" },
-  //             { name: "Chemistry", id: "3" },
-  //             { name: "Mechanics", id: "4" },
-  //             { name: "Drawing", id: "5" },
-  //             //{ name: "f" },
-  //           ],
-  //         },
-  //         {
-  //           branch: "IT",
-  //           subjects: [
-  //             { name: "Mathematics", id: "1" },
-  //             { name: "Physics", id: "2" },
-  //             { name: "Chemistry", id: "3" },
-  //             { name: "Mechanics", id: "4" },
-  //             { name: "Drawing", id: "5" },
-  //             //{ name: "f" },
-  //           ],
-  //         },
-  //         {
-  //           branch: "EXTC",
-  //           subjects: [
-  //             { name: "Mathematics", id: "1" },
-  //             { name: "Physics", id: "2" },
-  //             { name: "Chemistry", id: "3" },
-  //             { name: "Mechanics", id: "4" },
-  //             { name: "Drawing", id: "5" },
-  //             //{ name: "f" },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+          {
+            branch: "IT",
+            subjects: [
+              { name: "3", id: "1" },
+              { name: "3", id: "2" },
+              { name: "4", id: "3" },
+              { name: "4", id: "4" },
+              { name: "4", id: "1" },
+              { name: "5", id: "5" },
+            ],
+          },
+          {
+            branch: "EXTC",
+            subjects: [
+              { name: "3", id: "1" },
+              { name: "3", id: "2" },
+              { name: "4", id: "3" },
+              { name: "4", id: "4" },
+              { name: "4", id: "5" },
+              { name: "5", id: "6" },
+            ],
+          },
+        ],
+      },
+      {
+        num: 2,
+        bas: [
+          {
+            branch: "computer",
+            subjects: [
+              { name: "Mathematics", id: "1" },
+              { name: "Physics", id: "2" },
+              { name: "Chemistry", id: "3" },
+              { name: "Mechanics", id: "4" },
+              { name: "Drawing", id: "5" },
+              //{ name: "f" },
+            ],
+          },
+          {
+            branch: "IT",
+            subjects: [
+              { name: "Mathematics", id: "1" },
+              { name: "Physics", id: "2" },
+              { name: "Chemistry", id: "3" },
+              { name: "Mechanics", id: "4" },
+              { name: "Drawing", id: "5" },
+              //{ name: "f" },
+            ],
+          },
+          {
+            branch: "EXTC",
+            subjects: [
+              { name: "Mathematics", id: "1" },
+              { name: "Physics", id: "2" },
+              { name: "Chemistry", id: "3" },
+              { name: "Mechanics", id: "4" },
+              { name: "Drawing", id: "5" },
+              //{ name: "f" },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
-export default function Subjects({ route, navigation }) {
-  var year1 = route.params.year;
-  year1--;
-  var sem1 = route.params.sem;
-  sem1--;
-  var bas1 = route.params.id;
-  bas1--;
+const Subjects = (props) => {
+  // var year1 = route.params.year;
+  // year1--;
+  // var sem1 = route.params.sem;
+  // sem1--;
+  // var bas1 = route.params.id;
+  // bas1--;
 
+  var year1 = props.year;
+  year1--;
+  var sem1 = props.sem;
+  sem1--;
+  var bas1 = props.branch;
+  bas1--;
   return (
     <View style={styles.background}>
       <FlatList
@@ -199,7 +206,7 @@ export default function Subjects({ route, navigation }) {
               {
                 // item.year = route.params.id;
               }
-              navigation.navigate("AttendancePercent", item);
+              props.navigation.navigate("AttendancePercent", item);
               //setYearModalOpen(false);
             }}
           >
@@ -210,7 +217,16 @@ export default function Subjects({ route, navigation }) {
       />
     </View>
   );
-}
+};
+
+const mapStateToProps = (state) => {
+  return {
+    year: state.yearReducer.yearId,
+    sem: state.semReducer.semId,
+    branch: state.branchReducer.branchId,
+  };
+};
+export default connect(mapStateToProps)(Subjects);
 
 const styles = StyleSheet.create({
   background: {

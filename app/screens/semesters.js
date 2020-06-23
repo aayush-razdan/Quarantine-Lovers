@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from "react-native";
+import { connect } from "react-redux";
+import { modifySem } from "../src/actions/index";
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -26,7 +28,7 @@ const data = [
   },
 ];
 
-export default function Semesters({ route, navigation }) {
+const Semesters = (props) => {
   return (
     <View style={styles.background}>
       <FlatList
@@ -36,9 +38,10 @@ export default function Semesters({ route, navigation }) {
             style={styles.btn}
             onPress={() => {
               {
-                //item.year = route.params.id;
+                //item.year = props.route.params.id;
               }
-              navigation.navigate("Branches", item);
+              props.semAdd(item.id);
+              props.navigation.navigate("Branches");
               //setYearModalOpen(false);
             }}
           >
@@ -49,7 +52,15 @@ export default function Semesters({ route, navigation }) {
       />
     </View>
   );
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    semAdd: (id) => dispatch(modifySem(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Semesters);
 
 const styles = StyleSheet.create({
   background: {

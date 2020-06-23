@@ -11,7 +11,8 @@ const Stack = createStackNavigator();
 
 function AttendanceStack() {
   return (
-    <Stack.Navigator initialRouteName="Semester">
+    <Stack.Navigator initialRouteName="AttendanceDetails">
+      <Stack.Screen name="AttendanceDetails" component={AttendanceDetails} />
       <Stack.Screen name="Semester" component={Semesters} />
       <Stack.Screen name="Branches" component={Branches} />
       <Stack.Screen name="Subjects" component={Subjects} />
@@ -21,5 +22,3 @@ function AttendanceStack() {
 }
 
 export default AttendanceStack;
-
-//<Stack.Screen name="AttendanceDetails" component={AttendanceDetails} />

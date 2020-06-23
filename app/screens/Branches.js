@@ -12,66 +12,115 @@ import {
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
+import { connect } from "react-redux";
+import { modifyBranch } from "../src/actions/index";
 
-const data = [
+const data1 = [
   {
     id: "1",
     branch: "Batch 1",
-    year: "",
-    sem: "",
+    //year: "",
+    //sem: "",
   },
   {
     id: "2",
     branch: "Batch 2",
     // year: "",
-    sem: "",
+    //sem: "",
   },
   {
     id: "3",
     branch: "Batch 3",
     // year: "",
-    sem: "",
+    //sem: "",
   },
   {
     id: "4",
     branch: "Batch 4",
     // year: "",
-    sem: "",
+    //sem: "",
   },
 
   {
     id: "5",
     branch: "Batch 5",
     // year: "",
-    sem: "",
+    //sem: "",
   },
   {
     id: "6",
     branch: "Batch 6",
     // year: "",
-    sem: "",
+    //sem: "",
   },
-  // {
-  //   id: "7",
-  //   branch: "Civil",
-  //   year: "",
-  //   sem: "",
-  // },
-  // {
-  //   id: "8",
-  //   branch: "Production",
-  //   year: "",
-  //   sem: "",
-  // },
-  // {
-  //   id: "9",
-  //   branch: "Textile",
-  //   year: "",
-  //   sem: "",
-  // },
 ];
 
-export default function Branches({ route, navigation }) {
+const data2 = [
+  {
+    id: "1",
+    branch: "Computer",
+    //year: "",
+    //sem: "",
+  },
+  {
+    id: "2",
+    branch: "IT",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "3",
+    branch: "EXTC",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "4",
+    branch: "Electronics",
+    // year: "",
+    // sem: "",
+  },
+
+  {
+    id: "5",
+    branch: "Electrical",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "6",
+    branch: "Mechanical",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "7",
+    branch: "Civil",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "8",
+    branch: "Production",
+    // year: "",
+    // sem: "",
+  },
+  {
+    id: "9",
+    branch: "Textile",
+    // year: "",
+    // sem: "",
+  },
+];
+var data = [];
+
+const Branches = (props) => {
+  if (props.year == 1) {
+    data = data1;
+  } else {
+    data = data2;
+  }
+
   return (
     <View style={styles.background}>
       <FlatList
@@ -81,10 +130,11 @@ export default function Branches({ route, navigation }) {
             style={styles.btn}
             onPress={() => {
               {
-                item.year = route.params.year;
-                item.sem = route.params.id;
+                // item.year = props.route.params.year;
+                // item.sem = props.route.params.id;
               }
-              navigation.navigate("Subjects", item);
+              props.branchAdd(item.id, item.branch);
+              props.navigation.navigate("Subjects");
               //setYearModalOpen(false);
             }}
           >
@@ -95,7 +145,21 @@ export default function Branches({ route, navigation }) {
       />
     </View>
   );
-}
+};
+
+const mapStateToProps = (state) => {
+  return {
+    year: state.yearReducer.yearId,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    branchAdd: (id, branch) => dispatch(modifyBranch(id, branch)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Branches);
 
 const styles = StyleSheet.create({
   background: {

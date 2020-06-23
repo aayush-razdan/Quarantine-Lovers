@@ -10,7 +10,8 @@ import {
 } from "react-native";
 import { Button } from "react-native-elements";
 //import { TouchableOpacity } from "react-native-gesture-handler";
-//import Subjects from "../other/subjects";
+import { connect } from "react-redux";
+import { modifyYear } from "../src/actions/index";
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -34,9 +35,7 @@ const data = [
   },
 ];
 
-export default function AttendanceDetails({ navigation }) {
-  //const [yearModalOpen, setYearModalOpen] = useState(true);
-  //const [branchModalOpen, setBranchModalOpen] = useState(false);
+const AttendanceDetails = (props) => {
   return (
     <View style={styles.background}>
       <FlatList
@@ -45,8 +44,8 @@ export default function AttendanceDetails({ navigation }) {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              navigation.navigate("Semester", item);
-              //setYearModalOpen(false);
+              props.yearAdd(item.id, item.title);
+              props.navigation.navigate("Semester");
             }}
           >
             <Text style={styles.text}>{item.title}</Text>
@@ -54,58 +53,17 @@ export default function AttendanceDetails({ navigation }) {
         )}
         keyExtractor={(item) => item.id}
       />
-
-      {/* <TouchableOpacity style={styles.btnPhysics}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="PHYSICS"
-      >
-        <Text style={styles.text}>
-          PHYSICS
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnMaths}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="CHEMISTRY"
-      >
-        <Text style={styles.text}>
-          CHEMISTRY
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnChemistry}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="MATHEMATICS"
-      >
-        <Text style={styles.text}>
-          MATHEMATICS
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnComputers}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="COMPUTERS"
-      >
-        <Text style={styles.text}>
-          COMPUTERS
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnBEE}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="B.E.E."
-      >
-        <Text style={styles.text}>
-          B.E.E.
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btnEME}
-        onPress={() => navigation.navigate("AttendancePercent")}
-        title="E.M.E."
-      >
-        <Text style={styles.text}>
-          E.M.E.
-        </Text>
-      </TouchableOpacity> */}
     </View>
   );
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    yearAdd: (id, year) => dispatch(modifyYear(id, year)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AttendanceDetails);
 
 const styles = StyleSheet.create({
   background: {
