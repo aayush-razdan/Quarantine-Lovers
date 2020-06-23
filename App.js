@@ -1,6 +1,6 @@
 import * as React from "react";
 import DrawerStack from "./app/routes/Drawer";
-import store from "./app/src/store";
+import store from "./app/src/store/index";
 import { Provider } from "react-redux";
 
 export default function App() {
