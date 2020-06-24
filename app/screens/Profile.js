@@ -3,6 +3,8 @@ import { View, StyleSheet, Image, TextInput, Text, Dimensions, Button, Touchable
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
 import { robotoWeights, material } from 'react-native-typography';
+import { connect } from "react-redux";
+
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -34,6 +36,7 @@ function ProfileScreen() {
       setImage(result.uri);
     }
   };
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <View style={styles.header}></View>
@@ -105,7 +108,7 @@ const styles = StyleSheet.create({
     // height: 30,
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "black",
     //borderRadius: 8,
     //borderColor: "dodgerblue",
     // position: "absolute",
@@ -116,5 +119,5 @@ const styles = StyleSheet.create({
     ...robotoWeights.medium,
     color: "white",
     fontSize: height / 31
-  },
+  }
 })

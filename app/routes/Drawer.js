@@ -10,6 +10,7 @@ import Register_page from "../screens/Register_page";
 import RegisterStack from "./RegisterStack";
 import Lost from "../screens/lost";
 import MainPage from "../screens/MainPage";
+import IdDetails from "../screens/IdDetails";
 import DrawerContent from "./DrawerContent";
 import { robotoWeights, material } from "react-native-typography";
 import GpaCalculator from "../screens/Gpa";
@@ -29,7 +30,8 @@ export default function DrawerStack() {
         <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
-        <Drawer.Screen name="Lost" component={Lost} />
+        <Drawer.Screen name="Id Details" component={IdDetails} />
+        {/* <Drawer.Screen name="Lost" component={Lost} /> */}
         {/* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */}
       </Drawer.Navigator>
     </NavigationContainer>

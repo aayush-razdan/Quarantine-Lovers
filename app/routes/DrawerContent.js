@@ -72,7 +72,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Attendance");
               }}
             />
-            <DrawerItem
+            {/* <DrawerItem
               icon={({ color, size }) => (
                 <Icon name="paw" color={"rgba(255,255,255,1)"} size={size} />
               )}
@@ -80,6 +80,16 @@ export default function DrawerContent(props) {
               labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Lost");
+              }}
+            /> */}
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Icon name="account-outline" color={"rgba(255,255,255,1)"} size={size} />
+              )}
+              label="IdDetails"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Id Details");
               }}
             />
             <DrawerItem
