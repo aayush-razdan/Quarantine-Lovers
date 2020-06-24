@@ -35,6 +35,9 @@ export default function AttendancePercent({ navigation }) {
     } else if ((totClass * 0.75 - attClass) / (totClass - uptoClass) > 1) {
         perToAttend = 1;
     }
+    else if ((totClass * 0.75 - attClass) / (totClass - uptoClass) < 0) {
+        perToAttend = 0;
+    }
     else {
         perToAttend = (totClass * 0.75 - attClass) / (totClass - uptoClass);
     }
