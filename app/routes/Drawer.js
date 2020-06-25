@@ -31,9 +31,14 @@ export default function DrawerStack() {
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="Id Details" component={IdDetails} />
-        {/* <Drawer.Screen name="Lost" component={Lost} /> */}
-        {/* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );
+}
+
+{
+  /* <Drawer.Screen name="Lost" component={Lost} /> */
+}
+{
+  /* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */
 }
