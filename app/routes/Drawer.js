@@ -14,6 +14,9 @@ import IdDetails from "../screens/IdDetails";
 import DrawerContent from "./DrawerContent";
 import { robotoWeights, material } from "react-native-typography";
 import GpaCalculator from "../screens/Gpa";
+import CabShare from "../screens/CabShare";
+import CollegeMap from "../screens/CollegeMap";
+import Menu from "../screens/Menu";
 const todoListScreen = () => {
   return <TodoList />;
 };
@@ -30,7 +33,10 @@ export default function DrawerStack() {
         <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
+        <Drawer.Screen name="CabShare" component={CabShare} />
         <Drawer.Screen name="Id Details" component={IdDetails} />
+        <Drawer.Screen name="CollegeMap" component={CollegeMap} />
+        <Drawer.Screen name="Menu" component={Menu} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

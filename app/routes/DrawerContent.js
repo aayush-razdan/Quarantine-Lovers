@@ -15,7 +15,9 @@ import {
 } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { color } from "react-native-reanimated";
-
+import Icons from "react-native-vector-icons/AntDesign";
+import Iconss from "react-native-vector-icons/FontAwesome5";
+import Iconsss from "react-native-vector-icons/MaterialIcons";
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
@@ -62,8 +64,8 @@ export default function DrawerContent(props) {
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon
-                  name="clipboard"
+                <Iconss
+                  name="tasks"
                   color={"rgba(255,255,255,1)"}
                   size={size}
                 />
@@ -88,40 +90,60 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Attendance");
               }}
             />
-            {/* <DrawerItem
-              icon={({ color, size }) => (
-                <Icon name="paw" color={"rgba(255,255,255,1)"} size={size} />
-              )}
-              label="Lost"
-              labelStyle={{ color: "white" }}
-              onPress={() => {
-                props.navigation.navigate("Lost");
-              }}
-            /> */}
+
             <DrawerItem
               icon={({ color, size }) => (
-                <Icon
-                  name="account-outline"
+                <Icons
+                  name="idcard"
                   color={"rgba(255,255,255,1)"}
                   size={size}
                 />
               )}
-              label="IdDetails"
+              label="ID Details"
               labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Id Details");
               }}
             />
-            {/* <DrawerItem
+            <DrawerItem
               icon={({ color, size }) => (
-                <Icon name="chart-line" color={"rgba(255,255,255,1)"} size={size} />
+                <Icon name="taxi" color={"rgba(255,255,255,1)"} size={size} />
               )}
-              label="Gpa Calculator"
+              label="Cab Share"
               labelStyle={{ color: "white" }}
               onPress={() => {
-                props.navigation.navigate("GpaCalculator");
+                props.navigation.navigate("CabShare");
               }}
-            /> */}
+            />
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Iconsss
+                  name="restaurant-menu"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Menu"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Menu");
+              }}
+            />
+
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Iconss
+                  name="map-marked-alt"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="College Map"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("CollegeMap");
+              }}
+            />
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
