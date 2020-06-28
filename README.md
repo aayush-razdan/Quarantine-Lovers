@@ -100,24 +100,21 @@ until finished
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Highly useful app for VJTI students (especially first year sudents). (other uses)
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [React Native](https://github.com/facebook/react-native) - Framework
+- [Expo Client](https://expo.io/) - Publishing
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors)
-who participated in this project.
+- [Aayush Razdan](https://github.com/aayush-razdan)
+- [Saksham Tikoo](https://github.com/tikoosaksham)
+- [Aayush Pattnaik](https://github.com/ayushpattnaik)
+- [Mohammad Walid Palekar](https://github.com/greybeard9)
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+-     Shubhankar Kanchan Gupta
+- Atharva Thorve
