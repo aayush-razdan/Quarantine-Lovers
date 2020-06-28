@@ -166,7 +166,6 @@ function Todo() {
       </Modal>
       <View style={{ height: deviceHeight - deviceHeight / 2.7 }}>
         <FlatList
-          inverted
           keyExtractor={(item, index) => item.id}
           data={courseGoals}
           renderItem={(itemData) => (
@@ -204,7 +203,7 @@ export default function TodoList() {
       <Stack.Screen
         name="TodoList"
         component={Todo}
-        options={{ title: "TODO",headerShown:true }}
+        options={{ title: "TODO", headerShown: true }}
       />
     </Stack.Navigator>
   );

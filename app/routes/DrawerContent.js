@@ -62,7 +62,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Login");
               }}
             />
-          
+
             <DrawerItem
               icon={({ color, size }) => (
                 <Icon
@@ -77,7 +77,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Attendance");
               }}
             />
-              <DrawerItem
+            <DrawerItem
               icon={({ color, size }) => (
                 <Iconss
                   name="tasks"
@@ -142,6 +142,20 @@ export default function DrawerContent(props) {
               labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("CollegeMap");
+              }}
+            />
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Iconss
+                  name="map-marked-alt"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Gpa Calculator"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Gpa");
               }}
             />
           </Drawer.Section>
