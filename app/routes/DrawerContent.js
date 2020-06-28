@@ -62,20 +62,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Login");
               }}
             />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Iconss
-                  name="tasks"
-                  color={"rgba(255,255,255,1)"}
-                  size={size}
-                />
-              )}
-              label="Todo"
-              labelStyle={{ color: "white" }}
-              onPress={() => {
-                props.navigation.navigate("Todo List");
-              }}
-            />
+          
             <DrawerItem
               icon={({ color, size }) => (
                 <Icon
@@ -90,7 +77,20 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Attendance");
               }}
             />
-
+              <DrawerItem
+              icon={({ color, size }) => (
+                <Iconss
+                  name="tasks"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Todo"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Todo List");
+              }}
+            />
             <DrawerItem
               icon={({ color, size }) => (
                 <Icons

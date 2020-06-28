@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Icons from "react-native-vector-icons/MaterialCommunityIcons";
-
+import {createStackNavigator} from '@react-navigation/stack';
 var width = Dimensions.get("window").width;
 var height = Dimensions.get("window").height;
 
@@ -60,7 +60,7 @@ const GoalItem = (props) => (
   </View>
 );
 
-export default function CabShare() {
+function CabShareComponent({navigation}) {
   const [modalVisible, setModalVisible] = useState(false);
   const [name, setName] = useState("");
   const [from, setFrom] = useState("");
@@ -107,7 +107,7 @@ export default function CabShare() {
         >
           <Text style={{ color: "white", fontSize: height / 35 }}>New</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.fare} onPress>
+        <TouchableOpacity style={styles.fare} onPress={()=>navigation.navigate("Fare Calculator")}>
           <Text style={{ color: "#1F2023", fontSize: height / 35 }}>
             {" "}
             Fare{" "}
@@ -221,6 +221,22 @@ export default function CabShare() {
       />
     </View>
   );
+}
+function FareCalculator(){
+  return(
+    <View></View>
+  )
+}
+const Stack=createStackNavigator();
+
+export default function CabShare(){
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="Cab Share" component={CabShareComponent} options={{ headerShown:false}}/>
+      <Stack.Screen name="Fare Calculator" component={FareCalculator}/>
+    </Stack.Navigator>
+
+  )
 }
 const styles = StyleSheet.create({
   modal: {

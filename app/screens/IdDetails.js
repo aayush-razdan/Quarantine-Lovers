@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from '@expo/vector-icons/FontAwesome5';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -39,14 +39,14 @@ export default function IdDetails() {
                     let iconName;
 
                     if (route.name === 'College') {
-                        iconName = 'ios-home';
+                        iconName = 'school';
                     }
                     else if (route.name === 'Hostel') {
-                        iconName = 'ios-person';
+                        iconName = 'hotel';
                     }
 
                     // You can return any component that you like here!
-                    return <Ionicons name={iconName} size={size} color={color} />;
+                    return <Icon name={iconName} size={size} color={color} />;
                 },
             })}>
             <Tab.Screen name="College" component={CollegeStackScreen} />

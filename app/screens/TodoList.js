@@ -200,7 +200,7 @@ export default function TodoList() {
       <Stack.Screen
         name="TodoList"
         component={Todo}
-        options={{ title: "TODO" }}
+        options={{ title: "TODO",headerShown:true }}
       />
     </Stack.Navigator>
   );
