@@ -152,6 +152,10 @@ function Todo() {
             onPress={() => {
               addGoal();
               setModalVisible(!modalVisible);
+              setCategory("College");
+              setEnteredDetails('');
+              setEnteredText('');
+              setDate(d);
             }}
           >
             <View style={styles.addPosition}>

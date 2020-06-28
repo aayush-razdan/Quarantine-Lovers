@@ -66,11 +66,22 @@ function CabShareComponent({navigation}) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fare, setFare] = useState(0);
-  const [nameBox, changeNamebox] = useState("");
-  const [fromBox, changeFromBox] = useState("");
-  const [toBox, changeToBox] = useState("");
-  const [fareBox, changeFareBox] = useState(0);
+ 
   const [data, changeData] = useState([]);
+  const addName = (text) => {
+    setName(text);
+  };
+
+  const addFrom = (text) => {
+    setFrom(text);
+  };
+const addTo=(text)=>{
+  setTo(text);
+}
+const addFare=(t)=>{
+  setFare(t);
+}
+
 
   const addJourney = () => {
     changeData((currentItems) => [
@@ -133,8 +144,8 @@ function CabShareComponent({navigation}) {
               fontSize: 16,
               color: "#292e49",
             }}
-            value={nameBox}
-            onChangeText={(value) => changeNamebox(value)}
+            value={name}
+            onChangeText={addName}
             placeholder="enter"
           />
 
@@ -145,8 +156,8 @@ function CabShareComponent({navigation}) {
                 <TextInput
                   style={{ fontSize: 15, width: width / 7 }}
                   placeholder="From"
-                  value={fromBox}
-                  onChangeText={(value) => changeFromBox(value)}
+                  value={from}
+                  onChangeText={addFrom}
                 />
                 <View style={{ marginTop: 2.5, marginHorizontal: 10 }}>
                   <Text style={{ fontSize: 16, color: "#ccc" }}>to</Text>
@@ -154,8 +165,8 @@ function CabShareComponent({navigation}) {
                 <TextInput
                   style={{ fontSize: 15, marginLeft: 10, width: width / 4 }}
                   placeholder="Destination"
-                  value={toBox}
-                  onChangeText={(value) => changeToBox(value)}
+                  value={to}
+                  onChangeText={addTo}
                 />
               </View>
               <View style={{ flexDirection: "row", marginTop: 5 }}>
@@ -164,8 +175,8 @@ function CabShareComponent({navigation}) {
                   style={{ fontSize: 16 }}
                   placeholder="Fare"
                   keyboardType="numeric"
-                  value={fareBox}
-                  onChangeText={(value) => changeFareBox(value)}
+                  value={fare}
+                  onChangeText={addFare}
                 />
               </View>
             </View>
@@ -177,16 +188,12 @@ function CabShareComponent({navigation}) {
               style={styles.save}
               onPress={() => {
                 setModalVisible(!modalVisible);
-                setName(nameBox);
-                setFrom(fromBox);
-                setTo(toBox);
-                setFare(fareBox);
+              
                 addJourney();
-
-                changeNamebox("");
-                changeFromBox("");
-                changeToBox("");
-                changeFareBox(0);
+                setName('');
+                setFrom('');
+                setTo('');
+                setFare(0);
               }}
             >
               <Text style={{ color: "white" }}>Save</Text>
@@ -194,10 +201,10 @@ function CabShareComponent({navigation}) {
             <TouchableOpacity
               onPress={() => {
                 setModalVisible(!modalVisible);
-                changeNamebox("");
-                changeFromBox("");
-                changeToBox("");
-                changeFareBox(0);
+               setName("");
+                setFrom("");
+                setTo("");
+                setFare(0);
               }}
               style={styles.cancel}
             >
