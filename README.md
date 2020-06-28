@@ -106,4 +106,4 @@ Highly useful app for VJTI students (especially first year sudents). (other uses
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
 -     Shubhankar Kanchan Gupta
-- Atharva Thorve
+-     Atharva Thorve
