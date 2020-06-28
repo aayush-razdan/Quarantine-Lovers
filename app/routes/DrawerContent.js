@@ -18,6 +18,7 @@ import { color } from "react-native-reanimated";
 import Icons from "react-native-vector-icons/AntDesign";
 import Iconss from "react-native-vector-icons/FontAwesome5";
 import Iconsss from "react-native-vector-icons/MaterialIcons";
+import Iconssss from 'react-native-vector-icons/Octicons'
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
@@ -107,6 +108,20 @@ export default function DrawerContent(props) {
             />
             <DrawerItem
               icon={({ color, size }) => (
+                <Iconssss
+                  name="graph"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Gpa Calculator"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Gpa");
+              }}
+            />
+            <DrawerItem
+              icon={({ color, size }) => (
                 <Icon name="taxi" color={"rgba(255,255,255,1)"} size={size} />
               )}
               label="Cab Share"
@@ -130,7 +145,7 @@ export default function DrawerContent(props) {
               }}
             />
 
-            <DrawerItem
+          { /* <DrawerItem
               icon={({ color, size }) => (
                 <Iconss
                   name="map-marked-alt"
@@ -144,20 +159,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("CollegeMap");
               }}
             />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Iconss
-                  name="map-marked-alt"
-                  color={"rgba(255,255,255,1)"}
-                  size={size}
-                />
-              )}
-              label="Gpa Calculator"
-              labelStyle={{ color: "white" }}
-              onPress={() => {
-                props.navigation.navigate("Gpa");
-              }}
-            />
+            */}
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>

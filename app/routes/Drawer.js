@@ -35,7 +35,7 @@ export default function DrawerStack() {
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="CabShare" component={CabShare} />
         <Drawer.Screen name="Id Details" component={IdDetails} />
-        <Drawer.Screen name="CollegeMap" component={CollegeMap} />
+
         <Drawer.Screen name="Menu" component={Menu} />
         <Drawer.Screen name="Gpa" component={Gpa} />
       </Drawer.Navigator>
@@ -48,4 +48,5 @@ export default function DrawerStack() {
 }
 {
   /* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */
+  /* <Drawer.Screen name="CollegeMap" component={CollegeMap} />*/
 }

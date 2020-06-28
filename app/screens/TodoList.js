@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import DatePicker from "react-native-datepicker";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 var deviceWidth = Dimensions.get("window").width;
@@ -154,8 +154,8 @@ function Todo() {
               addGoal();
               setModalVisible(!modalVisible);
               setCategory("College");
-              setEnteredDetails('');
-              setEnteredText('');
+              setEnteredDetails("");
+              setEnteredText("");
               setDate(d);
             }}
           >
