@@ -46,10 +46,10 @@ export default function Menu() {
                     let iconName;
                 
                     if (route.name === 'Canteen') {
-                        iconName = 'food';
+                        iconName = 'food'; size=30
                     }
                     else if (route.name === 'Mess') {
-                        iconName = 'office-building';
+                        iconName = 'office-building'; size=30
                     }
                
                     return <Icons name={iconName} size={size} color={color}/>

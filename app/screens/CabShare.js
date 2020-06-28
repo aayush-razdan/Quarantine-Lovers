@@ -53,10 +53,13 @@ const GoalItem = (props) => (
     </Text>
     <Icons
       name="car-side"
-      style={{ position: "absolute", top: height / 10, right: width / 30 }}
+      style={{ position: "absolute", top: height / 10.4, right: width / 40 }}
       size={20}
       color="grey"
     />
+  <Text style={{position: "absolute", top: height / 10.5, right: width / 7 }}>{props.passengers}</Text>
+  <Icon name="group" size={height/60} style={{position: "absolute", top: height / 10, right: width / 10 }}/>
+ 
   </View>
 );
 
@@ -66,7 +69,7 @@ function CabShareComponent({ navigation }) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fare, setFare] = useState(0);
-  const [passengers, setPassenger] = useState(1);
+  const [passengers, setPassenger] = useState(2);
 
   const [data, changeData] = useState([]);
   const addName = (text) => {
@@ -97,6 +100,7 @@ function CabShareComponent({ navigation }) {
         fromplace: from,
         toplace: to,
         fareamount: fare,
+        passengersno:passengers
       },
     ]);
   };
@@ -150,7 +154,7 @@ function CabShareComponent({ navigation }) {
               fontSize: 16,
               color: "#292e49",
             }}
-            value={passengers + ""}
+            value={passengers+""}
             onChangeText={addPassengers}
             placeholder="enter"
           />
@@ -219,6 +223,7 @@ function CabShareComponent({ navigation }) {
                 setFrom('');
                 setTo('');
                 setFare(0);
+                setPassenger(2);
               }}
             >
               <Text style={{ color: "white" }}>Save</Text>
@@ -230,6 +235,7 @@ function CabShareComponent({ navigation }) {
                 setFrom("");
                 setTo("");
                 setFare(0);
+                setPassenger(2);
               }}
               style={styles.cancel}
             >
@@ -248,6 +254,8 @@ function CabShareComponent({ navigation }) {
             from={itemData.item.fromplace}
             to={itemData.item.toplace}
             fare={itemData.item.fareamount / parseInt(passengers)}
+            passengers={itemData.item.passengersno}
+
           />
         )}
       />
@@ -256,7 +264,17 @@ function CabShareComponent({ navigation }) {
 }
 function FareCalculator() {
   return (
-    <View></View>
+    <View style={{backgroundColor:"white",height:height}}>
+    <View style={{position:'absolute',right:width/4, backgroundColor:'#F7C135', marginTop:height/30,borderRadius:3,borderWidth:1}}>
+    <Text style={{fontSize:25}}> Mumbai Taxi Fare </Text>
+    </View>
+<Image source={require('../other/Capture.jpg')} style={{    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'contain',
+    marginBottom:"15%"}}/>
+
+    </View>
   )
 }
 const Stack = createStackNavigator();
@@ -265,7 +283,7 @@ export default function CabShare() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Cab Share" component={CabShareComponent} options={{ headerShown: false }} />
-      <Stack.Screen name="Fare Calculator" component={FareCalculator} />
+      <Stack.Screen name="Fare Calculator" component={FareCalculator} options={{title: "Fare Chart"}} />
     </Stack.Navigator>
 
   )
