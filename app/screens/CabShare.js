@@ -73,9 +73,9 @@ function CabShareComponent({ navigation }) {
     setName(text);
   };
 
-  // const addPassengers = (text) => {
-  //   setPassengers(text);
-  // };
+  const addPassengers = (text) => {
+    setPassenger(text);
+  };
 
   const addFrom = (text) => {
     setFrom(text);
@@ -150,6 +150,8 @@ function CabShareComponent({ navigation }) {
               fontSize: 16,
               color: "#292e49",
             }}
+            value={passengers + ""}
+            onChangeText={addPassengers}
             placeholder="enter"
           />
           {/* <TouchableOpacity
@@ -245,7 +247,7 @@ function CabShareComponent({ navigation }) {
             name={itemData.item.nameofperson}
             from={itemData.item.fromplace}
             to={itemData.item.toplace}
-            fare={itemData.item.fareamount / passengers}
+            fare={itemData.item.fareamount / parseInt(passengers)}
           />
         )}
       />
