@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import Icon from '@expo/vector-icons/FontAwesome5';
+import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -15,12 +16,32 @@ const HostelStack = createStackNavigator();
 
 const CollegeStackScreen = ({ navigation }) => (
     <CollegeStack.Navigator>
-        <CollegeStack.Screen name="College" component={College} />
+        <CollegeStack.Screen name="College" component={College} options={{
+            headerLeft: () => (
+                <Ionicons
+                    name="ios-menu"
+                    size={30}
+                    style={{ paddingLeft: 10 }}
+                    color="#1D2430"
+                    onPress={() => navigation.openDrawer()}
+                />
+            )
+        }} />
     </CollegeStack.Navigator>
 )
 const HostelStackScreen = ({ navigation }) => (
     <HostelStack.Navigator>
-        <HostelStack.Screen name="Hostel" component={Hostel} />
+        <HostelStack.Screen name="Hostel" component={Hostel} options={{
+            headerLeft: () => (
+                <Ionicons
+                    name="ios-menu"
+                    size={30}
+                    style={{ paddingLeft: 10 }}
+                    color="#1D2430"
+                    onPress={() => navigation.openDrawer()}
+                />
+            )
+        }} />
     </HostelStack.Navigator>
 )
 

@@ -6,9 +6,12 @@ import Icon from "react-native-vector-icons/Entypo";
 import Icons from "react-native-vector-icons/MaterialIcons";
 import { abs } from "react-native-reanimated";
 import { robotoWeights, material } from 'react-native-typography';
+import Gpa from './Gpa';
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
+
+// maths : 4, phy:3, mech:3 , chem:2 , eg:2 , english:2
 
 export default function GpaSubjects() {
     var [gpaMaths, setgpaMaths] = useState(10);
@@ -53,6 +56,7 @@ export default function GpaSubjects() {
     if (gpaEnglish < 4) {
         gpaEnglish = 4;
     }
+    var avgSubjects = (gpaMaths * 4 + gpaPhysics * 3 + gpaMechanics * 3 + gpaChemistry * 2 + gpaDrawing * 2 + gpaEnglish) / 15;
     return (
         <View style={styles.background}>
             <Text style={styles.text}>Applied Mathematics I : {gpaMaths}</Text>
@@ -176,7 +180,11 @@ export default function GpaSubjects() {
                     <Icon name="minus" size={19} />
                 </TouchableOpacity>
             </View>
-
+            <View style={styles.gpa}>
+                <Text style={styles.text}>
+                    Your GPA for Subjects: {avgSubjects.toFixed(2)}
+                </Text>
+            </View>
         </View>
     );
 }
@@ -251,4 +259,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    gpa: {
+        position: "absolute",
+        top: screenHeight / 1.22,
+    }
 });

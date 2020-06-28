@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Icons from "react-native-vector-icons/MaterialCommunityIcons";
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 var width = Dimensions.get("window").width;
 var height = Dimensions.get("window").height;
 
@@ -60,27 +60,32 @@ const GoalItem = (props) => (
   </View>
 );
 
-function CabShareComponent({navigation}) {
+function CabShareComponent({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [name, setName] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [fare, setFare] = useState(0);
- 
+  const [passengers, setPassenger] = useState(1);
+
   const [data, changeData] = useState([]);
   const addName = (text) => {
     setName(text);
   };
 
+  // const addPassengers = (text) => {
+  //   setPassengers(text);
+  // };
+
   const addFrom = (text) => {
     setFrom(text);
   };
-const addTo=(text)=>{
-  setTo(text);
-}
-const addFare=(t)=>{
-  setFare(t);
-}
+  const addTo = (text) => {
+    setTo(text);
+  }
+  const addFare = (t) => {
+    setFare(t);
+  }
 
 
   const addJourney = () => {
@@ -118,7 +123,7 @@ const addFare=(t)=>{
         >
           <Text style={{ color: "white", fontSize: height / 35 }}>New</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.fare} onPress={()=>navigation.navigate("Fare Calculator")}>
+        <TouchableOpacity style={styles.fare} onPress={() => navigation.navigate("Fare Calculator")}>
           <Text style={{ color: "#1F2023", fontSize: height / 35 }}>
             {" "}
             Fare{" "}
@@ -135,12 +140,31 @@ const addFare=(t)=>{
               Add a Trip
             </Text>
           </View>
+          <Text style={{ marginTop: 5, marginLeft: 5, fontSize: 17 }}>Number of co-passengers: </Text>
+          <TextInput
+            style={{
+              position: "absolute",
+              right: width / 7.6,
+              //marginLeft: width / 3.3,
+              marginTop: height / 14.8,
+              fontSize: 16,
+              color: "#292e49",
+            }}
+            placeholder="enter"
+          />
+          {/* <TouchableOpacity
+            style={styles.btnAdd}
+            onPress={() => {
+              setPassenger(passengers + 1);
+            }}
+          >
+          </TouchableOpacity> */}
           <Text style={{ marginTop: 5, fontSize: 17 }}> With you and: </Text>
           <TextInput
             style={{
               position: "absolute",
               marginLeft: width / 3.3,
-              marginTop: height / 15,
+              marginTop: height / 9.5,
               fontSize: 16,
               color: "#292e49",
             }}
@@ -148,7 +172,6 @@ const addFare=(t)=>{
             onChangeText={addName}
             placeholder="enter"
           />
-
           <View style={{ padding: 15, flexDirection: "row", marginTop: 10 }}>
             <Icon name="taxi" size={40} />
             <View style={{ marginLeft: 10, marginTop: -4 }}>
@@ -175,7 +198,7 @@ const addFare=(t)=>{
                   style={{ fontSize: 16 }}
                   placeholder="Fare"
                   keyboardType="numeric"
-                  value={fare}
+                  value={fare + ""}
                   onChangeText={addFare}
                 />
               </View>
@@ -188,7 +211,7 @@ const addFare=(t)=>{
               style={styles.save}
               onPress={() => {
                 setModalVisible(!modalVisible);
-              
+
                 addJourney();
                 setName('');
                 setFrom('');
@@ -201,7 +224,7 @@ const addFare=(t)=>{
             <TouchableOpacity
               onPress={() => {
                 setModalVisible(!modalVisible);
-               setName("");
+                setName("");
                 setFrom("");
                 setTo("");
                 setFare(0);
@@ -222,25 +245,25 @@ const addFare=(t)=>{
             name={itemData.item.nameofperson}
             from={itemData.item.fromplace}
             to={itemData.item.toplace}
-            fare={itemData.item.fareamount / 2}
+            fare={itemData.item.fareamount / passengers}
           />
         )}
       />
     </View>
   );
 }
-function FareCalculator(){
-  return(
+function FareCalculator() {
+  return (
     <View></View>
   )
 }
-const Stack=createStackNavigator();
+const Stack = createStackNavigator();
 
-export default function CabShare(){
-  return(
+export default function CabShare() {
+  return (
     <Stack.Navigator>
-      <Stack.Screen name="Cab Share" component={CabShareComponent} options={{ headerShown:false}}/>
-      <Stack.Screen name="Fare Calculator" component={FareCalculator}/>
+      <Stack.Screen name="Cab Share" component={CabShareComponent} options={{ headerShown: false }} />
+      <Stack.Screen name="Fare Calculator" component={FareCalculator} />
     </Stack.Navigator>
 
   )
@@ -266,6 +289,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 5,
   },
+
   fare: {
     width: width / 2.5,
     backgroundColor: "#F7C135",
@@ -314,4 +338,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  btnAdd: {
+
+  }
 });

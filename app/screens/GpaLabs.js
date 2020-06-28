@@ -46,6 +46,7 @@ export default function GpaLabs() {
     if (gpaEnglish < 4) {
         gpaEnglish = 4;
     }
+    var avgLabs = (gpaChemistry + gpaDrawing + gpaEnglish + gpaMechanics + gpaPhysics) / 5;
     return (
         <View style={styles.background}>
             <Text style={styles.text}>Applied Physics Lab : {gpaPhysics}</Text>
@@ -148,7 +149,11 @@ export default function GpaLabs() {
                     <Icon name="minus" size={19} />
                 </TouchableOpacity>
             </View>
-
+            <View style={styles.gpa}>
+                <Text style={styles.text}>
+                    Your GPA for labs: {avgLabs.toFixed(2)}
+                </Text>
+            </View>
         </View>
     );
 }
@@ -204,7 +209,6 @@ const styles = StyleSheet.create({
     text: {
         color: "#ECF1F1",
         fontSize: screenHeight / 44,
-
         marginBottom: screenHeight / 400,
         marginTop: screenHeight / 600,
     },
@@ -223,4 +227,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    gpa: {
+        position: "absolute",
+        top: screenHeight / 1.22,
+    }
 });
