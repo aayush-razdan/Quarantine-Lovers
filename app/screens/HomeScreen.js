@@ -6,11 +6,11 @@ export default class app extends Component {
     super(props);
     this.state = { webViewUrl: 'http://www.vjti.ac.in' };
   }
-render() {
+  render() {
     const jsCode = `document.body.innerHTML=document.getElementById('sidenav').innerHTML;`;
- 
+
     return (
-    
+
       <View style={styles.container}>
         <WebView
           ref={ref => {
@@ -20,27 +20,27 @@ render() {
           originWhitelist={['*']}
           javaScriptEnabledAndroid={true}
           injectedJavaScript={jsCode}
-           style={{width:"100%",height:"70%"}}
+          style={{ width: "100%", height: "70%" }}
           scrollEnabled={false}
-            scalesPageToFit={false}
-      /*  onFileDownload={true}
-        allowFileAccess={true}
-        allowFileAccessFromFileURLs={true}
-       */
+          scalesPageToFit={false}
+        /*  onFileDownload={true}
+          allowFileAccess={true}
+          allowFileAccessFromFileURLs={true}
+         */
         />
       </View>
-    
+
     );
   }
 }
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-     width:"100%",
-      //height:10,
-      backgroundColor:"white",
-     // marginRight:"100%"
-    }
+  container: {
+    flex: 1,
+    width: "150%",
+    left: -205,
+    height: "200%",
+    backgroundColor: "white",
+  }
 
-  
+
 });
