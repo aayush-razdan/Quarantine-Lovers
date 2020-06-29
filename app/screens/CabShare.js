@@ -155,6 +155,7 @@ function CabShareComponent({ navigation }) {
             }}
             value={passengers + ""}
             onChangeText={addPassengers}
+            keyboardType='numeric'
             placeholder="enter"
           />
           {/* <TouchableOpacity

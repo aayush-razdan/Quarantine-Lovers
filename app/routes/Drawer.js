@@ -16,7 +16,7 @@ import { robotoWeights, material } from "react-native-typography";
 import Gpa from "../screens/Gpa";
 import CabShare from "../screens/CabShare";
 import FindMe from "../screens/FindMe";
-import CollegeMap from "../screens/CollegeMap";
+
 import Menu from "../screens/Menu";
 const todoListScreen = () => {
   return <TodoList />;

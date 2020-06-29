@@ -185,12 +185,14 @@ function Todo() {
           position: "absolute",
         }}
       >
-        <TouchableOpacity
+        <Icon name="pencil-circle"
           onPress={() => setModalVisible(!modalVisible)}
+          size={deviceHeight/10}
+          color="#191939"
           style={styles.button}
-        >
-          {/* <Text style={styles.addButton}>+</Text> */}
-        </TouchableOpacity>
+/>
+      
+       
       </View>
     </View>
   );
@@ -226,18 +228,17 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
+   
     shadowColor: "rgba(0,0,0, .4)", // IOS
-    shadowOffset: { height: 2, width: 1 }, // IOS
+    shadowOffset: { height: 1, width: 1 }, // IOS
     shadowOpacity: 1, // IOS
-    shadowRadius: 7, //IOS
-    backgroundColor: "#24385B",
+    shadowRadius: 1, //IOS
     elevation: 8, // Android
     borderWidth: 0,
     borderColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    width: 70,
-    height: 70,
+  
     opacity: 0.85,
     position: "absolute",
     top: deviceHeight - deviceHeight / 3.9,

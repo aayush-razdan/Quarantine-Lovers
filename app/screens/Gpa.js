@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import Icon from '@expo/vector-icons/FontAwesome5';
+import Icon from '@expo/vector-icons/Entypo';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -60,10 +60,10 @@ export default function Gpa() {
                     let iconName;
 
                     if (route.name === 'GpaSubjects') {
-                        iconName = 'school'; size = 20
+                        iconName = 'book'; size = 23
                     }
                     else if (route.name === 'GpaLabs') {
-                        iconName = 'hotel'; size = 20
+                        iconName = 'lab-flask'; size = 23
                     }
 
                     // You can return any component that you like here!

@@ -92,20 +92,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Todo List");
               }}
             />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Icons
-                  name="idcard"
-                  color={"rgba(255,255,255,1)"}
-                  size={size}
-                />
-              )}
-              label="ID Details"
-              labelStyle={{ color: "white" }}
-              onPress={() => {
-                props.navigation.navigate("Id Details");
-              }}
-            />
+           
             <DrawerItem
               icon={({ color, size }) => (
                 <Iconssss
@@ -128,6 +115,20 @@ export default function DrawerContent(props) {
               labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("CabShare");
+              }}
+            />
+             <DrawerItem
+              icon={({ color, size }) => (
+                <Icons
+                  name="idcard"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="ID Details"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Id Details");
               }}
             />
             <DrawerItem

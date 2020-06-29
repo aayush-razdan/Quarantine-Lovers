@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import Icons from '@expo/vector-icons/MaterialCommunityIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,8 +19,8 @@ const HomeStackScreen = ({ navigation }) => (
   <HomeStack.Navigator>
     <HomeStack.Screen name="Home" component={HomeScreen} options={{
       headerLeft: () => (
-        <Ionicons
-          name="ios-menu"
+        <Icons
+          name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
           color="#1D2430"
@@ -34,8 +34,8 @@ const ProfileStackScreen = ({ navigation }) => (
   <ProfileStack.Navigator>
     <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
       headerLeft: () => (
-        <Ionicons
-          name="ios-menu"
+        <Icons
+          name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
           color="#1D2430"
@@ -47,10 +47,10 @@ const ProfileStackScreen = ({ navigation }) => (
 )
 const TimetableStackScreen = ({ navigation }) => (
   <TimetableStack.Navigator>
-    <TimetableStack.Screen name="Time-Table" component={TimeTable} options={{
+    <TimetableStack.Screen name="College Map" component={TimeTable} options={{
       headerLeft: () => (
-        <Ionicons
-          name="ios-menu"
+        <Icons
+          name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
           color="#1D2430"
@@ -75,18 +75,18 @@ export default function MainPage() {
           let iconName;
 
           if (route.name === 'Home') {
-            iconName = 'ios-home';
+            iconName = 'home';
           } else if (route.name === 'Profile') {
-            iconName = 'ios-person';
-          } else if (route.name === 'Time-table') {
-            iconName = 'ios-list-box';
+            iconName = 'human-greeting';
+          } else if (route.name === 'College Map') {
+            iconName = 'google-maps';
           }
 
           // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <Icons name={iconName} size={size} color={color} />;
         },
       })}>
-      <Tab.Screen name="Time-table" component={TimetableStackScreen} />
+      <Tab.Screen name="College Map" component={TimetableStackScreen} />
       <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Profile" component={ProfileStackScreen} />
     </Tab.Navigator>
