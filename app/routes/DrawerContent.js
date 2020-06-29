@@ -145,7 +145,8 @@ export default function DrawerContent(props) {
               }}
             />
 
-          { /* <DrawerItem
+
+            { /* <DrawerItem
               icon={({ color, size }) => (
                 <Iconss
                   name="map-marked-alt"

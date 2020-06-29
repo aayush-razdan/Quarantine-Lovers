@@ -57,7 +57,7 @@ const GoalItem = (props) => (
       size={20}
       color="grey"
     />
-    <Text style={{ position: "absolute", top: height / 10.5, right: width / 7 }}>{props.passengers}</Text>
+    <Text style={{ position: "absolute", top: height / 10.5, right: width / 7 }}>{parseInt(props.passengers) + 1}</Text>
     <Icon name="group" size={height / 60} style={{ position: "absolute", top: height / 10, right: width / 10 }} />
 
   </View>
