@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, BackHandler } from 'react-native';
+import { Text, View, StyleSheet, BackHandler, Dimensions } from 'react-native';
 import { WebView } from 'react-native-webview';
+const screenHeight = Math.round(Dimensions.get("window").height);
+const screenWidth = Math.round(Dimensions.get("window").width);
 export default class app extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "150%",
-    left: -205,
+    left: -screenHeight / 3.95,
     height: "200%",
     backgroundColor: "white",
   }
