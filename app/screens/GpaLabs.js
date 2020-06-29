@@ -49,105 +49,115 @@ export default function GpaLabs() {
     var avgLabs = (gpaChemistry + gpaDrawing + gpaEnglish + gpaMechanics + gpaPhysics) / 5;
     return (
         <View style={styles.background}>
-            <Text style={styles.text}>Applied Physics Lab : {gpaPhysics}</Text>
-            <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity
-                    style={styles.btnPlus}
-                    onPress={() => {
-                        setgpaPhysics(gpaPhysics + 1)
-                    }}
-                >
-                    <Icons name="add" size={20} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnMinus}
-                    onPress={() => {
-                        setgpaPhysics(gpaPhysics - 1)
-                    }}
-                >
+            <View style={styles.card}>
+                <Text style={styles.text}>Applied Physics Lab : {gpaPhysics}</Text>
+                <View style={{ flexDirection: "row" }}>
+                    <TouchableOpacity
+                        style={styles.btnPlus}
+                        onPress={() => {
+                            setgpaPhysics(gpaPhysics + 1)
+                        }}
+                    >
+                        <Icons name="add" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.btnMinus}
+                        onPress={() => {
+                            setgpaPhysics(gpaPhysics - 1)
+                        }}
+                    >
 
-                    <Icon name="minus" size={19} />
-                </TouchableOpacity>
+                        <Icon name="minus" size={19} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            <Text style={styles.text}>Applied Chemistry Lab : {gpaChemistry}</Text>
-            <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity
-                    style={styles.btnPlus}
-                    onPress={() => {
-                        setgpaChemistry(gpaChemistry + 1)
-                    }}
-                >
-                    <Icons name="add" size={20} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnMinus}
-                    onPress={() => {
-                        setgpaChemistry(gpaChemistry - 1)
-                    }}
-                >
+            <View style={styles.card}>
+                <Text style={styles.text}>Applied Chemistry Lab : {gpaChemistry}</Text>
+                <View style={{ flexDirection: "row" }}>
+                    <TouchableOpacity
+                        style={styles.btnPlus}
+                        onPress={() => {
+                            setgpaChemistry(gpaChemistry + 1)
+                        }}
+                    >
+                        <Icons name="add" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.btnMinus}
+                        onPress={() => {
+                            setgpaChemistry(gpaChemistry - 1)
+                        }}
+                    >
 
-                    <Icon name="minus" size={19} />
-                </TouchableOpacity>
+                        <Icon name="minus" size={19} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            <Text style={styles.text}>Engineering Mechanics Lab : {gpaMechanics}</Text>
-            <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity
-                    style={styles.btnPlus}
-                    onPress={() => {
-                        setgpaMechanics(gpaMechanics + 1)
-                    }}
-                >
-                    <Icons name="add" size={20} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnMinus}
-                    onPress={() => {
-                        setgpaMechanics(gpaMechanics - 1)
-                    }}
-                >
+            <View style={styles.card}>
+                <Text style={styles.text}>Engineering Mechanics Lab : {gpaMechanics}</Text>
+                <View style={{ flexDirection: "row" }}>
+                    <TouchableOpacity
+                        style={styles.btnPlus}
+                        onPress={() => {
+                            setgpaMechanics(gpaMechanics + 1)
+                        }}
+                    >
+                        <Icons name="add" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.btnMinus}
+                        onPress={() => {
+                            setgpaMechanics(gpaMechanics - 1)
+                        }}
+                    >
 
-                    <Icon name="minus" size={19} />
-                </TouchableOpacity>
+                        <Icon name="minus" size={19} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            <Text style={styles.text}>Engineering Drawing Lab : {gpaDrawing}</Text>
-            <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity
-                    style={styles.btnPlus}
-                    onPress={() => {
-                        setgpaDrawing(gpaDrawing + 1)
-                    }}
-                >
-                    <Icons name="add" size={20} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnMinus}
-                    onPress={() => {
-                        setgpaDrawing(gpaDrawing - 1)
-                    }}
-                >
+            <View style={styles.card}>
+                <Text style={styles.text}>Engineering Drawing Lab : {gpaDrawing}</Text>
+                <View style={{ flexDirection: "row" }}>
+                    <TouchableOpacity
+                        style={styles.btnPlus}
+                        onPress={() => {
+                            setgpaDrawing(gpaDrawing + 1)
+                        }}
+                    >
+                        <Icons name="add" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.btnMinus}
+                        onPress={() => {
+                            setgpaDrawing(gpaDrawing - 1)
+                        }}
+                    >
 
-                    <Icon name="minus" size={19} />
-                </TouchableOpacity>
+                        <Icon name="minus" size={19} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            <Text style={styles.text}>English Lab: {gpaEnglish}</Text>
-            <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity
-                    style={styles.btnPlus}
-                    onPress={() => {
-                        setgpaEnglish(gpaEnglish + 1)
-                    }}
-                >
-                    <Icons name="add" size={20} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnMinus}
-                    onPress={() => {
-                        setgpaEnglish(gpaEnglish - 1)
-                    }}
-                >
+            <View style={styles.card}>
+                <Text style={styles.text}>English Lab: {gpaEnglish}</Text>
+                <View style={{ flexDirection: "row" }}>
+                    <TouchableOpacity
+                        style={styles.btnPlus}
+                        onPress={() => {
+                            setgpaEnglish(gpaEnglish + 1)
+                        }}
+                    >
+                        <Icons name="add" size={20} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.btnMinus}
+                        onPress={() => {
+                            setgpaEnglish(gpaEnglish - 1)
+                        }}
+                    >
 
-                    <Icon name="minus" size={19} />
-                </TouchableOpacity>
+                        <Icon name="minus" size={19} />
+                    </TouchableOpacity>
+                </View>
             </View>
             <View style={styles.gpa}>
                 <Text style={styles.text}>
@@ -163,7 +173,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#181E28",
         //backgroundColor: "white",
-        justifyContent: "center",
+        //justifyContent: "center",
         alignItems: "center",
     },
     btnExtraClass: {
@@ -230,5 +240,15 @@ const styles = StyleSheet.create({
     gpa: {
         position: "absolute",
         top: screenHeight / 1.22,
+    },
+    card: {
+        width: screenWidth,
+        //height: screenHeight / 8,
+        elevation: 4,
+        backgroundColor: "#1D2430",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: screenHeight / 51,
+        marginTop: screenHeight / 80,
     }
 });

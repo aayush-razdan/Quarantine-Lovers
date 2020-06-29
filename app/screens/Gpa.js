@@ -60,10 +60,10 @@ export default function Gpa() {
                     let iconName;
 
                     if (route.name === 'GpaSubjects') {
-                        iconName = 'school'; size=20
+                        iconName = 'school'; size = 20
                     }
                     else if (route.name === 'GpaLabs') {
-                        iconName = 'hotel'; size=20
+                        iconName = 'hotel'; size = 20
                     }
 
                     // You can return any component that you like here!

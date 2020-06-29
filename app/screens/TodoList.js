@@ -189,7 +189,7 @@ function Todo() {
           onPress={() => setModalVisible(!modalVisible)}
           style={styles.button}
         >
-          <Text style={styles.addButton}>+</Text>
+          {/* <Text style={styles.addButton}>+</Text> */}
         </TouchableOpacity>
       </View>
     </View>
