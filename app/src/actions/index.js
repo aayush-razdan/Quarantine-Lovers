@@ -3,7 +3,6 @@ import {
   MODIFY_BRANCH,
   MODIFY_SEM,
   MODIFY_AVGLABGPA,
-  MODIFY_AVGLABGPA,
   MODIFY_AVGSUBGPA,
 } from "./types";
 

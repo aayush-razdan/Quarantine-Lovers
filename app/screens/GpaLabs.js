@@ -67,7 +67,7 @@ const GpaLabs = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaPhysics(gpaPhysics + 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -76,7 +76,7 @@ const GpaLabs = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaPhysics(gpaPhysics - 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -90,7 +90,7 @@ const GpaLabs = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaChemistry(gpaChemistry + 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -99,7 +99,7 @@ const GpaLabs = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaChemistry(gpaChemistry - 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -115,7 +115,7 @@ const GpaLabs = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaMechanics(gpaMechanics + 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -124,7 +124,7 @@ const GpaLabs = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaMechanics(gpaMechanics - 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -138,7 +138,7 @@ const GpaLabs = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaDrawing(gpaDrawing + 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -147,7 +147,7 @@ const GpaLabs = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaDrawing(gpaDrawing - 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -161,7 +161,7 @@ const GpaLabs = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaEnglish(gpaEnglish + 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -170,7 +170,7 @@ const GpaLabs = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaEnglish(gpaEnglish - 1);
-              props.labGpaAdd(avgLabs);
+              props.labGpaAdd(avgLabs.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -190,7 +190,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapDispatchToProps)(GpaLabs);
+export default connect(null, mapDispatchToProps)(GpaLabs);
 
 const styles = StyleSheet.create({
   background: {

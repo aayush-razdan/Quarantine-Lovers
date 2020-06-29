@@ -82,7 +82,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaMaths(gpaMaths + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -91,7 +91,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaMaths(gpaMaths - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -105,7 +105,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaPhysics(gpaPhysics + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -114,7 +114,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaPhysics(gpaPhysics - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -128,7 +128,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaChemistry(gpaChemistry + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -137,7 +137,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaChemistry(gpaChemistry - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -151,7 +151,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaMechanics(gpaMechanics + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -160,7 +160,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaMechanics(gpaMechanics - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -174,7 +174,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaDrawing(gpaDrawing + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -183,7 +183,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaDrawing(gpaDrawing - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -197,7 +197,7 @@ const GpaSubjects = (props) => {
             style={styles.btnPlus}
             onPress={() => {
               setgpaEnglish(gpaEnglish + 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icons name="add" size={20} />
@@ -206,7 +206,7 @@ const GpaSubjects = (props) => {
             style={styles.btnMinus}
             onPress={() => {
               setgpaEnglish(gpaEnglish - 1);
-              props.subGpaAdd(avgSubjects);
+              props.subGpaAdd(avgSubjects.toFixed(2));
             }}
           >
             <Icon name="minus" size={19} />
@@ -228,7 +228,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapDispatchToProps)(GpaSubjects);
+export default connect(null, mapDispatchToProps)(GpaSubjects);
 
 const styles = StyleSheet.create({
   background: {

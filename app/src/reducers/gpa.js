@@ -9,7 +9,7 @@ const gpaReducer = (state = initialState, action) => {
       state.averageSubGpa = action.avgSubjects;
     }
     case MODIFY_AVGLABGPA: {
-      state.averageSubGpa = action.avgLabs;
+      state.averageLabGpa = action.avgLabs;
     }
 
     default:
