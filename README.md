@@ -100,7 +100,7 @@ Highly useful app for VJTI students (especially first year sudents). (other uses
 
 - [Aayush Razdan](https://github.com/aayush-razdan)
 - [Saksham Tikoo](https://github.com/tikoosaksham)
-- [Aayush Pattnaik](https://github.com/ayushpattnaik)
+- [Ayush Pattnaik](https://github.com/ayushpattnaik)
 - [Mohammad Walid Palekar](https://github.com/greybeard9)
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
