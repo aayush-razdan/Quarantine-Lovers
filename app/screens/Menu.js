@@ -93,12 +93,32 @@ const MessStack = createStackNavigator();
 
 const CanteenStackScreen = ({ navigation }) => (
     <CanteenStack.Navigator>
-        <CanteenStack.Screen name="Canteen" component={Canteen} />
+        <CanteenStack.Screen name="Canteen" component={Canteen} options={{
+            headerLeft: () => (
+                <Ionicons
+                    name="ios-menu"
+                    size={30}
+                    style={{ paddingLeft: 10 }}
+                    color="#1D2430"
+                    onPress={() => navigation.openDrawer()}
+                />
+            )
+        }} />
     </CanteenStack.Navigator>
 )
 const MessStackScreen = ({ navigation }) => (
     <MessStack.Navigator>
-        <MessStack.Screen name="Mess" component={Mess} />
+        <MessStack.Screen name="Mess" component={Mess} options={{
+            headerLeft: () => (
+                <Ionicons
+                    name="ios-menu"
+                    size={30}
+                    style={{ paddingLeft: 10 }}
+                    color="#1D2430"
+                    onPress={() => navigation.openDrawer()}
+                />
+            )
+        }} />
     </MessStack.Navigator>
 )
 

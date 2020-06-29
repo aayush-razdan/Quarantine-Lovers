@@ -75,7 +75,6 @@ function CabShareComponent({ navigation }) {
   const addName = (text) => {
     setName(text);
   };
-
   const addPassengers = (text) => {
     setPassenger(text);
   };
@@ -223,7 +222,7 @@ function CabShareComponent({ navigation }) {
                 setFrom('');
                 setTo('');
                 setFare(0);
-                setPassenger(2);
+                //setPassenger(1);
               }}
             >
               <Text style={{ color: "white" }}>Save</Text>
@@ -235,7 +234,7 @@ function CabShareComponent({ navigation }) {
                 setFrom("");
                 setTo("");
                 setFare(0);
-                setPassenger(2);
+                //setPassenger(1);
               }}
               style={styles.cancel}
             >
@@ -253,7 +252,7 @@ function CabShareComponent({ navigation }) {
             name={itemData.item.nameofperson}
             from={itemData.item.fromplace}
             to={itemData.item.toplace}
-            fare={itemData.item.fareamount / (parseInt(passengers) + 1)}
+            fare={(itemData.item.fareamount / (parseInt(passengers) + 1)).toFixed(2)}
             passengers={itemData.item.passengersno}
 
           />
