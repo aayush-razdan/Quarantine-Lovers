@@ -234,6 +234,7 @@ const styles = StyleSheet.create({
         marginRight: screenWidth / 5,
 
         marginTop: screenHeight / 80,
+        marginBottom: "1.5%",
         alignItems: "center",
     },
     btnMinus: {

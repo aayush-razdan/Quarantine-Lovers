@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#7ED68A",
         justifyContent: "space-evenly",
         marginRight: screenWidth / 5,
-
+        marginBottom: "1.5%",
         marginTop: screenHeight / 80,
         alignItems: "center",
     },
