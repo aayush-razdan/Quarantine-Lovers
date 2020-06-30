@@ -18,77 +18,79 @@ const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
 
 function Canteen() {
-    return (<ScrollView>
-        <View style={styles.background}>
-            <View style={styles.card}>
-                <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Indian{"\n\n"}</Text></View>
-                <Text style={styles.text}>
-                    {"      "} Tomato Soup{"\n"}
-                    {"      "} Coconut Soup{"\n"}
-                    {"      "} Lentil Soup (vegan){"\n"}
-                    {"      "} Kachumber Salad{"\n"}
-                    {"      "} Garden Salad{"\n"}
-                    {"      "} Vegetable Samosa (Vegan){"\n"}
-                    {"      "} Gobhi Pakora (Vegan){"\n"}
-                    {"      "} Paneer Pakora{"\n"}
-                    {"      "} Vegetable Pakora{"\n"}
-                    {"      "} Samosa Chat{"\n"}
-                    {"      "} Papri Chat (cold){"\n"}
-                    {"      "} Bhel Poori (cold){"\n"}
-                    {"      "} Veg. Assorted Platter{"\n"}
-                    {"      "} Lamb Keema Samosa{"\n"}
-                    {"      "} Chicken Pakora{"\n"}
-                    {"      "} Assorted Platter{"\n"}
-                    {"      "} Tandoori Platter{"\n"}
-                </Text>
-            </View>
-            <View style={styles.card}>
-                <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Chinese{"\n\n"}</Text></View>
-                <Text style={styles.text}>
-                    {"      "} Steam Mixed Vegetables{"\n"}
-                    {"      "} Steam Chicken w/Vegetables{"\n"}
-                    {"      "} Steam Shrimp w/Vegetables{"\n"}
-                    {"      "} Chicken fried rice{"\n"}
-                    {"      "} Singapore Rice Noodle{"\n"}
-                    {"      "} Seafood pan fry Noodles{"\n"}
-                    {"      "} Honey Garlic Chicken{"\n"}
-                    {"      "} Lemon Mushu Chicken{"\n"}
-                    {"      "} Boneless Breaded Chicken{"\n"}
-                    {"      "} Honey Chilly Potato{"\n"}
-                    {"      "} Chicken Momos{"\n"}
-                    {"      "} Veg. Momos{"\n"}
-                    {"      "} Szechuan triple rice{"\n"}
-                    {"      "} Szechuan Bean Curd{"\n"}
-                    {"      "} Chicken w/Garlic Sauce{"\n"}
-                    {"      "} General Tso’s Chicken{"\n"}
-                    {"      "} Curry Shrimp{"\n"}
-                </Text>
-            </View>
-            <View style={styles.card}>
-                <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Others{"\n\n"}</Text></View>
-                <Text style={styles.text}>
-                    {"      "} Tomato Soup{"\n"}
-                    {"      "} Coconut Soup{"\n"}
-                    {"      "} Lentil Soup (vegan){"\n"}
-                    {"      "} Kachumber Salad{"\n"}
-                    {"      "} Garden Salad{"\n"}
-                    {"      "} Vegetable Samosa (Vegan){"\n"}
-                    {"      "} Gobhi Pakora (Vegan){"\n"}
-                    {"      "} Paneer Pakora{"\n"}
-                    {"      "} Vegetable Pakora{"\n"}
-                    {"      "} Samosa Chat{"\n"}
-                    {"      "} Papri Chat (cold){"\n"}
-                    {"      "} Bhel Poori (cold){"\n"}
-                    {"      "} Veg. Assorted Platter{"\n"}
-                    {"      "} Lamb Keema Samosa{"\n"}
-                    {"      "} Chicken Pakora{"\n"}
-                    {"      "} Assorted Platter{"\n"}
-                    {"      "} Tandoori Platter{"\n"}
-                </Text>
-            </View>
+    return (
+        <ScrollView>
+            <View style={styles.background}>
+                <View style={styles.card}>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Indian{"\n\n"}</Text></View>
+                    <Text style={styles.text}>
+                        {"      "} Tomato Soup{"\n"}
+                        {"      "} Coconut Soup{"\n"}
+                        {"      "} Lentil Soup (vegan){"\n"}
+                        {"      "} Kachumber Salad{"\n"}
+                        {"      "} Garden Salad{"\n"}
+                        {"      "} Vegetable Samosa (Vegan){"\n"}
+                        {"      "} Gobhi Pakora (Vegan){"\n"}
+                        {"      "} Paneer Pakora{"\n"}
+                        {"      "} Vegetable Pakora{"\n"}
+                        {"      "} Samosa Chat{"\n"}
+                        {"      "} Papri Chat (cold){"\n"}
+                        {"      "} Bhel Poori (cold){"\n"}
+                        {"      "} Veg. Assorted Platter{"\n"}
+                        {"      "} Lamb Keema Samosa{"\n"}
+                        {"      "} Chicken Pakora{"\n"}
+                        {"      "} Assorted Platter{"\n"}
+                        {"      "} Tandoori Platter{"\n"}
+                    </Text>
+                </View>
+                <View style={styles.card}>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Chinese{"\n\n"}</Text></View>
+                    <Text style={styles.text}>
+                        {"      "} Steam Mixed Vegetables{"\n"}
+                        {"      "} Steam Chicken w/Vegetables{"\n"}
+                        {"      "} Steam Shrimp w/Vegetables{"\n"}
+                        {"      "} Chicken fried rice{"\n"}
+                        {"      "} Singapore Rice Noodle{"\n"}
+                        {"      "} Seafood pan fry Noodles{"\n"}
+                        {"      "} Honey Garlic Chicken{"\n"}
+                        {"      "} Lemon Mushu Chicken{"\n"}
+                        {"      "} Boneless Breaded Chicken{"\n"}
+                        {"      "} Honey Chilly Potato{"\n"}
+                        {"      "} Chicken Momos{"\n"}
+                        {"      "} Veg. Momos{"\n"}
+                        {"      "} Szechuan triple rice{"\n"}
+                        {"      "} Szechuan Bean Curd{"\n"}
+                        {"      "} Chicken w/Garlic Sauce{"\n"}
+                        {"      "} General Tso’s Chicken{"\n"}
+                        {"      "} Curry Shrimp{"\n"}
+                    </Text>
+                </View>
+                <View style={styles.card}>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Others{"\n\n"}</Text></View>
+                    <Text style={styles.text}>
+                        {"      "} Sandwich{"\n"}
+                        {"      "} Granola cups{"\n"}
+                        {"      "} Chicken and and Egg Burgers{"\n"}
+                        {"      "} Meat and cheese Croissants{"\n"}
+                        {"      "} Banana Bread {"\n"}
+                        {"      "} Raisin Toast{"\n"}
+                        {"      "} Hash Brown{"\n"}
+                        {"      "} Garlic Bread{"\n"}
+                        {"      "} Hot Dog{"\n"}
+                        {"      "} Dim Sims{"\n"}
+                        {"      "} Sausage Roll{"\n"}
+                        {"      "} Spinach and cheese Toast{"\n"}
+                        {"      "} Toasted Turkish bread{"\n"}
+                        {"      "} Lassi{"\n"}
+                        {"      "} Soft drinks{"\n"}
+                        {"      "} Curd{"\n"}
+                        {"      "} Mineral water{"\n"}
+                    </Text>
+                </View>
 
-        </View>
-    </ScrollView>)
+            </View>
+        </ScrollView>
+    )
 }
 function Mess() {
     return (
