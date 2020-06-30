@@ -38,11 +38,8 @@ export default class app extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "150%",
+    width: 1.5 * screenWidth,
     left: -screenHeight / 3.95,
-    height: "200%",
     backgroundColor: "white",
   }
-
-
 });
