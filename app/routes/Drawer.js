@@ -31,7 +31,7 @@ export default function DrawerStack() {
         drawerContent={(props) => <DrawerContent {...props} />}
       >
         <Drawer.Screen name="MainPage" component={MainPage} />
-        <Drawer.Screen name="Login" component={AuthStack} />
+       
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="CabShare" component={CabShare} />
@@ -49,4 +49,5 @@ export default function DrawerStack() {
 {
   /* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */
   /* <Drawer.Screen name="CollegeMap" component={CollegeMap} />*/
+ /* <Drawer.Screen name="Login" component={AuthStack} />*/
 }
