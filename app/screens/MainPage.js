@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import Icons from '@expo/vector-icons/MaterialCommunityIcons';
+import Icon from '@expo/vector-icons/MaterialIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,7 +18,7 @@ const TimetableStack = createStackNavigator();
 
 const HomeStackScreen = ({ navigation }) => (
   <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={HomeScreen} options={{
+    <HomeStack.Screen name="Notifications" component={HomeScreen} options={{
       headerLeft: () => (
         <Icons
           name="menu"
@@ -32,7 +33,7 @@ const HomeStackScreen = ({ navigation }) => (
 )
 const ProfileStackScreen = ({ navigation }) => (
   <ProfileStack.Navigator>
-    <ProfileStack.Screen name="Profile" component={ProfileScreen} options={{
+    <ProfileStack.Screen name="Welcome" component={ProfileScreen} options={{
       headerLeft: () => (
         <Icons
           name="menu"
@@ -63,7 +64,7 @@ const TimetableStackScreen = ({ navigation }) => (
 export default function MainPage() {
   return (
 
-    <Tab.Navigator initialRouteName="Home"
+    <Tab.Navigator initialRouteName="Dashboard"
       tabBarOptions={{
         activeTintColor: 'white',
         style: {
@@ -73,22 +74,23 @@ export default function MainPage() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           let iconName;
-
-          if (route.name === 'Home') {
-            iconName = 'home';
-          } else if (route.name === 'Profile') {
+       
+          if (route.name === 'Notifications') {
+            iconName = 'newspaper';
+          } else if (route.name === 'Dashboard') {
             iconName = 'human-greeting';
           } else if (route.name === 'College Map') {
             iconName = 'google-maps';
           }
 
           // You can return any component that you like here!
-          return <Icons name={iconName} size={size} color={color} />;
+          return <Icons name={iconName} size={size} color={color}/>
         },
       })}>
+   
       <Tab.Screen name="College Map" component={TimetableStackScreen} />
-      <Tab.Screen name="Home" component={HomeStackScreen} />
-      <Tab.Screen name="Profile" component={ProfileStackScreen} />
+      <Tab.Screen name="Dashboard" component={ProfileStackScreen} />
+      <Tab.Screen name="Notifications" component={HomeStackScreen} />
     </Tab.Navigator>
 
   );

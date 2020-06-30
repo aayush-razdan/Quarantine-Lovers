@@ -8,7 +8,7 @@ export default function TimeTable() {
   return (
     <ImageBackground style={{ width: "100%", height: "100%" }}>
       <MapView
-        style={{ height: "98%", width: "98%", marginLeft: "1%", marginTop: "2%", opacity: 0.95 }}
+        style={{ height: "97%", width: "98%", marginLeft: "1%", marginTop: "2%", opacity: 0.95 }}
         initialRegion={{
           latitude: 19.0223415,
           longitude: 72.8560332,
