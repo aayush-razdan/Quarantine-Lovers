@@ -30,57 +30,212 @@ function Mess() {
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Monday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
+
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Tuesday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Wednesday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Thursday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Friday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Saturday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
                 <View style={styles.card}>
                     <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Sunday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
-                        Breakfast: {"\n\n"}
-                    Lunch: {"\n\n"}
-                    Dinner: {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
+                        {"\n      "}Scrambled farm-eggs {"\n"}
+                        {"      "}Lightly smoked back-meat {"\n"}
+                        {"      "}Grilled chicken sausages {"\n"}
+                        {"      "}Baked bean cocottes
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Lunch:</Text>
+                        {"\n      "}Chicken mayonnaise and meat{"\n"}
+                        {"      "}(on bread item){"\n"}
+                        {"      "}Moroccan chicken wraps{"\n"}
+                        {"      "}Pumpkin, feta and spinach{"\n"}
+                        {"      "}(on bread item) (V){"\n"}
+                        {"      "}Chicken stroganoff with pilaf rice{"\n"}
+                        {"      "}Garden salad{"\n"}
+                        {"      "}Salad of the Day
+                        {"\n\n"}
+                        <Text style={{ fontSize: screenHeight / 35 }}>Dinner:</Text>
+                        {"\n      "}Herb crusted salmon, crushed white{"\n"}
+                        {"      "}ricotta ravioli and slow braised{"\n"}
+                        {"      "}tomatoes{"\n"}
+                        {"      "}Wagyu slow braised 5 spices{"\n"}
+                        {"      "}mash, seasonal vegetables served{"\n"}
+                        {"      "}with braising sauce{"\n"}
+                        {"      "}Market fish, citrus risotto, seasonal{"\n"}
+                        {"      "}vegetables, lemon herb beurre blanc{"\n"}
                     </Text>
                 </View>
             </View>
@@ -200,7 +355,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#1D2430",
         elevation: 8,
         borderRadius: screenHeight / 51,
-        marginTop: "3%",
+        marginTop: "5%",
         marginBottom: "3%"
     },
 })
