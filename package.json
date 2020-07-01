@@ -16,6 +16,7 @@
     "@react-navigation/stack": "^5.4.1",
     "expo": "^37.0.12",
     "expo-image-picker": "~8.1.0",
+    "firebase": "^7.15.5",
     "formik": "^2.1.4",
     "logkitty": "^0.7.1",
     "randomcolor": "^0.5.4",
