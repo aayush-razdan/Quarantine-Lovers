@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, StyleSheet, Image, TextInput, Text, Dimensions, Button, TouchableWithoutFeedback, TouchableOpacity } from 'react-native'
 import * as ImagePicker from 'expo-image-picker';
+//import * as ImagePicker from 'react-native-image-picker';
 import Constants from 'expo-constants';
 import { robotoWeights, material } from 'react-native-typography';
 import { connect } from "react-redux";

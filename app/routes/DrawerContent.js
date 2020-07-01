@@ -49,7 +49,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("MainPage");
               }}
             ></DrawerItem>
-        {/*    <DrawerItem
+            {/*    <DrawerItem
               icon={({ color, size }) => (
                 <Icon
                   name="account-outline"
@@ -92,7 +92,20 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Todo List");
               }}
             />
-           
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Iconss
+                  name="tasks"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Timer"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Timer");
+              }}
+            />
             <DrawerItem
               icon={({ color, size }) => (
                 <Iconssss
@@ -117,7 +130,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("CabShare");
               }}
             />
-             <DrawerItem
+            <DrawerItem
               icon={({ color, size }) => (
                 <Icons
                   name="idcard"

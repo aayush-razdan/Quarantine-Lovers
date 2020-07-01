@@ -15,7 +15,9 @@ import DrawerContent from "./DrawerContent";
 import { robotoWeights, material } from "react-native-typography";
 import Gpa from "../screens/Gpa";
 import CabShare from "../screens/CabShare";
+import Timer from "../screens/Timer";
 import FindMe from "../screens/FindMe";
+//import Capture from "../screens/Capture";
 
 import Menu from "../screens/Menu";
 const todoListScreen = () => {
@@ -31,13 +33,15 @@ export default function DrawerStack() {
         drawerContent={(props) => <DrawerContent {...props} />}
       >
         <Drawer.Screen name="MainPage" component={MainPage} />
-       
+
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="CabShare" component={CabShare} />
         <Drawer.Screen name="Id Details" component={IdDetails} />
         <Drawer.Screen name="Menu" component={Menu} />
+        <Drawer.Screen name="Timer" component={Timer} />
         <Drawer.Screen name="Gpa" component={Gpa} />
+        {/* <Drawer.Screen name="Capture" component={Capture} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -49,5 +53,5 @@ export default function DrawerStack() {
 {
   /* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */
   /* <Drawer.Screen name="CollegeMap" component={CollegeMap} />*/
- /* <Drawer.Screen name="Login" component={AuthStack} />*/
+  /* <Drawer.Screen name="Login" component={AuthStack} />*/
 }
