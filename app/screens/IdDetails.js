@@ -19,7 +19,7 @@ const CollegeStackScreen = ({ navigation }) => (
         <CollegeStack.Screen name="College" component={College} options={{
             headerLeft: () => (
                 <Icons
-                    name="ios-menu"
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"
@@ -34,7 +34,7 @@ const HostelStackScreen = ({ navigation }) => (
         <HostelStack.Screen name="Hostel" component={Hostel} options={{
             headerLeft: () => (
                 <Icons
-                    name="ios-menu"
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"
