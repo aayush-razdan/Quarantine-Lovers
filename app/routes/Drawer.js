@@ -29,7 +29,7 @@ export default function DrawerStack() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" }}
+        drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" ,opacity: 0.97}}
         drawerContent={(props) => <DrawerContent {...props} />}
       >
         <Drawer.Screen name="MainPage" component={MainPage} />

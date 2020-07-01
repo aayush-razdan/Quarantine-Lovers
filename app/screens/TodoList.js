@@ -19,12 +19,13 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 var deviceWidth = Dimensions.get("window").width;
 var deviceHeight = Dimensions.get("window").height;
 var d = new Date();
+
 var randomColor = require("randomcolor");
 var color = randomColor();
 
 const GoalItem = (props) => (
   <View style={styles.listItem}>
-  {props.dates}
+  <Icon name="delete" onPress={props.onDelete.bind(this,props.id)} size={30} color="#292e49"style={{alignSelf:"flex-end",position:'absolute'}} size={deviceHeight/40}/>
     <Text
       style={{
         fontWeight: "bold",
@@ -38,8 +39,9 @@ const GoalItem = (props) => (
     <View
       style={{
         flexDirection: "row",
-        position: "absolute",
-        alignSelf: "flex-end",
+      position:"absolute",
+      top:deviceHeight/13,
+      right:deviceWidth/100
       }}
     >
       <Icon name="circle" color="#203557" />
@@ -48,7 +50,7 @@ const GoalItem = (props) => (
     <Text style={{ marginLeft: "3%", marginTop: "1%", marginBottom: "3%" }}>
       {props.details}
     </Text>
-    <Icon name="delete" onPress={props.onDelete} size={30} style={{alignSelf:"flex-end"}}/>
+    
   </View>
 );
 
@@ -75,14 +77,14 @@ function Todo() {
         id: Math.random().toString(),
         title: enteredText,
         details: enteredDetails,
-        dates: date,
+        dates: date.toString(),
         category: category,
       },
     ]);
   };
   const removeGoal=goalId=>{
     changeCourseGoals(currentGoals=>{
-      return currentGoals.filter((goal)=>goal.id==goalId)
+      return currentGoals.filter((goal)=>goal.id!==goalId)
     });
   }
     
@@ -185,7 +187,10 @@ function Todo() {
               details={itemData.item.details}
               category={itemData.item.category}
              dates={itemData.item.date}
-             onDelete={removeGoal.bind(this, itemData.item.id)}
+            // onDelete={removeGoal.bind(this,id)}
+            onDelete={removeGoal}
+            id={itemData.item.id}
+           
             />
           )}
         />

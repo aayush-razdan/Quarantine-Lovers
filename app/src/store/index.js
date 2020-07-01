@@ -12,9 +12,11 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default store = createStore(
+export const store = createStore(
   persistedReducer,
   applyMiddleware(createLogger())
 );
 
 export const persistedStore = persistStore(store);
+
+export default { store, persistedStore };
