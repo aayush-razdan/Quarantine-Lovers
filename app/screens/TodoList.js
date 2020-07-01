@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import DatePicker from "react-native-datepicker";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Ionicons } from "@expo/vector-icons";
+import Icons from "react-native-vector-icons/Feather";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 var deviceWidth = Dimensions.get("window").width;
@@ -24,6 +24,7 @@ var color = randomColor();
 
 const GoalItem = (props) => (
   <View style={styles.listItem}>
+  {props.dates}
     <Text
       style={{
         fontWeight: "bold",
@@ -47,6 +48,7 @@ const GoalItem = (props) => (
     <Text style={{ marginLeft: "3%", marginTop: "1%", marginBottom: "3%" }}>
       {props.details}
     </Text>
+    <Icon name="delete" onPress={props.onDelete} size={30} style={{alignSelf:"flex-end"}}/>
   </View>
 );
 
@@ -68,16 +70,24 @@ function Todo() {
 
   const addGoal = () => {
     changeCourseGoals((currentGoals) => [
-      ...courseGoals,
+      ...currentGoals,
       {
         id: Math.random().toString(),
         title: enteredText,
         details: enteredDetails,
-        date: date,
+        dates: date,
         category: category,
       },
     ]);
   };
+  const removeGoal=goalId=>{
+    changeCourseGoals(currentGoals=>{
+      return currentGoals.filter((goal)=>goal.id==goalId)
+    });
+  }
+    
+  
+   
 
   return (
     <View style={{ backgroundColor: "#fff", height: deviceHeight }}>
@@ -174,6 +184,8 @@ function Todo() {
               title={itemData.item.title}
               details={itemData.item.details}
               category={itemData.item.category}
+             dates={itemData.item.date}
+             onDelete={removeGoal.bind(this, itemData.item.id)}
             />
           )}
         />
@@ -206,7 +218,15 @@ export default function TodoList() {
       <Stack.Screen
         name="TodoList"
         component={Todo}
-        options={{ title: "TODO", headerShown: true }}
+        options={{ title: "TODO",  headerLeft: () => (
+                <Icons
+                    name="menu"
+                    size={30}
+                    style={{ paddingLeft: 10 }}
+                    color="#1D2430"
+                    onPress={() => navigation.openDrawer()}
+                />
+            ) }}
       />
     </Stack.Navigator>
   );

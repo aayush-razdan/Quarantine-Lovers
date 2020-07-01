@@ -7,7 +7,7 @@ import {
     Dimensions,
     TouchableOpacity,
 } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/Feather'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -318,8 +318,8 @@ const CanteenStackScreen = ({ navigation }) => (
     <CanteenStack.Navigator>
         <CanteenStack.Screen name="Canteen" component={Canteen} options={{
             headerLeft: () => (
-                <Ionicons
-                    name="ios-menu"
+                <Icon
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"
@@ -333,8 +333,8 @@ const MessStackScreen = ({ navigation }) => (
     <MessStack.Navigator>
         <MessStack.Screen name="Mess" component={Mess} options={{
             headerLeft: () => (
-                <Ionicons
-                    name="ios-menu"
+                <Icon
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"

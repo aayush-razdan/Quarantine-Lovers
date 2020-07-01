@@ -15,6 +15,9 @@ export default function TimeTable() {
           latitudeDelta: 0.0008,
           longitudeDelta: 0.0008
         }}
+        showsUserLocation={true}
+        pitchEnabled={true}
+      
       >
         <Marker coordinate={{ latitude: 19.0223415, longitude: 72.8560332 }}
         />

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import Icon from '@expo/vector-icons/Entypo';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/Entypo';
+import Icons from 'react-native-vector-icons/Feather'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -18,8 +18,8 @@ const GpaSubjectStacksScreen = ({ navigation }) => (
     <GpaSubjectsStack.Navigator>
         <GpaSubjectsStack.Screen name="Subjects" component={GpaSubjects} options={{
             headerLeft: () => (
-                <Ionicons
-                    name="ios-menu"
+                <Icons
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"
@@ -33,8 +33,8 @@ const GpaLabsStackScreen = ({ navigation }) => (
     <GpaLabsStack.Navigator>
         <GpaLabsStack.Screen name="Labs" component={GpaLabs} options={{
             headerLeft: () => (
-                <Ionicons
-                    name="ios-menu"
+                <Icons
+                    name="menu"
                     size={30}
                     style={{ paddingLeft: 10 }}
                     color="#1D2430"

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import Icons from '@expo/vector-icons/MaterialCommunityIcons';
-import Icon from '@expo/vector-icons/MaterialIcons';
+import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Feather';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -20,7 +20,7 @@ const HomeStackScreen = ({ navigation }) => (
   <HomeStack.Navigator>
     <HomeStack.Screen name="Notifications" component={HomeScreen} options={{
       headerLeft: () => (
-        <Icons
+        <Icon
           name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
@@ -35,7 +35,7 @@ const ProfileStackScreen = ({ navigation }) => (
   <ProfileStack.Navigator>
     <ProfileStack.Screen name="Welcome" component={ProfileScreen} options={{
       headerLeft: () => (
-        <Icons
+        <Icon
           name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
@@ -50,7 +50,7 @@ const TimetableStackScreen = ({ navigation }) => (
   <TimetableStack.Navigator>
     <TimetableStack.Screen name="College Map" component={TimeTable} options={{
       headerLeft: () => (
-        <Icons
+        <Icon
           name="menu"
           size={30}
           style={{ paddingLeft: 10 }}
