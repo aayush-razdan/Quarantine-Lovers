@@ -35,7 +35,7 @@ function Hostel() {
         }
     };
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "#1D2430" }}>
             {/* <Text>Home screen under Construction</Text> */}
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <TouchableOpacity activeOpacity={0.9} style={styles.btnpick} onPress={pickImage} >
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         // height: 30,
         justifyContent: "space-around",
         alignItems: "center",
-        backgroundColor: "black",
+        backgroundColor: "#7ED68A",
         //borderRadius: 8,
         //borderColor: "dodgerblue",
         // position: "absolute",
