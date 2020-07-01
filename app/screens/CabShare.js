@@ -34,7 +34,7 @@ const GoalItem = (props) => (
       style={{ position: "absolute", right: 5, top: 2 }}
       size={24}
       color="#1F2023"
-      onPress
+      onPress={props.onDelete}
     />
     <View style={{ flexDirection: "row", marginLeft: "3%", marginTop: "1%" }}>
       <Text style={{ fontSize: 15 }}>{props.from}</Text>
@@ -103,6 +103,7 @@ function CabShareComponent({ navigation }) {
       },
     ]);
   };
+  const removeJourney=(dataId)=>{changeData(data=>{return data.filter((item)=>item.id!==dataId)});}
 
   return (
     <View style={{ backgroundColor: "#fff", height: height / 1 }}>
@@ -255,6 +256,8 @@ function CabShareComponent({ navigation }) {
             to={itemData.item.toplace}
             fare={(itemData.item.fareamount / (parseInt(passengers) + 1)).toFixed(2)}
             passengers={itemData.item.passengersno}
+            onDelete={removeJourney.bind(this,itemData.item.id)}
+        
 
           />
         )}
