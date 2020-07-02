@@ -159,21 +159,23 @@ import {
   Text,
 } from "native-base";
 
-import * as firebase from "firebase";
+import Firebase from "../firebase/firebase";
 
 export default function Register_page() {
-  const [stateAuth, setStateAuth] = useState({
+  const [Email, setEmail] = useState({
     email: "",
+  });
+  const [Password, setPassword] = useState({
     password: "",
   });
 
   const signUpUser = (email, password) => {
     try {
-      if (stateAuth.password.length < 6) {
+      if (Password.password.length < 6) {
         alert("Please enter atleast 6 characters");
         return;
       }
-      firebase.auth().createUserWithEmailAndPassword(email, password);
+      Firebase.auth().createUserWithEmailAndPassword(email, password);
     } catch (error) {
       console.log(error.toString());
     }
@@ -186,7 +188,7 @@ export default function Register_page() {
           <Input
             autoCorrect={false}
             autoCapitalize="none"
-            onChangeText={(email) => setStateAuth({ email })}
+            onChangeText={(email) => setEmail({ email })}
           />
         </Item>
         <Item floatingLabel>
@@ -195,7 +197,7 @@ export default function Register_page() {
             secureTextEntry={true}
             autoCorrect={false}
             autoCapitalize="none"
-            onChangeText={(password) => setStateAuth({ password })}
+            onChangeText={(password) => setPassword({ password })}
           />
         </Item>
         <Button
@@ -203,7 +205,9 @@ export default function Register_page() {
           full
           rounded
           primary
-          onPress={() => signUpUser(stateAuth.email, stateAuth.password)}
+          onPress={() => {
+            signUpUser(Email.email, Password.password);
+          }}
         >
           <Text style={styles.text}>SignUp</Text>
         </Button>
