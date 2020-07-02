@@ -50,7 +50,7 @@ function College() {
     <View
       style={{
         flex: 1,
-        backgroundColor: "#1D2430",
+        backgroundColor: "white",
       }}
     >
       <View style={{ justifyContent: "center", alignItems: "center" }}>
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     width: width / 3.5,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7ED68A",
+    backgroundColor: "#292e49",
     borderRadius: 20,
     height: height / 20,
   },
@@ -121,14 +121,14 @@ const styles = StyleSheet.create({
     width: width / 3.5,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#EFF577",
+    backgroundColor: "#FF8518",
     borderRadius: 20,
     height: height / 20,
   },
 
   text: {
     ...robotoWeights.regular12,
-    color: "black",
+    color: "white",
     fontSize: height / 42,
   },
 });
