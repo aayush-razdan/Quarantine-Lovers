@@ -19,6 +19,7 @@ import Icons from "react-native-vector-icons/AntDesign";
 import Iconss from "react-native-vector-icons/FontAwesome5";
 import Iconsss from "react-native-vector-icons/MaterialIcons";
 import Iconssss from 'react-native-vector-icons/Octicons'
+import Custom from 'react-native-vector-icons/AntDesign'
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
@@ -94,13 +95,13 @@ export default function DrawerContent(props) {
             />
             <DrawerItem
               icon={({ color, size }) => (
-                <Iconss
-                  name="tasks"
+                <Custom
+                  name="piechart"
                   color={"rgba(255,255,255,1)"}
                   size={size}
                 />
               )}
-              label="Timer"
+              label="Goals"
               labelStyle={{ color: "white" }}
               onPress={() => {
                 props.navigation.navigate("Timer");

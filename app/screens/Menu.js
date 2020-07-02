@@ -22,7 +22,7 @@ function Canteen() {
         <ScrollView>
             <View style={styles.background}>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Indian{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Indian{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         {"      "} Tomato Soup{"\n"}
                         {"      "} Coconut Soup{"\n"}
@@ -44,7 +44,7 @@ function Canteen() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Chinese{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Chinese{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         {"      "} Steam Mixed Vegetables{"\n"}
                         {"      "} Steam Chicken w/Vegetables{"\n"}
@@ -66,7 +66,7 @@ function Canteen() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Others{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Others{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         {"      "} Sandwich{"\n"}
                         {"      "} Granola cups{"\n"}
@@ -97,7 +97,7 @@ function Mess() {
         <ScrollView>
             <View style={styles.background}>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Monday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", fontSize:18,marginTop: "25%" }}>Monday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -127,7 +127,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Tuesday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Tuesday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -157,7 +157,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Wednesday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D",fontSize:18, fontWeight: "bold", marginTop: "25%" }}>Wednesday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -187,7 +187,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Thursday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Thursday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -217,7 +217,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Friday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Friday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -247,7 +247,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Saturday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Saturday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}
@@ -277,7 +277,7 @@ function Mess() {
                     </Text>
                 </View>
                 <View style={styles.card}>
-                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold", marginTop: "25%" }}>Sunday{"\n\n"}</Text></View>
+                    <View style={styles.heading}><Text style={{ color: "#191E1D", fontWeight: "bold",fontSize:18, marginTop: "25%" }}>Sunday{"\n\n"}</Text></View>
                     <Text style={styles.text}>
                         <Text style={{ fontSize: screenHeight / 35 }}>Breakfast:</Text>
                         {"\n      "}Scrambled farm-eggs {"\n"}

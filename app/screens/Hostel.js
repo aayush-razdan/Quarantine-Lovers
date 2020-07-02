@@ -35,19 +35,37 @@ function Hostel() {
         }
     };
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "#1D2430" }}>
-            {/* <Text>Home screen under Construction</Text> */}
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <TouchableOpacity activeOpacity={0.9} style={styles.btnpick} onPress={pickImage} >
-                    <Text style={styles.text}>
-                        Edit
-          </Text>
-                </TouchableOpacity>
-                {image && <Image source={{ uri: image }} style={styles.imagePicking} />}
-            </View>
-        </View>
-    );
+        <View
+      style={{
+        flex: 1,
+        backgroundColor: "#1D2430",
+      }}
+    >
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
+        {image && <Image source={{ uri: image }} style={styles.imagePicking} />}
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          marginTop: height / 1.25,
+        }}
+      >
+        <TouchableOpacity
+          activeOpacity={0.9}
+          style={styles.btnpick}
+          onPress={pickImage}
+        >
+          <Text style={styles.text}>ADD</Text>
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.9} style={styles.btnpick1}>
+          <Text style={styles.text}>SHARE</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 }
+
 export default Hostel;
 
 const styles = StyleSheet.create({
@@ -79,24 +97,26 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     btnpick: {
-        position: "absolute",
-        bottom: 5,
-        width: width,
-        height: height / 20,
-        // width: 120,
-        // height: 30,
-        justifyContent: "space-around",
+        backgroundColor: "white",
+        width: width / 3.5,
+        justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#7ED68A",
-        //borderRadius: 8,
-        //borderColor: "dodgerblue",
-        // position: "absolute",
-        // top: height / 13,
-        // left: width / 30,
-    },
+        borderRadius: 20,
+        height: height / 20,
+      },
+       btnpick1: {
+        backgroundColor: "white",
+        width: width / 3.5,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#EFF577",
+        borderRadius: 20,
+        height: height / 20,
+      },
     text: {
-        ...robotoWeights.light,
-        color: "white",
-        fontSize: height / 31
+        ...robotoWeights.regular12,
+        color: "black",
+        fontSize: height / 42
     }
 })

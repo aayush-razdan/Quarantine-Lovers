@@ -25,7 +25,7 @@ var color = randomColor();
 
 const GoalItem = (props) => (
   <View style={styles.listItem}>
-  <Icon name="delete" onPress={props.onDelete.bind(this,props.id)} size={30} color="#292e49"style={{alignSelf:"flex-end",position:'absolute'}} size={deviceHeight/40}/>
+  <Icon name="delete" onPress={props.onDelete.bind(this,props.id)} size={30} color="#292e49"style={{alignSelf:"flex-end",position:'absolute'}} size={deviceHeight/30}/>
     <Text
       style={{
         fontWeight: "bold",
@@ -36,7 +36,7 @@ const GoalItem = (props) => (
     >
       {props.title}
     </Text>
-    <View
+ {/*   <View
       style={{
         flexDirection: "row",
       position:"absolute",
@@ -47,6 +47,7 @@ const GoalItem = (props) => (
       <Icon name="circle" color="#203557" />
       <Text>{props.category}</Text>
     </View>
+    */}
     <Text style={{ marginLeft: "3%", marginTop: "1%", marginBottom: "3%" }}>
       {props.details}
     </Text>
@@ -217,13 +218,13 @@ function Todo() {
 
 const Stack = createStackNavigator();
 
-export default function TodoList() {
+export default function TodoList({navigation}) {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="TodoList"
         component={Todo}
-        options={{ title: "TODO",  headerLeft: () => (
+        options={{ title: "TODO"/*,  headerLeft: () => (
                 <Icons
                     name="menu"
                     size={30}
@@ -231,7 +232,7 @@ export default function TodoList() {
                     color="#1D2430"
                     onPress={() => navigation.openDrawer()}
                 />
-            ) }}
+            ) */}}
       />
     </Stack.Navigator>
   );
