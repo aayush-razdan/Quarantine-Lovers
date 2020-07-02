@@ -19,6 +19,7 @@ import Icons from "react-native-vector-icons/AntDesign";
 import Iconss from "react-native-vector-icons/FontAwesome5";
 import Iconsss from "react-native-vector-icons/MaterialIcons";
 import Iconssss from 'react-native-vector-icons/Octicons'
+import Custom from 'react-native-vector-icons/AntDesign'
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
@@ -49,7 +50,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("MainPage");
               }}
             ></DrawerItem>
-        {/*    <DrawerItem
+            {/*    <DrawerItem
               icon={({ color, size }) => (
                 <Icon
                   name="account-outline"
@@ -92,7 +93,20 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Todo List");
               }}
             />
-           
+            <DrawerItem
+              icon={({ color, size }) => (
+                <Custom
+                  name="piechart"
+                  color={"rgba(255,255,255,1)"}
+                  size={size}
+                />
+              )}
+              label="Goals"
+              labelStyle={{ color: "white" }}
+              onPress={() => {
+                props.navigation.navigate("Timer");
+              }}
+            />
             <DrawerItem
               icon={({ color, size }) => (
                 <Iconssss
@@ -117,7 +131,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("CabShare");
               }}
             />
-             <DrawerItem
+            <DrawerItem
               icon={({ color, size }) => (
                 <Icons
                   name="idcard"
