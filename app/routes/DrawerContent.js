@@ -18,8 +18,8 @@ import { color } from "react-native-reanimated";
 import Icons from "react-native-vector-icons/AntDesign";
 import Iconss from "react-native-vector-icons/FontAwesome5";
 import Iconsss from "react-native-vector-icons/MaterialIcons";
-import Iconssss from 'react-native-vector-icons/Octicons'
-import Custom from 'react-native-vector-icons/AntDesign'
+import Iconssss from "react-native-vector-icons/Octicons";
+import Custom from "react-native-vector-icons/AntDesign";
 export default function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
@@ -50,7 +50,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("MainPage");
               }}
             ></DrawerItem>
-            {/*    <DrawerItem
+            <DrawerItem
               icon={({ color, size }) => (
                 <Icon
                   name="account-outline"
@@ -64,7 +64,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Login");
               }}
             />
-*/}
+
             <DrawerItem
               icon={({ color, size }) => (
                 <Icon
@@ -160,8 +160,7 @@ export default function DrawerContent(props) {
               }}
             />
 
-
-            { /* <DrawerItem
+            {/* <DrawerItem
               icon={({ color, size }) => (
                 <Iconss
                   name="map-marked-alt"

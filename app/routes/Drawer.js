@@ -29,11 +29,15 @@ export default function DrawerStack() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        drawerStyle={{ ...robotoWeights.medium, backgroundColor: "#1D2430" ,opacity: 0.97}}
+        drawerStyle={{
+          ...robotoWeights.medium,
+          backgroundColor: "#1D2430",
+          opacity: 0.97,
+        }}
         drawerContent={(props) => <DrawerContent {...props} />}
       >
         <Drawer.Screen name="MainPage" component={MainPage} />
-
+        <Drawer.Screen name="Login" component={AuthStack} />
         <Drawer.Screen name="Todo List" component={todoListScreen} />
         <Drawer.Screen name="Attendance" component={AttendanceStack} />
         <Drawer.Screen name="CabShare" component={CabShare} />
@@ -53,5 +57,5 @@ export default function DrawerStack() {
 {
   /* <Drawer.Screen name="GpaCalculator" component={GpaCalculator} /> */
   /* <Drawer.Screen name="CollegeMap" component={CollegeMap} />*/
-  /* <Drawer.Screen name="Login" component={AuthStack} />*/
+  /* */
 }
