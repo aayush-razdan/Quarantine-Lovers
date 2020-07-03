@@ -2,8 +2,8 @@ import {
   //MODIFY_YEAR,
   MODIFY_BRANCH,
   MODIFY_SEM,
-  MODIFY_AVGLABGPA,
-  MODIFY_AVGSUBGPA,
+  MODIFY_AVGGPA,
+  //MODIFY_AVGSUBGPA,
 } from "./types";
 
 // export const modifyYear = (id, year) => ({
@@ -23,12 +23,12 @@ export const modifySem = (id) => ({
   id: id,
 });
 
-export const modifyAvgSub = (avgSubjects) => ({
-  type: MODIFY_AVGSUBGPA,
-  avgSubjects: avgSubjects,
+export const modifyAvgGPA = (avgGPA) => ({
+  type: MODIFY_AVGGPA,
+  avgGPA: avgGPA,
 });
 
-export const modifyAvgLab = (avgLabs) => ({
-  type: MODIFY_AVGLABGPA,
-  avgLabs: avgLabs,
-});
+// export const modifyAvgLab = (avgLabs) => ({
+//   type: MODIFY_AVGLABGPA,
+//   avgLabs: avgLabs,
+// });
