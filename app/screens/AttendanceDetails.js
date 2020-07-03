@@ -11,7 +11,7 @@ import {
 import { Button } from "react-native-elements";
 //import { TouchableOpacity } from "react-native-gesture-handler";
 import { connect } from "react-redux";
-import { modifyYear } from "../src/actions/index";
+//import { modifyYear } from "../src/actions/index";
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -44,7 +44,7 @@ const AttendanceDetails = (props) => {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              props.yearAdd(item.id, item.title);
+              //props.yearAdd(item.id, item.title);
               props.navigation.navigate("Semester");
             }}
           >
@@ -59,7 +59,7 @@ const AttendanceDetails = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    yearAdd: (id, year) => dispatch(modifyYear(id, year)),
+    // yearAdd: (id, year) => dispatch(modifyYear(id, year)),
   };
 };
 
