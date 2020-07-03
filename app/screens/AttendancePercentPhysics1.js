@@ -15,7 +15,7 @@ import { abs } from "react-native-reanimated";
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
 
-export default function AttendancePercentMaths({ navigation }) {
+export default function AttendancePercentPhysics1({ navigation }) {
   const [totClass, setTotClass] = useState(40);
   const [uptoClass, setUptoClass] = useState(0);
   const [attClass, setAttClass] = useState(0);
@@ -34,8 +34,7 @@ export default function AttendancePercentMaths({ navigation }) {
     perToAttend = 0;
   } else if ((totClass * 0.75 - attClass) / (totClass - uptoClass) > 1) {
     perToAttend = 1;
-  }
-  else {
+  } else {
     perToAttend = (totClass * 0.75 - attClass) / (totClass - uptoClass);
   }
   if (perToAttend > 1) {
@@ -55,11 +54,10 @@ export default function AttendancePercentMaths({ navigation }) {
 
   return (
     <View style={styles.background}>
-
       <View>
         <Text style={{ paddingLeft: screenWidth / 5, color: "#A4A6A6" }}>
           Analysis of your attended classes
-          </Text>
+        </Text>
         <ProgressChart
           data={data}
           width={screenWidth - screenWidth / 20}
@@ -108,7 +106,7 @@ export default function AttendancePercentMaths({ navigation }) {
             style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
           >
             YES
-            </Text>
+          </Text>
           <Icons name="done" size={20} />
         </TouchableOpacity>
         <TouchableOpacity
@@ -123,7 +121,7 @@ export default function AttendancePercentMaths({ navigation }) {
             style={{ color: "#191E1D", fontWeight: "bold", marginLeft: 20 }}
           >
             NO
-            </Text>
+          </Text>
           <Icon name="cross" size={19} />
         </TouchableOpacity>
       </View>
@@ -137,7 +135,7 @@ export default function AttendancePercentMaths({ navigation }) {
         </Text>
         <Text style={styles.text}>
           {"  "} Attendance is {per.toFixed(2)}%
-          </Text>
+        </Text>
         <Text style={styles.text}>
           {"  "} Total classes you need to attend: {toAttend} {"\n"}
         </Text>

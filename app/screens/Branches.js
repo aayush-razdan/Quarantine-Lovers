@@ -115,11 +115,12 @@ const data2 = [
 var data = [];
 
 const Branches = (props) => {
-  if (props.year == 1) {
-    data = data1;
-  } else {
-    data = data2;
-  }
+  // if (props.year == 1) {
+  //   data = data1;
+  // } else {
+  //   data = data2;
+  // }
+  data = data1;
 
   return (
     <View style={styles.background}>
@@ -147,11 +148,11 @@ const Branches = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    year: state.yearReducer.yearId,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     year: state.yearReducer.yearId,
+//   };
+// };
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -159,7 +160,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Branches);
+export default connect(null, mapDispatchToProps)(Branches);
 
 const styles = StyleSheet.create({
   background: {

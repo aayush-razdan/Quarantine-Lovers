@@ -15,171 +15,190 @@ const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
 
 //data
-const data = [
-  {
-    year: "1",
-    sem: [
-      {
-        num: 1,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "IT",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-        ],
-      },
-      {
-        num: 2,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "IT",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    year: "2",
-    sem: [
-      {
-        num: 1,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
+// const data = [
+//   {
+//     year: "1",
+//     sem: [
+//       {
+//         num: 1,
+//         bas: [
+//           {
+//             branch: "computer",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "IT",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "EXTC",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         num: 2,
+//         bas: [
+//           {
+//             branch: "computer",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "IT",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "EXTC",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     year: "2",
+//     sem: [
+//       {
+//         num: 1,
+//         bas: [
+//           {
+//             branch: "computer",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
 
-          {
-            branch: "IT",
-            subjects: [
-              { name: "3", id: "1" },
-              { name: "3", id: "2" },
-              { name: "4", id: "3" },
-              { name: "4", id: "4" },
-              { name: "4", id: "1" },
-              { name: "5", id: "5" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "3", id: "1" },
-              { name: "3", id: "2" },
-              { name: "4", id: "3" },
-              { name: "4", id: "4" },
-              { name: "4", id: "5" },
-              { name: "5", id: "6" },
-            ],
-          },
-        ],
-      },
-      {
-        num: 2,
-        bas: [
-          {
-            branch: "computer",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "IT",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-          {
-            branch: "EXTC",
-            subjects: [
-              { name: "Mathematics", id: "1" },
-              { name: "Physics", id: "2" },
-              { name: "Chemistry", id: "3" },
-              { name: "Mechanics", id: "4" },
-              { name: "Drawing", id: "5" },
-              //{ name: "f" },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+//           {
+//             branch: "IT",
+//             subjects: [
+//               { name: "3", id: "1" },
+//               { name: "3", id: "2" },
+//               { name: "4", id: "3" },
+//               { name: "4", id: "4" },
+//               { name: "4", id: "1" },
+//               { name: "5", id: "5" },
+//             ],
+//           },
+//           {
+//             branch: "EXTC",
+//             subjects: [
+//               { name: "3", id: "1" },
+//               { name: "3", id: "2" },
+//               { name: "4", id: "3" },
+//               { name: "4", id: "4" },
+//               { name: "4", id: "5" },
+//               { name: "5", id: "6" },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         num: 2,
+//         bas: [
+//           {
+//             branch: "computer",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "IT",
+//             subjects: [
+//               { name: "Mathematics", id: "1" },
+//               { name: "Physics", id: "2" },
+//               { name: "Chemistry", id: "3" },
+//               { name: "Mechanics", id: "4" },
+//               { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//           {
+//             branch: "EXTC",
+//             subjects: [
+// { name: "Mathematics", id: "1" },
+// { name: "Physics", id: "2" },
+// { name: "Chemistry", id: "3" },
+// { name: "Mechanics", id: "4" },
+// { name: "Drawing", id: "5" },
+//               //{ name: "f" },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ];
+
+const data1 = [
+  { name: "Mathematics", id: "1", page: "AttendancePercentMaths1" },
+  { name: "Physics", id: "2", page: "AttendancePercentPhysics1" },
+  { name: "Chemistry", id: "3", page: "AttendancePercentChemistry1" },
+  { name: "Mechanics", id: "4", page: "AttendancePercentMechanics" },
+  { name: "EG", id: "5", page: "AttendancePercentEG" },
 ];
+
+const data2 = [
+  { name: "Mathematics", id: "1", page: "AttendancePercentMaths2" },
+  { name: "Physics", id: "2", page: "AttendancePercentPhysics2" },
+  { name: "Chemistry", id: "3", page: "AttendancePercentChemistry2" },
+  { name: "BEE", id: "4", page: "AttendancePercentBEE" },
+  { name: "EME", id: "5", page: "AttendancePercentEME" },
+  { name: "CPP", id: "6", page: "AttendancePercentCS" },
+];
+
+var data = [];
 
 const Subjects = (props) => {
   // var year1 = route.params.year;
@@ -189,16 +208,23 @@ const Subjects = (props) => {
   // var bas1 = route.params.id;
   // bas1--;
 
-  var year1 = props.year;
-  year1--;
-  var sem1 = props.sem;
-  sem1--;
-  var bas1 = props.branch;
-  bas1--;
+  // var year1 = props.year;
+  // year1--;
+  // var sem1 = props.sem;
+  // sem1--;
+  // var bas1 = props.branch;
+  // bas1--;
+
+  if (props.sem == 1) {
+    data = data1;
+  } else if (props.sem == 2) {
+    data = data2;
+  }
+
   return (
     <View style={styles.background}>
       <FlatList
-        data={data[year1].sem[sem1].bas[bas1].subjects}
+        data={data}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.btn}
@@ -206,7 +232,7 @@ const Subjects = (props) => {
               {
                 // item.year = route.params.id;
               }
-              props.navigation.navigate("AttendancePercent", item);
+              props.navigation.navigate(item.page);
               //setYearModalOpen(false);
             }}
           >
@@ -221,9 +247,9 @@ const Subjects = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    year: state.yearReducer.yearId,
+    //year: state.yearReducer.yearId,
     sem: state.semReducer.semId,
-    branch: state.branchReducer.branchId,
+    //branch: state.branchReducer.branchId,
   };
 };
 export default connect(mapStateToProps)(Subjects);
