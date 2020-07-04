@@ -31,8 +31,8 @@ export default function DrawerStack() {
       <Drawer.Navigator
         drawerStyle={{
           ...robotoWeights.medium,
-          backgroundColor: "#1D2430",
-          opacity: 0.97,
+          backgroundColor: "#17202a",
+          
         }}
         drawerContent={(props) => <DrawerContent {...props} />}
       >
@@ -45,7 +45,7 @@ export default function DrawerStack() {
         <Drawer.Screen name="Menu" component={Menu} />
         <Drawer.Screen name="Timer" component={Timer} />
         <Drawer.Screen name="Gpa" component={Gpa} />
-        {/* <Drawer.Screen name="Capture" component={Capture} /> */}
+      {/* <Drawer.Screen name="GoalProgress" component={GoalProgre} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );

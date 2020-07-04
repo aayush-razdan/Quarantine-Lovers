@@ -93,7 +93,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("Todo List");
               }}
             />
-            <DrawerItem
+            {/*<DrawerItem
               icon={({ color, size }) => (
                 <Custom
                   name="piechart"
@@ -106,7 +106,7 @@ export default function DrawerContent(props) {
               onPress={() => {
                 props.navigation.navigate("Timer");
               }}
-            />
+            />*/}
             <DrawerItem
               icon={({ color, size }) => (
                 <Iconssss

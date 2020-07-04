@@ -1,4 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react'
+import {ProgressCircle} from 'react-native-svg-charts'
+import {Text,View} from 'react-native'
+ 
+export default function GoalProgress() {
+ return (
+    <View style={{justifyContent:'center',height:180,width:'45%',borderRadius:7,elevation:10,backgroundColor:'white'}}>
+    <Text style={{alignSelf:'center',position:'absolute',fontSize:20,fontWeight:'bold',color:'#fe9538'}}>8.00</Text>
+    <ProgressCircle style={{ elevation:0,borderRadius:0,height: 145}}progress={0.8} strokeWidth={15}backgroundColor='#fcf8f4' progressColor={'#ffab40'}></ProgressCircle>
+<Text style={{alignSelf:'center',marginTop:"1%",fontSize:17}}>GPA</Text>
+</View>
+);   
+}
+
+
+{/*import React, { Component } from 'react';
 import {
     ImageBackground,
     StyleSheet,
@@ -106,4 +121,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
     },
-});
+});*/}
