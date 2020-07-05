@@ -11,9 +11,8 @@
 
 ## 📝 Table of Contents
 
-- [Problem Statement](#problem_statement)
-- [Idea / Solution](#idea)
-- [Dependencies / Limitations](#limitations)
+- [Need for the app](#problem_statement)
+- [Limitations](#limitations)
 - [Future Scope](#future_scope)
 - [Setting up a local environment](#getting_started)
 - [Usage](#usage)
@@ -26,7 +25,7 @@
 
 Entering VJTI we all felt the sense of something missing. To be specific there were no means to keep track of our college specific activities like attendance percentage, work we need to get done, new college notices and much more. And we felt that this problem is mainly felt by first yesr students. So keeping them in mind we created an app made for VJTI students.
 
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
+## ⛓️Limitations <a name = "limitations"></a>
 
 - The project is still in alpha mode i.e. right now it only targets first year students.
 - Althogh it can be used by all VJTI students for all kinds of stuff but they cannot use it to keep track of their attendance and GPA.
