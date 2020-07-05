@@ -23,27 +23,31 @@
 
 ## 🧐 Need for the app <a name = "problem_statement"></a>
 
-Entering VJTI we all felt the sense of something missing. To be specific there were no means to keep track of our college specific activities like attendance percentage, work we need to get done, new college notices and much more. And we felt that this problem is mainly felt by first yesr students. So keeping them in mind we created an app made for VJTI students.
+Entering VJTI we all felt the sense of something missing. To be specific there were no means to keep track of our college specific activities like one's attendance percentage, current/probable GPA for the semester, tasks which needed to be done, latest notices/updates from the college and much more. And we felt that these problems are mainly felt by first year students. So keeping them in mind we created an app made for VJTI students to help them solve the problems which we faced.
 
 ## ⛓️Limitations <a name = "limitations"></a>
 
-- The project is still in alpha mode i.e. right now it only targets first year students.
-- Althogh it can be used by all VJTI students for all kinds of stuff but they cannot use it to keep track of their attendance and GPA.
-- The limitation exists as we thought that most of the seniors have fihured out a way of keeping everything in check.
-- These limitations might stop seniors from using it. But our team is working and soon we'll be removing this limitation.
+- The project is still in alpha mode i.e. right now it only targets First Year students.
+- Although it can be used by all VJTI students for most of the purposes but they cannot use it to keep track of their attendance and GPA.
+- These limitations exists due to time limitations in the development of project and insufficiency of data available from college.
+- These limitations might be a drawback for seniors but our team is working on it and soon we'll be removing these limitations.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-This can be the VJTI specific app that we all deserve (after all the hardwork we have done to reach here).
+This can be the one "VJTI App" that we all deserve. And with the possible integration of our database with college servers, the whole attendance system of VJTI can be computerized. The data can be made easily accessible to the students and can help them in maintaining and improving their college performance.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-Getting started with the app is quite easy. You just have to download the apk we have provided you or you can simply ask for the apk by reaching us out on quarantinelovers@gmail.com(mujhe yaad nahi kya hai asli email).
+Getting started with the app is quite easy. It supports both ios and Android platforms. You just have to intstall the apk/ipa we have provided you or you can simply ask for the apk/ipa by reaching us out on quarantinelovers@gmail.com.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Highly useful app for VJTI students (especially first year sudents). Use it to download all the important notifications from the college website,
-watch where you are and get where you want to with college map. Get all the stats about your attendance and GPA right on your fingertips. Know what can you expect the menu (for hostel mess and college canteen) on a specific day. Also, if you travel frequenty in cabs and trains with friends and one of you pays the bill, you can keep track of how much money you owe.
+- Highly useful app for VJTI students (especially first year sudents). 
+- Use it to download all the important notifications from the college website instantly.
+- Reach any department or location within college easily from our own customized map designed for VJTI.
+- Get all the statistics about your attendance and GPA right on your fingertips. 
+- Know what you can expect from the menu (for hostel mess and college canteen) on a specific day with just a click.
+- Also, if you travel frequenty in cabs and trains with your friends and one of you pays the total bill, you can keep track of how much money you owe to them.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
