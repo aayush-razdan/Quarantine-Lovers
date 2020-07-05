@@ -159,7 +159,7 @@ import {
   Text,
 } from "native-base";
 
-import Firebase from "../firebase/firebase";
+import { Firebase, db } from "../firebase/firebase";
 
 export default function Register_page() {
   const [Email, setEmail] = useState({
@@ -168,14 +168,26 @@ export default function Register_page() {
   const [Password, setPassword] = useState({
     password: "",
   });
+  const [Name, setName] = useState({
+    name: "",
+  });
 
-  const signUpUser = (email, password) => {
+  const signUpUser = (email, password, name) => {
     try {
       if (Password.password.length < 6) {
         alert("Please enter atleast 6 characters");
         return;
       }
-      Firebase.auth().createUserWithEmailAndPassword(email, password);
+      Firebase.auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then((cred) => {
+          return db.collection("users").doc(cred.user.uid).set({
+            name: name,
+          });
+        })
+        .then(() => {
+          console.log("hello");
+        });
     } catch (error) {
       console.log(error.toString());
     }
@@ -183,6 +195,14 @@ export default function Register_page() {
   return (
     <Container style={styles.container}>
       <Form>
+        <Item floatingLabel>
+          <Label>Name</Label>
+          <Input
+            autoCorrect={false}
+            autoCapitalize="none"
+            onChangeText={(name) => setName({ name })}
+          />
+        </Item>
         <Item floatingLabel>
           <Label>Email</Label>
           <Input
@@ -206,7 +226,7 @@ export default function Register_page() {
           rounded
           primary
           onPress={() => {
-            signUpUser(Email.email, Password.password);
+            signUpUser(Email.email, Password.password, Name.name);
           }}
         >
           <Text style={styles.text}>SignUp</Text>
