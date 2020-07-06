@@ -13,7 +13,7 @@ if (!global.atob) {
   global.atob = decode;
 }
 
-//console.disableYellowBox = true;
+console.disableYellowBox = true;
 
 export default function App() {
   return (

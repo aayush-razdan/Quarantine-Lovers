@@ -12,27 +12,39 @@ import {
   Label,
   Text,
 } from "native-base";
+import { connect } from "react-redux";
+import { modifyBranch } from "../src/actions/index";
+import { modifySem } from "../src/actions/index";
 
-import Firebase from "../firebase/firebase";
+import { Firebase, db } from "../firebase/firebase";
 
-export default function WelcomePage(props) {
-  const [stateAuthEmail, setStateAuthEmail] = useState({
+function WelcomePage(props) {
+  const [Email, setEmail] = useState({
     email: "",
   });
-  const [stateAuthPassword, setStateAuthPassword] = useState({
+  const [Password, setPassword] = useState({
     password: "",
   });
 
   const loginUser = (email, password) => {
     try {
-      if (stateAuthPassword.password.length < 6) {
+      if (Password.password.length < 6) {
         alert("Please enter atleast 6 characters");
         return;
       }
       Firebase.auth()
         .signInWithEmailAndPassword(email, password)
-        .then(function (user) {
-          console.log(user);
+        .then((cred) => {
+          // console.log(user);
+          if (cred.user) {
+            db.collection("users")
+              .doc(cred.user.uid)
+              .get()
+              .then((doc) => {
+                props.branchAdd(doc.data().branch);
+                props.semAdd(doc.data().semester);
+              });
+          }
         });
     } catch (error) {
       console.log(error.toString());
@@ -46,7 +58,7 @@ export default function WelcomePage(props) {
           <Input
             autoCorrect={false}
             autoCapitalize="none"
-            onChangeText={(email) => setStateAuthEmail({ email })}
+            onChangeText={(email) => setEmail({ email })}
           />
         </Item>
         <Item floatingLabel>
@@ -55,7 +67,7 @@ export default function WelcomePage(props) {
             secureTextEntry={true}
             autoCorrect={false}
             autoCapitalize="none"
-            onChangeText={(password) => setStateAuthPassword({ password })}
+            onChangeText={(password) => setPassword({ password })}
           />
         </Item>
         <Button
@@ -63,9 +75,7 @@ export default function WelcomePage(props) {
           full
           rounded
           primary
-          onPress={() =>
-            loginUser(stateAuthEmail.email, stateAuthPassword.password)
-          }
+          onPress={() => loginUser(Email.email, Password.password)}
         >
           <Text style={styles.text}>Login</Text>
         </Button>
@@ -84,6 +94,15 @@ export default function WelcomePage(props) {
     </Container>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    branchAdd: (id) => dispatch(modifyBranch(id)),
+    semAdd: (id) => dispatch(modifySem(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(WelcomePage);
 
 const styles = StyleSheet.create({
   container: {
