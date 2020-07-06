@@ -13,10 +13,13 @@ import {
   Text,
 } from "native-base";
 import DropDownPicker from "react-native-dropdown-picker";
+import { connect } from "react-redux";
+import { modifyBranch } from "../src/actions/index";
+import { modifySem } from "../src/actions/index";
 
 import { Firebase, db } from "../firebase/firebase";
 
-export default function Register_page() {
+function Register_page(props) {
   const [Email, setEmail] = useState({
     email: "",
   });
@@ -49,7 +52,10 @@ export default function Register_page() {
           });
         })
         .then(() => {
-          console.log("hello");
+          // console.log("hello");
+          props.branchAdd(branch);
+          props.semAdd(sem);
+          props.navigation.navigate("Dashboard");
         });
     } catch (error) {
       console.log(error.toString());
@@ -173,6 +179,14 @@ export default function Register_page() {
     </Container>
   );
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    branchAdd: (id) => dispatch(modifyBranch(id)),
+    semAdd: (id) => dispatch(modifySem(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Register_page);
 
 const styles = StyleSheet.create({
   container: {

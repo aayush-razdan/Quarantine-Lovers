@@ -45,6 +45,9 @@ function WelcomePage(props) {
                 props.semAdd(doc.data().semester);
               });
           }
+        })
+        .then(() => {
+          props.navigation.navigate("Dashboard");
         });
     } catch (error) {
       console.log(error.toString());
