@@ -27,27 +27,26 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerStack() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator
-        drawerStyle={{
-          ...robotoWeights.medium,
-          backgroundColor: "#17202a",
-          
-        }}
-        drawerContent={(props) => <DrawerContent {...props} />}
-      >
-        <Drawer.Screen name="MainPage" component={MainPage} />
-        <Drawer.Screen name="Login" component={AuthStack} />
-        <Drawer.Screen name="Todo List" component={todoListScreen} />
-        <Drawer.Screen name="Attendance" component={AttendanceStack} />
-        <Drawer.Screen name="CabShare" component={CabShare} />
-        <Drawer.Screen name="Id Details" component={IdDetails} />
-        <Drawer.Screen name="Menu" component={Menu} />
-        <Drawer.Screen name="Timer" component={Timer} />
-        <Drawer.Screen name="Gpa" component={Gpa} />
+    // <NavigationContainer>
+    <Drawer.Navigator
+      drawerStyle={{
+        ...robotoWeights.medium,
+        backgroundColor: "#17202a",
+      }}
+      drawerContent={(props) => <DrawerContent {...props} />}
+    >
+      <Drawer.Screen name="MainPage" component={MainPage} />
+      {/* <Drawer.Screen name="Login" component={AuthStack} /> */}
+      <Drawer.Screen name="Todo List" component={todoListScreen} />
+      <Drawer.Screen name="Attendance" component={AttendanceStack} />
+      <Drawer.Screen name="CabShare" component={CabShare} />
+      <Drawer.Screen name="Id Details" component={IdDetails} />
+      <Drawer.Screen name="Menu" component={Menu} />
+      <Drawer.Screen name="Timer" component={Timer} />
+      <Drawer.Screen name="Gpa" component={Gpa} />
       {/* <Drawer.Screen name="GoalProgress" component={GoalProgre} /> */}
-      </Drawer.Navigator>
-    </NavigationContainer>
+    </Drawer.Navigator>
+    //  </NavigationContainer>
   );
 }
 

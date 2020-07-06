@@ -50,7 +50,7 @@ export default function DrawerContent(props) {
                 props.navigation.navigate("MainPage");
               }}
             ></DrawerItem>
-            <DrawerItem
+            {/* <DrawerItem
               icon={({ color, size }) => (
                 <Icon
                   name="account-outline"
@@ -63,7 +63,7 @@ export default function DrawerContent(props) {
               onPress={() => {
                 props.navigation.navigate("Login");
               }}
-            />
+            /> */}
 
             <DrawerItem
               icon={({ color, size }) => (
