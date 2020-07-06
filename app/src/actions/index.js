@@ -12,9 +12,12 @@ import {
 //   id: id,
 // });
 
-export const modifyBranch = (id, branch) => ({
+export const modifyBranch = (
+  id
+  // branch
+) => ({
   type: MODIFY_BRANCH,
-  branch: branch,
+  // branch: branch,
   id: id,
 });
 
