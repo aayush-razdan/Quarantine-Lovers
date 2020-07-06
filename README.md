@@ -11,9 +11,8 @@
 
 ## 📝 Table of Contents
 
-- [Problem Statement](#problem_statement)
-- [Idea / Solution](#idea)
-- [Dependencies / Limitations](#limitations)
+- [Need for the app](#problem_statement)
+- [Limitations](#limitations)
 - [Future Scope](#future_scope)
 - [Setting up a local environment](#getting_started)
 - [Usage](#usage)
@@ -22,74 +21,33 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
-## 🧐 Problem Statement <a name = "problem_statement"></a>
+## 🧐 Need for the app <a name = "problem_statement"></a>
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
+Entering VJTI we all felt the sense of something missing. To be specific there were no means to keep track of our college specific activities like one's attendance percentage, current/probable GPA for the semester, tasks which needed to be done, latest notices/updates from the college and much more. And we felt that these problems are mainly felt by first year students. So keeping them in mind we created an app made for VJTI students to help them solve the problems which we faced.
 
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
+## ⛓️Limitations <a name = "limitations"></a>
 
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
-
-## 💡 Idea / Solution <a name = "idea"></a>
-
-This section is used to describe potential solutions.
-
-Once the ideal, reality, and consequences sections have been
-completed, and understood, it becomes easier to provide a solution for solving the problem.
-
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
-
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
-  appropriate, describe how these limitations could point to the need for further research.
+- The project is still in alpha mode i.e. right now it only targets First Year students.
+- Although it can be used by all VJTI students for most of the purposes but they cannot use it to keep track of their attendance and GPA.
+- These limitations exists due to time limitations in the development of project and insufficiency of data available from college.
+- These limitations might be a drawback for seniors but our team is working on it and soon we'll be removing these limitations.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+This can be the one "VJTI App" that we all deserve. And with the possible integration of our database with college servers, the whole attendance system of VJTI can be computerized. The data can be made easily accessible to the students and can help them in maintaining and improving their college performance.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development
-and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
+Getting started with the app is quite easy. It supports both ios and Android platforms. You just have to intstall the apk/ipa we have provided you or you can simply ask for the apk/ipa by reaching us out on quarantinelovers@gmail.com.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Highly useful app for VJTI students (especially first year sudents). (other uses)
+- Highly useful app for VJTI students (especially first year sudents). 
+- Use it to download all the important notifications from the college website instantly.
+- Reach any department or location within college easily from our own customized map designed for VJTI.
+- Get all the statistics about your attendance and GPA right on your fingertips. 
+- Know what you can expect from the menu (for hostel mess and college canteen) on a specific day with just a click.
+- Also, if you travel frequenty in cabs and trains with your friends and one of you pays the total bill, you can keep track of how much money you owe to them.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
