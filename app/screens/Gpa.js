@@ -432,7 +432,7 @@ const GpaSubjects = (props) => {
     if (gpaCPPLab < 4) {
       gpaCPPLab = 4;
     }
-    var avgSubjects =
+    var avgGPA =
       (gpaMaths * 4 +
         gpaPhysics * 3 +
         gpaBEE * 2 +
@@ -685,7 +685,7 @@ const GpaSubjects = (props) => {
           </View>
           <View style={styles.gpa}>
             <Text style={styles.text}>
-              Your GPA for Subjects: {avgSubjects.toFixed(2)}
+              Your GPA for Subjects: {avgGPA.toFixed(2)}
             </Text>
           </View>
         </View>
