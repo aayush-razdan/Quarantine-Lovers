@@ -353,9 +353,16 @@ const GpaSubjects = (props) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={styles.gpa}>
-            <Text style={styles.text}>
-              Your GPA for Subjects: {avgSubjects.toFixed(2)}
+          <View style={styles.card}>
+            <Text style={{
+              color: "dodgerblue",
+              height: screenHeight / 15,
+              //alignItems: "center",
+              fontSize: screenHeight / 44,
+              marginBottom: screenHeight / 200,
+              marginTop: screenHeight / 70,
+            }}>
+              Your GPA for Subjects: {avgGPA.toFixed(2)}
             </Text>
           </View>
         </View>
@@ -448,7 +455,7 @@ const GpaSubjects = (props) => {
       <ScrollView style={styles.scrollcontainer}>
         <View style={styles.background}>
           <View style={styles.card}>
-            <Text style={styles.text}>Applied Mathematics I : {gpaMaths}</Text>
+            <Text style={styles.text}>Applied Mathematics II : {gpaMaths}</Text>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 style={styles.btnPlus}
@@ -471,7 +478,7 @@ const GpaSubjects = (props) => {
             </View>
           </View>
           <View style={styles.card}>
-            <Text style={styles.text}>Applied Physics I : {gpaPhysics}</Text>
+            <Text style={styles.text}>Applied Physics II : {gpaPhysics}</Text>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 style={styles.btnPlus}
@@ -495,7 +502,7 @@ const GpaSubjects = (props) => {
           </View>
           <View style={styles.card}>
             <Text style={styles.text}>
-              Applied Chemistry I : {gpaChemistry}
+              Applied Chemistry II : {gpaChemistry}
             </Text>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
@@ -683,8 +690,15 @@ const GpaSubjects = (props) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={styles.gpa}>
-            <Text style={styles.text}>
+          <View style={styles.card}>
+            <Text style={{
+              color: "dodgerblue",
+              height: screenHeight / 15,
+              //alignItems: "center",
+              fontSize: screenHeight / 44,
+              marginBottom: screenHeight / 200,
+              marginTop: screenHeight / 70,
+            }}>
               Your GPA for Subjects: {avgGPA.toFixed(2)}
             </Text>
           </View>
