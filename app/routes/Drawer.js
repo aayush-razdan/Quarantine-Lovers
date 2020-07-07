@@ -31,7 +31,7 @@ export default function DrawerStack() {
     <Drawer.Navigator
       drawerStyle={{
         ...robotoWeights.medium,
-        backgroundColor: "#1A1A24",
+        backgroundColor: "#121b24",
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
