@@ -8,8 +8,11 @@ import {
   FlatList,
   TouchableOpacity,
   SafeAreaView,
+  ImageBackground,
+  Image
 } from "react-native";
 import { connect } from "react-redux";
+import {LinearGradient} from 'expo-linear-gradient'
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -222,8 +225,12 @@ const Subjects = (props) => {
   }
 
   return (
-    <View style={styles.background}>
+   
+     <ImageBackground source={{uri:'https://static.vecteezy.com/system/resources/thumbnails/000/622/344/original/Beautiful_background_of_lines_with_gradients.jpg'}} style={styles.background}>
       <FlatList
+        scrollEventThrottle={1900} 
+     numColumns={2}
+    columnWrapperStyle={{flexDirection:'row'}}
         data={data}
         renderItem={({ item }) => (
           <TouchableOpacity
@@ -236,12 +243,16 @@ const Subjects = (props) => {
               //setYearModalOpen(false);
             }}
           >
+          
             <Text style={styles.text}>{item.name}</Text>
+           
+     
           </TouchableOpacity>
         )}
-        idExtractor={(item) => item.id}
+        idExtractor={(item,index) => item.id}
       />
-    </View>
+     
+    </ImageBackground>
   );
 };
 
@@ -256,25 +267,37 @@ export default connect(mapStateToProps)(Subjects);
 
 const styles = StyleSheet.create({
   background: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    alignItems:'center',
+    height:"101%",
+    width:screenWidth,
+   
+    
+    
+  },
+  image:{
+    width:screenWidth,
+    height:screenHeight/4,
+    opacity:0.8
   },
   btn: {
-    elevation: screenHeight / 90,
-    width: screenHeight / 4.63,
-    height: screenHeight / 18,
-    borderRadius: screenHeight / 32,
+    elevation: 10,
+    width: screenHeight /4.5,
+    height: screenHeight / 6.5,
+    borderRadius: 10,
     fontSize: screenHeight / 51,
-    backgroundColor: "dodgerblue",
+  backgroundColor: "dodgerblue",
     justifyContent: "center",
-    marginTop: screenHeight / 54,
-    marginBottom: screenHeight / 32,
+    marginHorizontal:10,
     alignItems: "center",
+    marginTop:screenHeight/7,
+    
+    opacity:0.9
+    
   },
   text: {
-    color: "rgba(255,255,255,0.7)",
-    fontSize: screenHeight / 51,
+    color:"white",
+    fontSize: screenHeight / 40,
     textAlign: "center",
+    fontWeight:'bold'
   },
 });

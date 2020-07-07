@@ -180,6 +180,7 @@ function Todo() {
       </Modal>
       <View style={{ height: deviceHeight - deviceHeight / 2.7 }}>
         <FlatList
+        showsVerticalScrollIndicator={false}
           keyExtractor={(item, index) => item.id}
           data={courseGoals}
           renderItem={(itemData) => (

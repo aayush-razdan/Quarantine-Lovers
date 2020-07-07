@@ -26,7 +26,7 @@ function AttendanceStack(props) {
       {/* <Stack.Screen name="AttendanceDetails" component={AttendanceDetails} /> */}
       {/* <Stack.Screen name="Semester" component={Semesters} />
       <Stack.Screen name="Branches" component={Branches} /> */}
-      <Stack.Screen name="Subjects" component={Subjects} />
+      <Stack.Screen name="Subjects" component={Subjects} options={{headerShown:false}}/>
       <Stack.Screen
         name="AttendancePercentBEE"
         component={AttendancePercentBEE}

@@ -247,6 +247,8 @@ function CabShareComponent({ navigation }) {
       </Modal>
 
       <FlatList
+     showsVerticalScrollIndicator={false}
+
         keyExtractor={(item, index) => item.id}
         data={data}
         renderItem={(itemData) => (

@@ -10,7 +10,7 @@ function AuthStack() {
   return (
     <Stack.Navigator initialRouteName="Welcome">
       <Stack.Screen name="Welcome" component={WelcomePage} options={{headerShown:false}} />
-      <Stack.Screen name="Register" component={Register_page} options={{title:'SIGN UP'}} />
+      <Stack.Screen name="Register" component={Register_page} options={{title:'SIGN UP'}} options={{headerShown:false}} />
     </Stack.Navigator>
   );
 }

@@ -91,8 +91,7 @@ function WelcomePage(props) {
         style={{
           flexDirection: "row",
           alignSelf: "center",
-          position: "absolute",
-          bottom: height/30,
+          marginTop:height/4
         }}
       >
         <Text style={{ color: "grey" }}>Don't have an account? </Text>
