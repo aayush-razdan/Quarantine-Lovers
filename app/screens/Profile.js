@@ -58,7 +58,7 @@ function ProfileScreen() {
       style={{ flex: 1, backgroundColor: "white", alignContent: "center" }}
     >
       <LinearGradient
-        colors={["#485ad0","#8475cb", "#eac2f3"]}
+        colors={["#17273d","#131111"]}
         style={{
           flexDirection: "row",
           backgroundColor: "#fff",
@@ -66,8 +66,7 @@ function ProfileScreen() {
           width: width / 1,
           elevation: 7,
           
-         borderBottomLeftRadius:10,
-          borderBottomRightRadius:10,
+         
           
         }}
       >

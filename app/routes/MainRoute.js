@@ -10,8 +10,8 @@ function MainRoute() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="AuthStack">
-        <Stack.Screen name="Login" component={AuthStack} />
-        <Stack.Screen name="Dashboard" component={DrawerStack} />
+        <Stack.Screen name="Login" component={AuthStack} options={{headerShown:false}}/>
+        <Stack.Screen name="Dashboard" component={DrawerStack} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

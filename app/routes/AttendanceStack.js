@@ -30,46 +30,57 @@ function AttendanceStack(props) {
       <Stack.Screen
         name="AttendancePercentBEE"
         component={AttendancePercentBEE}
+        options={{title:"Basic Electrical Engineering"}}
       />
       <Stack.Screen
         name="AttendancePercentEME"
         component={AttendancePercentEME}
+        options={{title:"Elements of Mech. Engineering"}}
       />
       <Stack.Screen
         name="AttendancePercentCS"
         component={AttendancePercentCS}
+        options={{title:"Computer Programming"}}
       />
       <Stack.Screen
         name="AttendancePercentEG"
         component={AttendancePercentEG}
+        options={{title:"Engineering Graphics"}}
       />
       <Stack.Screen
         name="AttendancePercentMechanics"
         component={AttendancePercentMechanics}
+        options={{title:"Mechanics"}}
       />
       <Stack.Screen
         name="AttendancePercentMaths1"
         component={AttendancePercentMaths1}
+        options={{title:"Mathematics-I"}}
       />
       <Stack.Screen
         name="AttendancePercentMaths2"
         component={AttendancePercentMaths2}
+        options={{title:"Mathematics-II"}}
       />
       <Stack.Screen
         name="AttendancePercentPhysics1"
         component={AttendancePercentPhysics1}
+        options={{title:"Physics-I"}}
       />
       <Stack.Screen
         name="AttendancePercentPhysics2"
         component={AttendancePercentPhysics2}
+        options={{title:"Physics-II"}}
       />
       <Stack.Screen
         name="AttendancePercentChemistry1"
         component={AttendancePercentChemistry1}
+        options={{title:"Chemistry-I"}}
       />
       <Stack.Screen
         name="AttendancePercentChemistry2"
         component={AttendancePercentChemistry2}
+        options={{title:"Chemistry-II"}}
       />
     </Stack.Navigator>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
-
+import {View,Picker} from 'react-native';
 import {
   Container,
   Content,
@@ -62,7 +62,7 @@ function Register_page(props) {
     }
   };
   return (
-    <Container style={styles.container}>
+    <View style={styles.container}>
       <Form>
         <Item floatingLabel>
           <Label>Full Name</Label>
@@ -176,7 +176,7 @@ function Register_page(props) {
           <Text style={styles.text}>SignUp</Text>
         </Button>
       </Form>
-    </Container>
+    </View>
   );
 }
 const mapDispatchToProps = (dispatch) => {
