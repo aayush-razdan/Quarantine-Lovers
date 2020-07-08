@@ -14,7 +14,7 @@
 - [Need for the app](#problem_statement)
 - [Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
+- [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
 - [Authors](#authors)
