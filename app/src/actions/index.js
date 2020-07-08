@@ -4,6 +4,17 @@ import {
   MODIFY_SEM,
   MODIFY_AVGGPA,
   //MODIFY_AVGSUBGPA,
+  MODIFY_BEE,
+  MODIFY_CHEMISTRY1,
+  MODIFY_CHEMISTRY2,
+  MODIFY_CPP,
+  MODIFY_EG,
+  MODIFY_EME,
+  MODIFY_MATHS1,
+  MODIFY_MATHS2,
+  MODIFY_MECHANICS,
+  MODIFY_PHYSICS1,
+  MODIFY_PHYSICS2,
 } from "./types";
 
 // export const modifyYear = (id, year) => ({
@@ -35,3 +46,11 @@ export const modifyAvgGPA = (avgGPA) => ({
 //   type: MODIFY_AVGLABGPA,
 //   avgLabs: avgLabs,
 // });
+
+export const modifyMaths1 = (per, upclass, attclass, totclass) => ({
+  type: MODIFY_MATHS1,
+  per: per,
+  upclass: upclass,
+  attclass: attclass,
+  totclass: totclass,
+});

@@ -11,14 +11,19 @@ import { Button } from "react-native-elements";
 import Icon from "react-native-vector-icons/Entypo";
 import Icons from "react-native-vector-icons/MaterialIcons";
 import { abs } from "react-native-reanimated";
+import { connect } from "react-redux";
+import { modifyMaths1 } from "../src/actions/index";
 
 const screenHeight = Math.round(Dimensions.get("window").height);
 const screenWidth = Math.round(Dimensions.get("window").width);
 
-export default function AttendancePercentMaths1({ navigation }) {
-  const [totClass, setTotClass] = useState(40);
-  const [uptoClass, setUptoClass] = useState(0);
-  const [attClass, setAttClass] = useState(0);
+const AttendancePercentMaths1 = (props) => {
+  const [totClass, setTotClass] = useState(props.totClass);
+  const [uptoClass, setUptoClass] = useState(props.uptoClass);
+  const [attClass, setAttClass] = useState(props.attClass);
+  // var totClass = props.totClass;
+  // var uptoClass = props.uptoClass;
+  // var attClass = props.attClass;
 
   var toAttend;
   if (Math.ceil(0.75 * uptoClass - attClass) <= 0) {
@@ -87,6 +92,8 @@ export default function AttendancePercentMaths1({ navigation }) {
         style={styles.btnExtraClass}
         onPress={() => {
           setTotClass(totClass + 1);
+          //totClass++;
+          props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
         }}
       >
         <Text style={{ color: "#D0E1DE", fontWeight: "bold" }}>YES</Text>
@@ -99,6 +106,7 @@ export default function AttendancePercentMaths1({ navigation }) {
             if (uptoClass < totClass) {
               setUptoClass(uptoClass + 1);
               setAttClass(attClass + 1);
+              props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
             }
           }}
         >
@@ -114,6 +122,7 @@ export default function AttendancePercentMaths1({ navigation }) {
           onPress={() => {
             if (uptoClass < totClass) {
               setUptoClass(uptoClass + 1);
+              props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
             }
           }}
         >
@@ -125,6 +134,7 @@ export default function AttendancePercentMaths1({ navigation }) {
           <Icon name="cross" size={19} />
         </TouchableOpacity>
       </View>
+
       <View style={styles.OutputContainer}>
         <Text style={styles.text}>
           {"\n"}
@@ -142,7 +152,28 @@ export default function AttendancePercentMaths1({ navigation }) {
       </View>
     </View>
   );
-}
+};
+
+const mapStateToProps = (state) => {
+  return {
+    totClass: state.maths1Reducer.totClass,
+    attClass: state.maths1Reducer.attClass,
+    uptoClass: state.maths1Reducer.uptoClass,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // branchAdd: (id, branch) => dispatch(modifyBranch(id, branch)),
+    maths1Update: (per, upclass, attclass, totclass) =>
+      dispatch(modifyMaths1(per, upclass, attclass, totclass)),
+  };
+};
+
+export default connect(
+  mapDispatchToProps,
+  mapDispatchToProps
+)(AttendancePercentMaths1);
 
 const styles = StyleSheet.create({
   background: {
