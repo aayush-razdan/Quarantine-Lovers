@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
-import {View,Picker} from 'react-native';
+import {View,Dimensions,TouchableOpacity,Image} from 'react-native';
 import {
   Container,
   Content,
@@ -16,9 +16,11 @@ import DropDownPicker from "react-native-dropdown-picker";
 import { connect } from "react-redux";
 import { modifyBranch } from "../src/actions/index";
 import { modifySem } from "../src/actions/index";
-
+import {LinearGradient} from 'expo-linear-gradient'
 import { Firebase, db } from "../firebase/firebase";
-
+import Icons from 'expo-vector-icons/Ionicons'
+var height=Dimensions.get('window').height;
+var width=Dimensions.get('window').width;
 function Register_page(props) {
   const [Email, setEmail] = useState({
     email: "",
@@ -36,7 +38,7 @@ function Register_page(props) {
     branch: null,
   });
 
-  const signUpUser = (email, password, name, sem, branch) => {
+  const signUpUser = (email, password, name, sem, branch,navigation) => {
     try {
       if (Password.password.length < 6) {
         alert("Please enter atleast 6 characters");
@@ -62,26 +64,37 @@ function Register_page(props) {
     }
   };
   return (
-    <View style={styles.container}>
-      <Form>
-        <Item floatingLabel>
-          <Label>Full Name</Label>
+    <LinearGradient  colors={["#17273d", "#000000"]} style={styles.container}>
+  
+<Icons name="ios-arrow-back" color="#e8f3e6" size={43} onPress={() => props.navigation.goBack()} style={{position:'absolute',alignSelf:'flex-start',left:width/20,top:height/20}}/>
+      <Form style={styles.regScrn}>
+      <Image source={require('../other/loginIcon.png')} style={{ alignSelf: "center",
+          height: 100,
+          width: 70,
+          marginTop:20,
+          resizeMode: "contain",
+      }}/> 
+        <Text style={{fontSize:height/30,fontWeight:'bold'}}>Create your account</Text>
+      
+        <Item floatingLabel style={{width:width/1.3,marginTop:10}}>
+          <Label>NAME</Label>
           <Input
+          
             autoCorrect={false}
             autoCapitalize="none"
             onChangeText={(name) => setName({ name })}
           />
         </Item>
-        <Item floatingLabel>
-          <Label>Email</Label>
+        <Item floatingLabel style={{width:width/1.3}} >
+          <Label>YOUR EMAIL</Label>
           <Input
             autoCorrect={false}
             autoCapitalize="none"
             onChangeText={(email) => setEmail({ email })}
           />
         </Item>
-        <Item floatingLabel>
-          <Label>Password</Label>
+        <Item floatingLabel style={{width:width/1.3}}>
+          <Label>PASSWORD</Label>
           <Input
             secureTextEntry={true}
             autoCorrect={false}
@@ -89,6 +102,48 @@ function Register_page(props) {
             onChangeText={(password) => setPassword({ password })}
           />
         </Item>
+        <DropDownPicker
+          items={[
+            {
+              label: "BATCH 1",
+              value: "1",
+            },
+            {
+              label: "BATCH 2",
+              value: "2",
+            },
+            {
+              label: "BATCH 3",
+              value: "3",
+            },
+            {
+              label: "BATCH 4",
+              value: "4",
+            },
+            {
+              label: "BATCH 5",
+              value: "5",
+            },
+            {
+              label: "BACTH 6",
+              value: "6",
+            },
+          ]}
+          defaultValue={Branch.branch}
+          placeholder="BATCH"
+          containerStyle={{ height: 40,width:width/1.3,marginTop:height/50 }}
+          style={{ backgroundColor: "#ffffff" }}
+          itemStyle={{
+            justifyContent: "flex-start",
+            marginTop:0
+          }}
+          dropDownStyle={{ backgroundColor: "#fff",height:125 }}
+          onChangeItem={(item) =>
+            setBranch({
+              branch: item.value,
+            })
+          }
+        />
 
         <DropDownPicker
           items={[
@@ -102,13 +157,13 @@ function Register_page(props) {
             },
           ]}
           defaultValue={Semester.semester}
-          placeholder="Semester"
-          containerStyle={{ height: 40, marginTop: 20 }}
-          style={{ backgroundColor: "#fafafa" }}
+          placeholder="SEMESTER"
+          containerStyle={{ height: 40,width:width/1.3,marginTop:height/50}}
+          style={{ backgroundColor: "#ffffff" }}
           itemStyle={{
             justifyContent: "flex-start",
           }}
-          dropDownStyle={{ backgroundColor: "#fafafa" }}
+          dropDownStyle={{ backgroundColor: "#ffffff",height:80}}
           onChangeItem={(item) =>
             setSemester({
               semester: item.value,
@@ -116,53 +171,10 @@ function Register_page(props) {
           }
         />
 
-        <DropDownPicker
-          items={[
-            {
-              label: "Batch 1",
-              value: "1",
-            },
-            {
-              label: "Batch 2",
-              value: "2",
-            },
-            {
-              label: "Batch 3",
-              value: "3",
-            },
-            {
-              label: "Batch 4",
-              value: "4",
-            },
-            {
-              label: "Batch 5",
-              value: "5",
-            },
-            {
-              label: "Batch 6",
-              value: "6",
-            },
-          ]}
-          defaultValue={Branch.branch}
-          placeholder="Batch"
-          containerStyle={{ height: 40, marginTop: 90 }}
-          style={{ backgroundColor: "#fafafa" }}
-          itemStyle={{
-            justifyContent: "flex-start",
-          }}
-          dropDownStyle={{ backgroundColor: "#fafafa" }}
-          onChangeItem={(item) =>
-            setBranch({
-              branch: item.value,
-            })
-          }
-        />
-
-        <Button
+       
+        <TouchableOpacity
           style={styles.button}
-          full
-          rounded
-          primary
+        
           onPress={() => {
             signUpUser(
               Email.email,
@@ -173,10 +185,10 @@ function Register_page(props) {
             );
           }}
         >
-          <Text style={styles.text}>SignUp</Text>
-        </Button>
+          <Text style={styles.text}>Sign up</Text>
+        </TouchableOpacity>
       </Form>
-    </View>
+    </LinearGradient>
   );
 }
 const mapDispatchToProps = (dispatch) => {
@@ -192,13 +204,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    alignItems:'center'
 
-    padding: 10,
+  
   },
   button: {
-    marginTop: 160,
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
+    backgroundColor: "#1DB954",
+    height: height / 17,
+    borderRadius: 20,
+    width: width / 1.6,
+  
+    marginTop: height/9,
+    elevation:10 
   },
   text: {
     color: "white",
+    fontSize:height/40,
+    fontWeight:'bold'
   },
+  regScrn:{
+    alignItems:'center',
+    height:height/1.25,
+    borderRadius:10,
+    width:width/1.15,
+    borderWidth:1,
+    marginTop:height/7,
+    backgroundColor:'#fafafa',
+    opacity:0.98
+  }
 });
+
