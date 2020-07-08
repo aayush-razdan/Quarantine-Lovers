@@ -22,7 +22,7 @@ export default class app extends Component {
           originWhitelist={['*']}
           javaScriptEnabledAndroid={true}
           injectedJavaScript={jsCode}
-          style={{ width: "100%", height: "70%" }}
+          style={{ width: "100%", height: "70%"}}
           scrollEnabled={false}
           scalesPageToFit={false}
         /*  onFileDownload={true}
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: 1.5 * screenWidth,
-    left: -screenHeight / 3.95,
+    left: -screenHeight / 4.35,
     backgroundColor: "white",
   }
 });

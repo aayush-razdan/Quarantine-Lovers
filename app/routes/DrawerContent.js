@@ -27,11 +27,9 @@ export default function DrawerContent(props) {
         <View style={styles.drawerContent}>
           <View style={{ alignSelf: "center", marginTop: 15 }}>
             <Avatar.Image
-              source={{
-                uri:
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbhEQbhS6T_6jCg4524GJ8Bf0nSA2ejNbGKOUtx_lwZgvmTuJ&usqp=CAU",
-              }}
-              size={120}
+              source={require('../other/loginIcon.png')}
+              size={100}
+              
             />
           </View>
           <Drawer.Section style={styles.drawerSection}>

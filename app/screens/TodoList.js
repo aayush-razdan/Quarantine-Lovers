@@ -95,10 +95,7 @@ function Todo() {
   return (
     <View style={{ backgroundColor: "#fff", height: deviceHeight }}>
       <Image
-        source={{
-          uri:
-            "https://cdn.wallpaperhub.app/cloudcache/7/4/f/3/d/5/74f3d51cbec9db78da32e103de1b28538af1b76a.jpg",
-        }}
+        source={require('../other/todo.jpg')}
         style={styles.header}
       />
       <Modal animationType="fade" transparent={true} visible={modalVisible}>
@@ -311,6 +308,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: deviceHeight / 3.5,
+    width:deviceWidth
   },
   addButton: {
     fontSize: deviceHeight / 15,

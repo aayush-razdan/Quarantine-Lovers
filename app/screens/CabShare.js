@@ -108,11 +108,8 @@ function CabShareComponent({ navigation }) {
   return (
     <View style={{ backgroundColor: "#fff", height: height / 1 }}>
       <Image
-        source={{
-          uri:
-            "https://thumbs.dreamstime.com/b/last-year-premier-padmini-service-mumbai-india-circa-as-taxi-also-called-kaali-peeli-flat-vector-168230333.jpg",
-        }}
-        style={{ height: height / 4.5 }}
+        source={require('../other/taxi.jpg')}
+        style={{ height: height / 4.5,width:width }}
       />
       <View
         style={{
