@@ -54,7 +54,7 @@ function ProfileScreen() {
   };
 
   return (
-    <ScrollView
+    <View
       style={{ flex: 1, backgroundColor: "white", alignContent: "center" }}
     >
       <LinearGradient
@@ -114,7 +114,7 @@ function ProfileScreen() {
       >
         <Capture />
       </View>
-    </ScrollView>
+    </View>
 
     // <Button title="Pick an image" onPress={pickImage} />
     // <Image source={require('./images/sample_image_button.png')} style={styles.ImageClass} />
@@ -170,6 +170,6 @@ name: {
   text: {
     ...robotoWeights.regular12,
     color: "white",
-    fontSize: height / 25,
+    fontSize: height / 30,
   },
 });

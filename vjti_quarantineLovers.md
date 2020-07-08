@@ -14,10 +14,9 @@
 - [Need for the app](#problem_statement)
 - [Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
+- [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
@@ -44,14 +43,15 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 
 - Highly useful app for VJTI students (especially first year sudents). 
 - Use it to download all the important notifications from the college website instantly.
-- Reach any department or location within college easily from our own customized map designed for VJTI.
 - Get all the statistics about your attendance and GPA right on your fingertips. 
+- Keep forgetting your id-card and even if you take a pic it is lost in hundreds of other spam pics? Well we've got that covered for you. Keep your id cards(hostel and college) with you in the dedicated section of id-Details.
 - Know what you can expect from the menu (for hostel mess and college canteen) on a specific day with just a click.
 - Also, if you travel frequenty in cabs and trains with your friends and one of you pays the total bill, you can keep track of how much money you owe to them.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
 - [React Native](https://github.com/facebook/react-native) - Framework
+- [Google Firebase](https://firebase.google.com) - Backend
 - [Expo Client](https://expo.io/) - Publishing
 
 ## ✍️ Authors <a name = "authors"></a>

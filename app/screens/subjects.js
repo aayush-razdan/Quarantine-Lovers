@@ -226,7 +226,7 @@ const Subjects = (props) => {
 
   return (
    
-     <ImageBackground source={{uri:'https://static.vecteezy.com/system/resources/thumbnails/000/622/344/original/Beautiful_background_of_lines_with_gradients.jpg'}} style={styles.background}>
+     <ImageBackground source={require('../other/bg.jpg')} style={styles.background}>
       <FlatList
         scrollEventThrottle={1900} 
      numColumns={2}
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     fontSize: screenHeight / 51,
   backgroundColor: "dodgerblue",
     justifyContent: "center",
-    marginHorizontal:10,
+    marginHorizontal:screenWidth/100,
     alignItems: "center",
     marginTop:screenHeight/7,
     
