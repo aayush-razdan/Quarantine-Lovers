@@ -8,6 +8,8 @@
             "web"
         ],
         "android": {
+            "package": "com.quarantineLovers.vjti",
+            "versionCode": 3,
             "permissions": [
                 "ACCESS_FINE_LOCATION",
                 "ACCESS_COARSE_LOCATION",
