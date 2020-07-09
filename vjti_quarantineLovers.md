@@ -17,7 +17,7 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
-- [Screenshots](#screenchots)
+- [Screenshots](#screenshots)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
@@ -57,17 +57,8 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 
 ## 🤳 Screenshots <a name = "screenshots"></a>
 
-![Signup](https://user-images.githubusercontent.com/59977316/87026762-d56e1400-c1f9-11ea-9072-dd8607b8e496.jpeg)
-![Login](https://user-images.githubusercontent.com/59977316/87027051-35fd5100-c1fa-11ea-87c9-3271af358046.jpeg)
-![Dashboard](https://user-images.githubusercontent.com/59977316/87027086-41e91300-c1fa-11ea-9cde-e89649326bb7.jpeg)
-![Notifications](https://user-images.githubusercontent.com/59977316/87027095-44e40380-c1fa-11ea-881c-b554921f4d4b.jpeg)
-![map](https://user-images.githubusercontent.com/59977316/87027099-46153080-c1fa-11ea-971b-ccbcbb895b45.jpeg)
-![Drawer](https://user-images.githubusercontent.com/59977316/87027111-4ca3a800-c1fa-11ea-92cc-d82069858c7a.jpeg)
-![AttendanceSubjects](https://user-images.githubusercontent.com/59977316/87027117-50cfc580-c1fa-11ea-9e9d-6dd121022b97.jpeg)
-![AttendancePercent](https://user-images.githubusercontent.com/59977316/87027130-55947980-c1fa-11ea-9ea3-96378f085fa9.jpeg)
-![CabShare](https://user-images.githubusercontent.com/59977316/87027144-5a592d80-c1fa-11ea-9812-30fc2314afb8.jpeg)
-![GPA](https://user-images.githubusercontent.com/59977316/87027168-6644ef80-c1fa-11ea-90b6-052f49033ff7.jpeg)
-![Todo](https://user-images.githubusercontent.com/59977316/87027176-693fe000-c1fa-11ea-9046-efdae6536f53.jpeg)
+![image](https://user-images.githubusercontent.com/59977316/87031393-b6bf4b80-c200-11ea-997a-793706b53bba.jpg)
+![merge_from_ofoct (1)](https://user-images.githubusercontent.com/59977316/87031395-b8890f00-c200-11ea-95c0-274d47846579.jpg)
 
 ## ✍️ Authors <a name = "authors"></a>
 
