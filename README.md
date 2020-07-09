@@ -66,8 +66,13 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 <!-- ![image](https://user-images.githubusercontent.com/59977316/87031393-b6bf4b80-c200-11ea-997a-793706b53bba.jpg)
 ![merge_from_ofoct (1)](https://user-images.githubusercontent.com/59977316/87031395-b8890f00-c200-11ea-95c0-274d47846579.jpg) -->
 
-<img src="https://user-images.githubusercontent.com/60364028/87046109-5c30ea00-c216-11ea-8bd9-e0063bdbb033.jpeg" >
-<img src="https://user-images.githubusercontent.com/60364028/87046727-26d8cc00-c217-11ea-9dcd-508cb0e68dd8.jpeg">
+
+<img src="https://user-images.githubusercontent.com/60364028/87046109-5c30ea00-c216-11ea-8bd9-e0063bdbb033.jpeg" width="250" height="480">
+  
+<img src="https://user-images.githubusercontent.com/60364028/87046727-26d8cc00-c217-11ea-9dcd-508cb0e68dd8.jpeg" width="250" height="480">
+
+
+
 ## ✍️ Authors <a name = "authors"></a>
 
 - [Aayush Razdan](https://github.com/aayush-razdan)
