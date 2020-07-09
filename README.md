@@ -1,6 +1,7 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://drive.google.com/file/d/1gxW1U34Iz29BKMnX0G3PGkBOG1f-_k7X/view?usp=sharing" alt="Project logo"></a>
+ <img width="800" alt="readme" src="https://user-images.githubusercontent.com/60364028/87056323-13336280-c223-11ea-85ea-a1ef84f95af7.png">
+</a>
 </p>
 
 <h3 align="center"> Manage everything with one app
