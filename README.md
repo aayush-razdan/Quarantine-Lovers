@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="./assets/readme.png" alt="Project logo"></a>
+ <img src="https://drive.google.com/file/d/1gxW1U34Iz29BKMnX0G3PGkBOG1f-_k7X/view?usp=sharing" alt="Project logo"></a>
 </p>
 
 <h3 align="center"> Manage everything with one app
