@@ -17,6 +17,7 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
+- [Screenshots](#screenchots)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
@@ -41,9 +42,9 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 
 ## 🎈 Usage <a name="usage"></a>
 
-- Highly useful app for VJTI students (especially first year sudents). 
+- Highly useful app for VJTI students (especially first year sudents).
 - Use it to download all the important notifications from the college website instantly.
-- Get all the statistics about your attendance and GPA right on your fingertips. 
+- Get all the statistics about your attendance and GPA right on your fingertips.
 - Keep forgetting your id-card and even if you take a pic it is lost in hundreds of other spam pics? Well we've got that covered for you. Keep your id cards(hostel and college) with you in the dedicated section of id-Details.
 - Know what you can expect from the menu (for hostel mess and college canteen) on a specific day with just a click.
 - Also, if you travel frequenty in cabs and trains with your friends and one of you pays the total bill, you can keep track of how much money you owe to them.
@@ -53,6 +54,20 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 - [React Native](https://github.com/facebook/react-native) - Framework
 - [Google Firebase](https://firebase.google.com) - Backend
 - [Expo Client](https://expo.io/) - Publishing
+
+## 🤳 Screenshots <a name = "screenshots"></a>
+
+![Signup](https://user-images.githubusercontent.com/59977316/87026762-d56e1400-c1f9-11ea-9072-dd8607b8e496.jpeg)
+![Login](https://user-images.githubusercontent.com/59977316/87027051-35fd5100-c1fa-11ea-87c9-3271af358046.jpeg)
+![Dashboard](https://user-images.githubusercontent.com/59977316/87027086-41e91300-c1fa-11ea-9cde-e89649326bb7.jpeg)
+![Notifications](https://user-images.githubusercontent.com/59977316/87027095-44e40380-c1fa-11ea-881c-b554921f4d4b.jpeg)
+![map](https://user-images.githubusercontent.com/59977316/87027099-46153080-c1fa-11ea-971b-ccbcbb895b45.jpeg)
+![Drawer](https://user-images.githubusercontent.com/59977316/87027111-4ca3a800-c1fa-11ea-92cc-d82069858c7a.jpeg)
+![AttendanceSubjects](https://user-images.githubusercontent.com/59977316/87027117-50cfc580-c1fa-11ea-9e9d-6dd121022b97.jpeg)
+![AttendancePercent](https://user-images.githubusercontent.com/59977316/87027130-55947980-c1fa-11ea-9ea3-96378f085fa9.jpeg)
+![CabShare](https://user-images.githubusercontent.com/59977316/87027144-5a592d80-c1fa-11ea-9812-30fc2314afb8.jpeg)
+![GPA](https://user-images.githubusercontent.com/59977316/87027168-6644ef80-c1fa-11ea-90b6-052f49033ff7.jpeg)
+![Todo](https://user-images.githubusercontent.com/59977316/87027176-693fe000-c1fa-11ea-9046-efdae6536f53.jpeg)
 
 ## ✍️ Authors <a name = "authors"></a>
 
