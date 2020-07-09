@@ -17,6 +17,7 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
+- [Links](#links)
 - [Screenshots](#screenshots)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
@@ -54,6 +55,11 @@ Getting started with the app is quite easy. It supports both ios and Android pla
 - [React Native](https://github.com/facebook/react-native) - Framework
 - [Google Firebase](https://firebase.google.com) - Backend
 - [Expo Client](https://expo.io/) - Publishing
+
+## 🔗 Links <a name = "links"></a>
+
+- [Google Drive](https://drive.google.com/drive/folders/1Lqcg8Rbyl3UKUTf0ejsHWkXMpYA5EP3Y?usp=sharing)
+- [Github Repo Link](https://github.com/aayush-razdan/Quarantine-Lovers)
 
 ## 🤳 Screenshots <a name = "screenshots"></a>
 
