@@ -1,6 +1,6 @@
 import { MODIFY_MATHS1 } from "../actions/types";
 const initialState = {
-  maths1Attendance: 100,
+  maths1Attendance: 0,
   totClass: 40,
   uptoClass: 0,
   attClass: 0,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -91,9 +91,13 @@ const AttendancePercentMaths1 = (props) => {
       <TouchableOpacity
         style={styles.btnExtraClass}
         onPress={() => {
-          setTotClass(totClass + 1);
+          // useEffect(() => {
+          //   setTotClass(totClass + 1);
+          // });
           //totClass++;
-          props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
+          setTotClass(totClass + 1);
+          console.log(per.toFixed(2), uptoClass, attClass, totClass);
+          props.maths1Update(per.toFixed(2), uptoClass, attClass, totClass);
         }}
       >
         <Text style={{ color: "#D0E1DE", fontWeight: "bold" }}>YES</Text>
@@ -104,9 +108,18 @@ const AttendancePercentMaths1 = (props) => {
           style={styles.btnYes}
           onPress={() => {
             if (uptoClass < totClass) {
-              setUptoClass(uptoClass + 1);
+              // setUptoClass(uptoClass + 1);
+              // useEffect(() => {
+              //   setUptoClass(uptoClass + 1);
+              // });
+              // useEffect(() => {
+              //   setAttClass(attClass + 1);
+              // });
               setAttClass(attClass + 1);
-              props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
+              // uptoClass++;
+              // attClass++;
+              console.log(per.toFixed(2), uptoClass, attClass, totClass);
+              props.maths1Update(per.toFixed(2), uptoClass, attClass, totClass);
             }
           }}
         >
@@ -122,7 +135,12 @@ const AttendancePercentMaths1 = (props) => {
           onPress={() => {
             if (uptoClass < totClass) {
               setUptoClass(uptoClass + 1);
-              props.maths1Update(per.toFixed(2), uptoClass, totClass, attClass);
+              // uptoClass++;
+              useEffect(() => {
+                setUptoClass(uptoClass + 1);
+              });
+              console.log(per.toFixed(2), uptoClass, attClass, totClass);
+              props.maths1Update(per.toFixed(2), uptoClass, attClass, totClass);
             }
           }}
         >
@@ -171,7 +189,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(
-  mapDispatchToProps,
+  mapStateToProps,
   mapDispatchToProps
 )(AttendancePercentMaths1);
 
