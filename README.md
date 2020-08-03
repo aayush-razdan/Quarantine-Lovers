@@ -74,12 +74,7 @@ Getting started with the app is quite easy. It supports both ios and Android pla
   <p></p>
 <img src="https://user-images.githubusercontent.com/53592579/89143578-b2b8ec00-d568-11ea-83a2-2f9ce3ef945d.png" width="250" height="540">
 <img src="https://user-images.githubusercontent.com/53592579/89143671-062b3a00-d569-11ea-9a29-66347e0b90d7.png" width="250" height="540">
-<style type="text/css"> 
-  .padded img { 
-    padding-left: 6em; 
-    padding-right: 6em; 
-  } 
-  </style> 
+
 </span>
 
 
